@@ -34,6 +34,9 @@
         height: 10px;
         fill: #FFF;
         rotate: 90deg;
+        position: absolute;
+        top: 20px;
+        left: 66%;
     }
     &__list{
         display: flex;
@@ -47,12 +50,16 @@
     }
     &__checkbox{
         position: absolute;
-        top: 14px;
+        top: 14.5px;
         left: 66%;
         opacity: 0;
+        z-index: 2;
     }
-    &__checkbox:checked + &__list{
+    &__checkbox:checked ~ &__list{
         display: flex;
+    }
+    &__checkbox:checked + &__title-svg{
+        rotate: 270deg;
     }
     &__title{
         font-size: 20px;
