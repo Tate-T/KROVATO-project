@@ -6,7 +6,7 @@
         font-size: 30px;
         font-weight: 900;
         line-height: 40px;
-        color: #2B2929;
+        color: $dark-color;
         text-align: center;
         margin-bottom: 40px;
         max-width: 410px;
@@ -25,12 +25,12 @@
         font-size: 20px;
         font-weight: 600;
         line-height: 28px;
-        color: #535353;
+        color: $grey-color;
     }
     &__marker{
         width: 32px;
         height: 32px;
-        fill: #FFBC57;
+        fill: $yellow-color;
         flex-shrink: 0;
     }
     &__btn{
@@ -42,8 +42,8 @@
         margin-right: auto;
         margin-left: auto;
         border-radius: 8px;
-        background-color: #FFBC57;
-        color: #FFF;
+        background-color: $yellow-color;
+        color: $light-color;
         font-size: 17px;
         font-weight: 900;
         line-height: 24px;

@@ -1,5 +1,5 @@
 .location{
-    background-color: #F8F8F8;
+    background-color: $light-color;
     padding-top: 20px;
     padding-bottom: 60px;
     font-family: 'Montserrat';
@@ -13,23 +13,23 @@
     &__pages-svg{
         width: 10px;
         height: 10px;
-        fill: #535353;
+        fill: $grey-color;
         display: flex;
         justify-content: center;
         align-items: center;
     }
     &__page{
-        color: #535353;
+        color: $grey-color;
         font-size: 16px;
         font-weight: 400;
         line-height: 30px; 
     }
     &__active-page{
-        color: #FFBC57;
+        color: $yellow-color;
     }
 
     &__title{
-        color: #2B2929;
+        color: $dark-color;
         font-size: 30px;
         font-weight: 600;
         line-height: 1.33;
@@ -53,7 +53,7 @@
     &__svg-container{
         width: 50px;
         height: 50px;
-        background-color: #FFBC57;
+        background-color: $yellow-color;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -64,14 +64,14 @@
         font-size: 17px;
         font-weight: 400;
         line-height: 24px;
-        color: #B1B1B1;
+        color: $grey-light-color;
         margin-bottom: 5px;
     }
     &__link{
         font-size: 18px;
         font-weight: 600;
         line-height: 28px;
-        color: #2B2929;
+        color: $dark-color;
     }
     &__sn{
         display: flex;
@@ -86,7 +86,7 @@
         font-size: 18px;
         font-weight: 600;
         line-height: 28px;
-        color: #2B2929;
+        color: $dark-color;
         font-style: normal;
         max-width: 235px;
     }
