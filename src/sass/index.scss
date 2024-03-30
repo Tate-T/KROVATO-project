@@ -1,4 +1,13 @@
+@import './utils/vars.scss';
 @import './common/base.scss';
 @import './common/reset.scss';
-
-// @import './utils/varlibers.scss';
+@import './components/header.scss';
+@import './main/hero.scss';
+@import './main/categories.scss';
+@import './main/products.scss';
+@import './main/promotions.scss';
+@import './components/last-reviews.scss';
+@import './main/articles.scss';
+@import './main/about.scss';
+@import './components/options.scss';
+@import './components/footer.scss';
