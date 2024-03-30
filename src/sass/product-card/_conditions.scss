@@ -1,0 +1,48 @@
+.conditions{
+    background-color: $light-color;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    &__list{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    &__item{
+        display: flex;
+        gap: 20px;
+    }
+    &__svg{
+        width: 80px;
+        height: 80px;
+        flex-shrink: 0;
+    }
+    &__title{
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 28px;
+        color: $dark-color;
+        margin-bottom: 11px;
+    }
+    &__text{
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 22px;
+        color: $grey-color;
+        margin-bottom: 11px;
+    }
+    &__link{
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 22px;
+        color: $yellow-color;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+    &__arrow{
+        width: 24px;
+        height: 24px;
+        fill: $yellow-color;
+    }
+}
