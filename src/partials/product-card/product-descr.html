@@ -2,6 +2,10 @@
     <div class="container">
         <h2 class="product-description__title">Опис товару</h2>
         <p class="product-description__text">Модель МК-1 – це ліжко від українського виробника, компанії MegaMebli. Вона виготовляється з ДСП та оснащена м'якою спинкою. Також може бути виготовлена з дерев'яного щита (сосни). Ламелі виконані з бука. Подібна конструкція характеризується надійністю та привабливим зовнішнім виглядом.</p>
-        <img src="#" alt="colors" class="product-description__img">
+        <picture>
+            <source srcset="../../images/desktop/palette@1x.webp 1x, ../../images/desktop/palette@2x.webp 2x" media="(min-width: 768px)">
+            <source srcset="../../images/mobile/palette@1x.webp 1x, ../../images/mobile/palette@2x.webp 2x" media="(min-width: 480px)">
+            <img class="product-description__img" src="../../images/mobile/palette@1x.webp" alt="materials">
+        </picture>
     </div>
 </section>
