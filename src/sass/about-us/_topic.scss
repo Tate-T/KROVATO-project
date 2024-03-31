@@ -1,6 +1,14 @@
 .topic {
   padding: 40px 0 248px;
-  background: #f8f8f8;
+  background: url(../images/mobile/about-bg@1x.webp) bottom / contain no-repeat
+    #f8f8f8;
+
+  @media (min-display-pixe-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background: url(../images/mobile/about-bg@2x.webp) bottom / contain
+      no-repeat #f8f8f8;
+  }
 
   &__title {
     color: #2b2929;
