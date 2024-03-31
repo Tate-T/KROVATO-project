@@ -1,0 +1,22 @@
+.questions {
+    background-color: $light-color;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__title {
+        display: flex;
+        justify-content: center;
+        color: $dark-color;
+        text-align: center;
+        font-size: 40px;
+        font-weight: 600;
+        line-height: 1.2;
+    }
+
+
+}
