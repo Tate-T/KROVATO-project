@@ -1,0 +1,288 @@
+.last-reviews {
+  padding: 40px 0;
+  background-color: #e9e9e9;
+
+  &__title {
+    color: #2b2929;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  &__flex {
+    margin: 40px 0;
+
+    display: flex;
+    gap: 30px;
+  }
+
+  &__bg {
+    width: 80px;
+    height: 80px;
+    padding: 24px 11px 24px;
+    border-radius: 50%;
+
+    background-color: #fff;
+  }
+
+  &__icon {
+    width: 57px;
+    height: 32px;
+
+    fill: #ffbc57;
+  }
+
+  &__subtitle {
+    margin: 0 0 10px;
+
+    color: #2b2929;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  &__opinion {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__rating {
+    color: #f90;
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.26;
+  }
+
+  &__stars {
+    display: flex;
+  }
+
+  &__starlet {
+    width: 24px;
+    height: 24px;
+
+    &--main {
+      fill: #ff9900;
+    }
+
+    &--user {
+      fill: #ffbc57;
+    }
+  }
+
+  &__text {
+    color: #535353;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.69;
+  }
+
+  &__btn {
+    width: 210px;
+    height: 50px;
+    padding: 13px 13.5px;
+    border-radius: 8px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+    background-color: #ffbc57;
+
+    transition: background-color 250ms ease-in;
+
+    &:hover,
+    &:focus {
+      background-color: #f3ab3f;
+    }
+  }
+
+  &__span {
+    color: #fff;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.26;
+
+    @media screen and (min-width: 413px) {
+      font-size: 16px;
+    }
+  }
+
+  &__chat {
+    width: 24px;
+    height: 24px;
+
+    &--first {
+      fill: #fff;
+    }
+
+    &--second {
+      fill: #535353;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  &__link > span {
+    color: #535353;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.26;
+
+    @media screen and (min-width: 413px) {
+      font-size: 16px;
+    }
+  }
+
+  &__buttons {
+    margin: 0 0 40px;
+
+    display: flex;
+    gap: 30px;
+  }
+
+  &__list {
+    margin: 0 0 30px;
+  }
+
+  &__item {
+    position: relative;
+
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #e3e2e2;
+
+    background-color: #fff;
+    box-shadow: -3px 4px 15px 0px rgba(0, 0, 0, 0.06);
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 100px;
+      right: 20px;
+
+      display: block;
+      width: 6px;
+      height: 51px;
+
+      background-color: #b1b1b1;
+    }
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 151px;
+      right: 20px;
+
+      display: block;
+      width: 6px;
+      height: 99px;
+
+      background-color: #f8f8f8;
+    }
+
+    &:not(:first-child) {
+      display: none;
+    }
+  }
+
+  &__flex2 {
+    display: flex;
+  }
+
+  &__case {
+    width: 50px;
+    height: 50px;
+    padding: 14px;
+    border-radius: 50%;
+    border: 1px solid #ffbc57;
+  }
+
+  &__profile {
+    width: 22px;
+    height: 22px;
+
+    fill: #535353;
+  }
+
+  &__box2 {
+    margin: 0 15% 0 5%;
+
+    @media screen and (min-width: 480px) {
+      margin: 0 96px 0 30px;
+    }
+  }
+
+  &__name {
+    color: #2b2929;
+    font-size: 17px;
+    line-height: 1.41;
+  }
+
+  &__time {
+    color: #535353;
+    text-align: right;
+    font-size: 17px;
+    line-height: 1.41;
+  }
+
+  &__review {
+    max-width: 354px;
+    margin: 30px 0;
+
+    color: #535353;
+    font-size: 16px;
+    line-height: 1.87;
+  }
+
+  &__block {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__img {
+    width: 50px;
+    height: 50px;
+  }
+
+  &__product {
+    color: #535353;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  &__circles {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  &__circle {
+    &:nth-child(3) > .last-reviews__round {
+      border: 2px solid #fff;
+
+      background-color: #ffbc57;
+    }
+  }
+
+  &__round {
+    width: 15px;
+    height: 15px;
+    border: 2px solid #b1b1b1;
+    border-radius: 50%;
+
+    background-color: #fff;
+  }
+}
