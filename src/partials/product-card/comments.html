@@ -1,5 +1,5 @@
 <section class="comments">
-    <div class="container">
+    <div class="container comments__container">
         <h2 class="comments__title">Відгуки про Ліжко двоспальне МК-1 з підйомним механізмом</h2>
         <div class="comments__summ-box">
             <p class="comments__summ-text">Всього відгуків: 93</p>
@@ -87,15 +87,17 @@
                         </button>
                     </li>
                     <li class="comments__review">
-                        <svg class="comments__review-svg">
-                            <use href="../../images/symbol-defs.svg#icon-like"></use>
-                        </svg>
-                        Корисний відгук: 24
+                        <button class="comments__review-btn" type="button">
+                            <svg class="comments__review-svg">
+                                <use href="../../images/symbol-defs.svg#icon-like"></use>
+                            </svg>
+                            Корисний відгук: 24
+                        </button>
                     </li>
                 </ul>
                 <ul class="comments__answers">
-                    <li class="comment__answer">
-                        <div class="comment__answer-user">
+                    <li class="comments__answer">
+                        <div class="comments__answer-user">
                             <svg class="comments__user-svg">
                                 <use href="../../images/symbol-defs.svg#icon-avatar"></use>
                             </svg>
@@ -110,9 +112,9 @@
                             Згоден з вами! Довго шукав зручне та недороге ліжко в спальню. Ліжко+матрац виходила дуже пристойна сума. Тут знайшов ліжко разом із матрацом за дуже привабливою ціною. Передзвонив, уточнив, дій.
                         </p>
                     </li>
-                    <li class="comment__answer">
-                        <div class="comment__answer-user">
-                            <svg class="comments__user-svg">
+                    <li class="comments__answer">
+                        <div class="comments__answer-user">
+                            <svg class="comments__admin-svg">
                                 <use href="../../images/symbol-defs.svg#icon-avatar-admin"></use>
                             </svg>
                             <p class="comments__user-name">KROVATO</p>
@@ -186,18 +188,21 @@
                         Корисний відгук: 24
                     </li>
                 </ul>
-                <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                 <div class="comments__response">
-                    <svg class="comments__response-svg">
-                        <use href="../../images/symbol-defs.svg#icon-forward"></use>
-                    </svg>
-                    <p class="comments__response-text">Відповідь для Іван Стедниця</p>
+                    <div class="comments__response-box">
+                        <svg class="comments__response-svg">
+                            <use href="../../images/symbol-defs.svg#icon-forward"></use>
+                        </svg>
+                        <p class="comments__response-text">Відповідь для Іван Стедниця</p>
+                    </div>
                     <form class="comments__response-form">
                         <input type="text" class="comments__response-input" placeholder="Ваше ім'я прізвище">
                         <input type="text" class="comments__response-input" placeholder="E-mail">
                         <input type="text" class="comments__response-input" placeholder="Відгук">
-                        <button class="comments__response-submit" type="submit">Відправити</button>
-                        <button class="comments__response-decline" type="reset">Відмінити</button>
+                        <div class="comments__response-btn-box">
+                            <button class="comments__response-submit" type="submit">Відправити</button>
+                            <button class="comments__response-decline" type="reset">Відмінити</button>
+                        </div>
                     </form>
                 </div>
             </li>
@@ -379,5 +384,11 @@
                 </ul>
             </li>
         </ul>
+        <button class="comments__show-more" type="button">
+            <svg class="comments__show-more-svg">
+                <use href="../../images/symbol-defs.svg#icon-reload"></use>
+            </svg>
+            Показати ще відгуки
+        </button>
     </div>
 </section>

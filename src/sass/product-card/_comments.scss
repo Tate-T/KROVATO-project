@@ -1,0 +1,225 @@
+.comments{
+    background-color: $light-color;
+
+    &__container{
+        background-color: #FFF;
+        border-radius: 8px;
+        padding-bottom: 30px;
+        padding-top: 30px;
+    }
+    &__title{
+        font-size: 30px;
+        font-weight: 600;
+        line-height: 40px;
+        color: $dark-color;
+        margin-bottom: 10px;
+    }
+    &__item{
+        padding-top: 30px;
+        padding-bottom: 30px;
+        border-top: solid $light-color;
+    }
+    &__item:first-child{
+        border: none;
+    }
+    &__summ-box{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+    &__summ-text{
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 24px;
+        color: #6A6A6A;
+        margin-right: 31px;
+    }
+    &__stars{
+        display: flex;
+    }
+    &__star-svg{
+        width: 24px;
+        height: 24px;
+        fill: $yellow-color;
+    }
+
+    &__user-box{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 10px 20px;
+        margin-bottom: 20px;
+    }
+    &__user-svg{
+        width: 50px;
+        height: 50px;
+        flex-shrink: 0;
+    }
+    &__user-name{
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 24px;
+        color: $dark-color;
+        flex-shrink: 0;
+    }
+    &__text{
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 30px;
+        color: $dark-color;
+        margin-bottom: 20px;
+    }
+    &__date{
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 24px;
+        color: $grey-color;
+    }
+    &__reviews{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    &__review-btn{
+        background-color: transparent;
+        border: none;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+    &__review-number{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $yellow-color;
+        width: 21px;
+        height: 21px;
+        color: #FFF;
+        font-size: 13px;
+        font-weight: 700;
+        border-radius: 50%;
+    }
+    &__review-svg{
+        width: 24px;
+        height: 24px;
+        fill: $yellow-color;
+    }
+    &__answers{
+        border-top: solid $yellow-color;
+        margin-top: 30px;
+        padding-top: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    &__answer-user{
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+    }
+    &__answer-svg{
+        width: 24px;
+        height: 24px;
+        fill: $yellow-color;
+        flex-shrink: 0;
+    }
+    &__admin-svg{
+        width: 50px;
+        height: 50px;
+        fill: #FFF;
+        stroke: $yellow-color;
+    }
+    &__answer-name{
+        font-size: 19px;
+        font-weight: 600;
+        line-height: 24px;
+        color: $dark-color;
+    }
+    &__answer-text{
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 30px;
+        color: $dark-color;
+    }
+    &__response{
+        background-color: $light-color;
+        padding: 30px 36px;
+        margin-top: 30px;
+        border-radius: 8px;
+    }
+    &__response-box{
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 30px;
+    }
+    &__response-svg{
+        width: 32px;
+        height: 32px;
+        fill: $yellow-color;
+    }
+    &__response-form{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    &__response-input{
+        padding: 10px 20px;
+        border-radius: 8px;
+        border: solid #D1D5D5;
+        background: #FFF;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 30px;
+        color: $grey-color;
+    }
+    &__response-btn-box{
+        display: flex;
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+    &__response-submit{
+        padding: 8px 20px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;
+        background-color: $yellow-color;
+        font-size: 19px;
+        font-weight: 600;
+        line-height: 24px;
+        color: #FFF;
+    }
+    &__response-decline{
+        padding: 8px 20px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;
+        border: 0.5px solid $yellow-color;
+        background-color: #FFF;
+        font-size: 19px;
+        font-weight: 600;
+        line-height: 24px;
+        color: $yellow-color;
+    }
+    &__show-more{
+        display: flex;
+        padding: 8px 30px;
+        gap: 15px;
+        border-radius: 8px;
+        background-color: $yellow-color;
+        font-size: 19px;
+        font-weight: 600;
+        line-height: 24px;
+        color: #FFF;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &__show-more-svg{
+        width: 24px;
+        height: 24px;
+        fill: #FFF;
+    }
+}
