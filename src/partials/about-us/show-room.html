@@ -14,9 +14,29 @@
     <button class="show-room__btn">
       <span class="show-room__span">Відкрити контакти</span>
       <svg class="show-room__icon">
-        <use href="#"></use>
+        <use href="../images/symbol-defs.svg#icon-upper-arrow"></use>
       </svg>
     </button>
-    <img src="#" alt="Меблі" class="show-room__img" />
+    <picture>
+      <source
+        srcset="
+          ./images/mobile/show-room@1x.webp 1x,
+          ./images/mobile/show-room@2x.webp 2x
+        "
+        media="(min-width: 320px)"
+      />
+      <source
+        srcset="
+          ./images/desktop/show-room@1x.webp 1x,
+          ./images/desktop/show-room@2x.webp 2x
+        "
+        media="(min-width: 1290px)"
+      />
+      <img
+        src="./images/desktop/show-room@1x.webp"
+        alt="Меблі"
+        class="show-room__img"
+      />
+    </picture>
   </div>
 </section>
