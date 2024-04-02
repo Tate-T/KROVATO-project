@@ -10,7 +10,7 @@
     &__title{
         font-size: 30px;
         font-weight: 600;
-        line-height: 40px;
+        line-height: 1.33;
         color: $dark-color;
         margin-bottom: 10px;
     }
@@ -30,8 +30,7 @@
     }
     &__summ-text{
         font-size: 17px;
-        font-weight: 400;
-        line-height: 24px;
+        line-height: 1.4;
         color: #6A6A6A;
         margin-right: 31px;
     }
@@ -58,22 +57,19 @@
     }
     &__user-name{
         font-size: 17px;
-        font-weight: 400;
-        line-height: 24px;
+        line-height: 1.4;
         color: $dark-color;
         flex-shrink: 0;
     }
     &__text{
         font-size: 16px;
-        font-weight: 400;
-        line-height: 30px;
+        line-height: 1.875;
         color: $dark-color;
         margin-bottom: 20px;
     }
     &__date{
         font-size: 17px;
-        font-weight: 400;
-        line-height: 24px;
+        line-height: 1.4;
         color: $grey-color;
     }
     &__reviews{
@@ -135,13 +131,12 @@
     &__answer-name{
         font-size: 19px;
         font-weight: 600;
-        line-height: 24px;
+        line-height: 1.26;
         color: $dark-color;
     }
     &__answer-text{
         font-size: 16px;
-        font-weight: 400;
-        line-height: 30px;
+        line-height: 1.875;
         color: $dark-color;
     }
     &__response{
@@ -172,8 +167,7 @@
         border: solid #D1D5D5;
         background: #FFF;
         font-size: 16px;
-        font-weight: 400;
-        line-height: 30px;
+        line-height: 1.875;
         color: $grey-color;
     }
     &__response-btn-box{
@@ -189,7 +183,7 @@
         background-color: $yellow-color;
         font-size: 19px;
         font-weight: 600;
-        line-height: 24px;
+        line-height: 1.26;
         color: #FFF;
     }
     &__response-decline{
@@ -201,7 +195,7 @@
         background-color: #FFF;
         font-size: 19px;
         font-weight: 600;
-        line-height: 24px;
+        line-height: 1.26;
         color: $yellow-color;
     }
     &__show-more{
@@ -212,7 +206,7 @@
         background-color: $yellow-color;
         font-size: 19px;
         font-weight: 600;
-        line-height: 24px;
+        line-height: 1.26;
         color: #FFF;
         margin-left: auto;
         margin-right: auto;
