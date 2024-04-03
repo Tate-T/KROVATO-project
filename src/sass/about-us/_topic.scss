@@ -1,17 +1,17 @@
 .topic {
   padding: 40px 0 248px;
   background: url(../images/mobile/about-bg@1x.webp) bottom / contain no-repeat
-    #f8f8f8;
+    $light-color;
 
   @media (min-display-pixe-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     background: url(../images/mobile/about-bg@2x.webp) bottom / contain
-      no-repeat #f8f8f8;
+      no-repeat $light-color;
   }
 
   &__title {
-    color: #2b2929;
+    color: $dark-color;
     text-align: center;
     font-size: 30px;
     font-weight: 600;
@@ -21,7 +21,7 @@
   &__subtitle {
     margin: 30px 0 20px;
 
-    color: #2b2929;
+    color: $dark-color;
     text-align: center;
     font-size: 20px;
     font-weight: 600;
@@ -29,7 +29,7 @@
   }
 
   &__text {
-    color: #2b2929;
+    color: $dark-color;
     text-align: center;
     font-size: 16px;
     line-height: 1.87;

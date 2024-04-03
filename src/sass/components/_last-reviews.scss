@@ -3,7 +3,7 @@
   background-color: #e9e9e9;
 
   &__title {
-    color: #2b2929;
+    color: $dark-color;
     font-size: 40px;
     font-weight: 600;
     line-height: 1.2;
@@ -29,13 +29,13 @@
     width: 57px;
     height: 32px;
 
-    fill: #ffbc57;
+    fill: $yellow-color;
   }
 
   &__subtitle {
     margin: 0 0 10px;
 
-    color: #2b2929;
+    color: $dark-color;
     font-size: 20px;
     font-weight: 600;
     line-height: 1.4;
@@ -67,12 +67,12 @@
     }
 
     &--user {
-      fill: #ffbc57;
+      fill: $yellow-color;
     }
   }
 
   &__text {
-    color: #535353;
+    color: $grey-color;
     font-size: 13px;
     font-weight: 300;
     line-height: 1.69;
@@ -89,7 +89,7 @@
     align-items: center;
     gap: 15px;
 
-    background-color: #ffbc57;
+    background-color: $yellow-color;
 
     transition: background-color 250ms ease-in;
 
@@ -120,7 +120,7 @@
     }
 
     &--second {
-      fill: #535353;
+      fill: $grey-color;
     }
   }
 
@@ -131,7 +131,7 @@
   }
 
   &__link > span {
-    color: #535353;
+    color: $grey-color;
     text-align: center;
     font-size: 13px;
     font-weight: 600;
@@ -174,7 +174,7 @@
       width: 6px;
       height: 51px;
 
-      background-color: #b1b1b1;
+      background-color: $grey-light-color;
     }
 
     &::after {
@@ -188,7 +188,7 @@
       width: 6px;
       height: 99px;
 
-      background-color: #f8f8f8;
+      background-color: $light-color;
     }
 
     &:not(:first-child) {
@@ -205,14 +205,14 @@
     height: 50px;
     padding: 14px;
     border-radius: 50%;
-    border: 1px solid #ffbc57;
+    border: 1px solid $yellow-color;
   }
 
   &__profile {
     width: 22px;
     height: 22px;
 
-    fill: #535353;
+    fill: $grey-color;
   }
 
   &__box2 {
@@ -224,13 +224,13 @@
   }
 
   &__name {
-    color: #2b2929;
+    color: $dark-color;
     font-size: 17px;
     line-height: 1.41;
   }
 
   &__time {
-    color: #535353;
+    color: $grey-color;
     text-align: right;
     font-size: 17px;
     line-height: 1.41;
@@ -240,7 +240,7 @@
     max-width: 95%;
     margin: 30px 0;
 
-    color: #535353;
+    color: $grey-color;
     font-size: 16px;
     line-height: 1.87;
 
@@ -260,7 +260,7 @@
   }
 
   &__product {
-    color: #535353;
+    color: $grey-color;
     font-size: 20px;
     font-weight: 600;
     line-height: 1.4;
@@ -276,14 +276,14 @@
     &:nth-child(3) > .last-reviews__round {
       border: 2px solid #fff;
 
-      background-color: #ffbc57;
+      background-color: $yellow-color;
     }
   }
 
   &__round {
     width: 15px;
     height: 15px;
-    border: 2px solid #b1b1b1;
+    border: 2px solid $grey-light-color;
     border-radius: 50%;
 
     background-color: #fff;
