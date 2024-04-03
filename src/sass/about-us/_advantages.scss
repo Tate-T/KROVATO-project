@@ -1,11 +1,11 @@
 .advantages {
   padding: 60px 0;
-  background: #f8f8f8;
+  background: $light-color;
 
   &__title {
     margin: 0 0 40px;
 
-    color: #2b2929;
+    color: $dark-color;
     text-align: center;
     font-size: 40px;
     font-weight: 600;
@@ -32,7 +32,7 @@
   &__subtitle {
     margin: 20px 0;
 
-    color: #2b2929;
+    color: $dark-color;
     text-align: center;
     font-size: 26px;
     font-weight: 600;
@@ -40,7 +40,7 @@
   }
 
   &__text {
-    color: #2b2929;
+    color: $dark-color;
     text-align: center;
     font-size: 16px;
     line-height: 1.87;
