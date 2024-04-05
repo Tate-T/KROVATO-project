@@ -13,7 +13,7 @@
   }
 
   &__title {
-    color: #2b2929;
+    color: $dark-color;
     font-size: 30px;
     font-weight: 600;
     line-height: 1.33;
@@ -25,7 +25,7 @@
   }
 
   &__descr {
-    color: #2b2929;
+    color: $dark-color;
     font-size: 16px;
     line-height: 1.87;
   }
@@ -33,7 +33,7 @@
   &__subtitle {
     margin: 40px 0 20px;
 
-    color: #2b2929;
+    color: $dark-color;
     font-size: 20px;
     font-weight: 600;
     line-height: 1.4;
@@ -63,7 +63,7 @@
   &__paragraph {
     width: 80%;
 
-    color: #2b2929;
+    color: $dark-color;
     font-size: 16px;
     line-height: 1.87;
 
@@ -75,7 +75,7 @@
   &__text {
     margin: 40px 0;
 
-    color: #2b2929;
+    color: $dark-color;
     font-size: 16px;
     line-height: 1.87;
   }
@@ -106,7 +106,7 @@
     align-items: center;
     gap: 15px;
 
-    background-color: #ffbc57;
+    background-color: $yellow-color;
 
     transition: background-color 250ms ease-in;
 
