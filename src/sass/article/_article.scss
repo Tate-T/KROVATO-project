@@ -1,0 +1,141 @@
+.article {
+  padding: 40px 0 60px;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    & * {
+      max-width: 410px;
+    }
+  }
+
+  &__title {
+    color: $dark-color;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.33;
+  }
+
+  &__img {
+    max-width: 410px;
+    margin: 30px 0 40px;
+  }
+
+  &__descr {
+    color: $dark-color;
+    font-size: 16px;
+    line-height: 1.87;
+  }
+
+  &__subtitle {
+    margin: 40px 0 20px;
+
+    color: $dark-color;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__item {
+    display: flex;
+    gap: 15px;
+
+    &::before {
+      content: "";
+
+      display: block;
+      width: 32px;
+      height: 32px;
+
+      background-image: url(../images/check.svg);
+    }
+  }
+
+  &__paragraph {
+    width: 80%;
+
+    color: $dark-color;
+    font-size: 16px;
+    line-height: 1.87;
+
+    @media screen and (min-width: 480px) {
+      max-width: 363px;
+    }
+  }
+
+  &__text {
+    margin: 40px 0;
+
+    color: $dark-color;
+    font-size: 16px;
+    line-height: 1.87;
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+
+  &__button {
+    &:nth-child(1) > .article__btn {
+      padding: 13px 51px;
+    }
+
+    &:nth-child(2) > .article__btn {
+      padding: 13px 60px;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    border-radius: 8px;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    background-color: $yellow-color;
+
+    transition: background-color 250ms ease-in;
+
+    &:hover,
+    &:focus {
+      background-color: #f3ab3f;
+    }
+
+    @media screen and (min-width: 480px) {
+      max-width: 402px;
+    }
+
+    & > span {
+      color: #fff;
+      text-align: center;
+      font-size: 19px;
+      font-weight: 600;
+      line-height: 1.26;
+    }
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+
+    fill: #fff;
+
+    &--right {
+      transform: rotate(180deg);
+    }
+  }
+}
