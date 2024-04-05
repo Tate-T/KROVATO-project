@@ -3,35 +3,73 @@
     padding-top: 60px;
     padding-bottom: 60px;
 
+    &__container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 8px;
+        max-width: 1290px;
+
+        @media screen and (min-width: 1290px){
+            background-image: url(../../images/desktop/women@1x.webp);
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            flex-direction: row;
+            justify-content: space-between;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+    }
+    &__box{
+        @media screen and (min-width: 1290px){
+            width: 470px;
+        }
+    }
+
     &__title{
         font-size: 30px;
         font-weight: 900;
-        line-height: 40px;
+        line-height: 1.33;
         color: $dark-color;
         text-align: center;
         margin-bottom: 10px;
+
+        @media screen and (min-width: 1290px) {
+            text-align: start;
+        }
     }
     &__text{
         font-size: 17px;
         font-weight: 900;
-        line-height: 23px;
+        line-height: 1.35;
         color: $dark-color;
         text-align: center;
         margin-bottom: 10px;
+        max-width: 470px;
+
+        @media screen and (min-width: 1290px) {
+            text-align: start;
+        }
     }
     &__invitation{
         font-size: 20px;
         font-weight: 900;
-        line-height: 30px;
+        line-height: 1.5;
         color: $yellow-color;
         text-align: center;
         margin-bottom: 40px;
+
+        @media screen and (min-width: 1290px) {
+            text-align: start;
+        }
     }
     &__form{
         max-width: 410px;
         display: flex;
         flex-direction: column;
         gap: 10px;
+        width: 100%;
     }
     &__input{
         padding: 10px 20px;
@@ -41,7 +79,7 @@
 
         font-size: 14px;
         font-weight: 600;
-        line-height: 30px;
+        line-height: 2.14;
         color: $grey-color;
     }
     &__comm{
@@ -55,7 +93,11 @@
 
         font-size: 15px;
         font-weight: 600;
-        line-height: 24px;
+        line-height: 1.6;
         color: #FFF;
+
+        @media screen and (min-width: 1290px) {
+            max-width: 240px;
+        }
     }
  }
