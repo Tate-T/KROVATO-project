@@ -1,0 +1,318 @@
+.product{
+    padding-top: 20px;
+    background-color: $light-color;
+
+    &__container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+    &__location{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+    &__location-svg{
+        width: 8px;
+        height: 8px;
+    }
+    &__location-pages{
+        font-size: 16px;
+        line-height: 1.875;
+        color: $grey-color;
+    }
+    &__location-active{
+        color: $yellow-color;
+    }
+
+    &__title-box{
+        margin-bottom: 20px;
+    }
+    &__name{
+        font-size: 30px;
+        font-weight: 600;
+        line-height: 1.33;
+        color: $dark-color;
+        margin-bottom: 20px;
+    }
+    &__info{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    &__info-item{
+        display: flex;
+        align-items: center;
+    }
+    &__check-svg{
+        width: 24px;
+        height: 24px;
+        fill: #82B09D;
+        margin-right: 5px;
+    }
+    &__stars{
+        display: flex;
+        margin-right: 10px;
+    }
+    &__star-svg{
+        width: 24px;
+        height: 24px;
+        fill: $yellow-color;
+    }
+    &__review-svg{
+        width: 24px;
+        height: 24px;
+        fill: $grey-color;
+        margin-right: 5px;
+    }
+    &__reviwe-text, &__model{
+        font-size: 17px;
+        line-height: 1.4; 
+        color: $grey-color;
+    }
+    &__img{
+        margin-bottom: 20px;
+        width: 100%;
+        max-width: 290px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &__img-btn{
+        display: none;
+
+        @media screen and (min-width: 1200px) {
+            display: block;
+        }
+    }
+    &__images{
+        display: none;
+
+        @media screen and (min-width: 1200px) {
+            display: block;
+        }
+    }
+    &__btn-points{
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        padding-bottom: 30px;
+    }
+    &__point-svg{
+        width: 15px;
+        height: 15px;
+        fill: white;
+    }
+
+    &__card{
+        background-color: #FFF;
+        border-radius: 8px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    &__prise-box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 30px;
+        border-bottom: solid $light-color;
+    }
+    &__prise{
+        font-size: 30px;
+        font-weight: 600;
+        line-height: 40px;
+        color: $dark-color;
+    }
+    &__old-prise{
+        color: #E03D3D;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 1.4;
+        text-decoration-line: line-through;
+        margin-bottom: 15px;
+    }
+    &__like-box{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+    &__like-btn{
+        background-color: transparent;
+    }
+    &__like-svg{
+        width: 50px;
+        height: 50px;
+    }
+    &__like-text{
+        font-size: 19px;
+        font-weight: 600;
+        line-height: 1.26; 
+        color: $grey-color;
+    }
+    &__properties-list{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 30px;
+        padding-top: 30px;
+    }
+    &__properties-svg{
+        width: 24px;
+        height: 24px;
+        fill: $grey-light-color;
+    }
+    &__properties-title-box{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        margin-bottom: 10px;
+    }
+    &__properties-text{
+        font-size: 17px;
+        line-height: 1.4;
+        color: $dark-color;
+    }
+    &__select{
+        padding: 10px 15px;
+        border-radius: 8px;
+        background-color: $light-color;
+        width: 100%;
+    }
+    &__materials{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+    &__material{
+        position: relative;
+    }
+    &__material-svg{
+        position: absolute;
+        top: 25%;
+        left: 25%;
+        width: 35px;
+        height: 35px;
+        fill: $yellow-color;
+    }
+    &__material-img{
+        width: 70px;
+        height: 70px;
+    }
+    &__show-all{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        font-size: 17px;
+        line-height: 1.4; 
+        color: $yellow-color;
+        margin-bottom: 30px;
+    }
+    &__show-all-svg{
+        width: 24px;
+        height: 24px;
+        fill: $yellow-color;
+    }
+    &__btn-box{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    &__amount{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        border-radius: 8px;
+        border: solid $grey-light-color;
+        background-color: $light-color;
+    }
+    &__amount-btn{
+        background-color: transparent;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 1.4;
+        color: $dark-color;
+    }
+    &__amount-text{
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 1.4;
+        color: $dark-color;
+    }
+    &__buy{
+        padding: 8px 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;
+        background-color: $yellow-color;
+        font-size: 19px;
+        font-weight: 600;
+        line-height: 1.26;
+        color: #FFF;
+    }
+    &__buy-svg{
+        width: 40px;
+        height: 40px;
+    }
+    &__credit{
+        display: flex;
+        padding: 8px 30px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border-radius: 8px;
+        background-color: transparent;
+        font-size: 19px;
+        font-weight: 600;
+        line-height: 1.26;
+        color: $dark-color;
+        border: solid $yellow-color;
+    }
+    &__credit-svg{
+        width: 24px;
+        height: 24px;
+        fill: $yellow-color;
+    }
+    &__buy-now{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+    &__phone{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 1.4;
+        color: $grey-light-color;
+    }
+    &__phone-svg{
+        width: 30px;
+        height: 30px;
+        fill: $grey-light-color;
+    }
+    &__buy-now-btn{
+        padding: 8px 30px;
+        background-color: transparent;
+        border-radius: 8px;
+        border: solid $grey-color;
+        font-size: 19px;
+        font-weight: 600;
+        line-height: 1.26;
+        color: $grey-color;
+    }
+}
