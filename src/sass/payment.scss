@@ -1,6 +1,9 @@
 @import './utils/vars.scss';
 @import './common/base.scss';
 @import './common/reset.scss';
+@import './payment/topic';
+@import './payment/kyiv-payment';
+@import './payment/payment-types';
 @import './components/questions2.scss';
 @import './components/options.scss';
 @import './components/footer.scss';
