@@ -7,10 +7,26 @@
         display: flex;
         flex-direction: column;
         gap: 20px;
+        margin-right: auto;
+        margin-left: auto;
+
+        @media screen and (min-width: 768px) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            max-width: 630px;
+            align-items: center;
+            gap: 30px;
+        }
+        @media screen and (min-width: 1290px) {
+            max-width: 100%;
+            gap: 20px;
+        }
+
     }
     &__item{
         display: flex;
         gap: 20px;
+        width: 300px;
     }
     &__svg{
         width: 80px;
