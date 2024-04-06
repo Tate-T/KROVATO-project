@@ -1,11 +1,11 @@
 .kyiv-payment {
   padding: 60px 0;
-  background-color: #f8f8f8;
+  background-color: $light-color;
 
   &__title {
     margin: 0 0 40px;
 
-    color: #2b2929;
+    color: $dark-color;
     text-align: center;
     font-size: 30px;
     font-weight: 600;
@@ -25,7 +25,7 @@
     padding: 25px;
     border-radius: 50%;
 
-    background-color: #ffbc57;
+    background-color: $yellow-color;
   }
 
   &__icon {
@@ -38,7 +38,7 @@
   &__subtitle {
     margin: 20px 0;
 
-    color: #2b2929;
+    color: $dark-color;
     text-align: center;
     font-size: 26px;
     font-weight: 600;
@@ -46,7 +46,7 @@
   }
 
   &__text {
-    color: var(--Theme-Dark, #2b2929);
+    color: var(--Theme-Dark, $dark-color);
     text-align: center;
 
     /* Base font - text */
