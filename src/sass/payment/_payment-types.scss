@@ -14,7 +14,7 @@
     border-radius: 50%;
     margin: 0 auto;
 
-    background-color: #ffbc57;
+    background-color: $yellow-color;
   }
 
   &__icon {
@@ -27,7 +27,7 @@
   &__title {
     margin: 20px 0 10px;
 
-    color: #2b2929;
+    color: $dark-color;
     text-align: center;
     font-size: 26px;
     font-weight: 600;
@@ -35,7 +35,7 @@
   }
 
   &__text {
-    color: #2b2929;
+    color: $dark-color;
     text-align: center;
     font-size: 16px;
     line-height: 1.87;
