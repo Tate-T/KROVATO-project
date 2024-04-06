@@ -1,22 +1,50 @@
 .footer{
-    background-color: #2B2929;
+    background-color: $dark-color;
     padding-top: 40px;
     padding-bottom: 20px;
     position: relative;
+
+
+    @media screen and (min-width: 1290px) {
+        padding-bottom: 102px;
+    }
 
     &__container{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+
+        @media screen and (min-width: 1290px) {
+            flex-direction: row;
+            align-items: start;
+            justify-content: start;
+        }
     }
     &__logo{
         width: 250px;
         height: 50px;
         margin-bottom: 40px;
+        flex-shrink: 0;
+
+        @media screen and (min-width: 1290px) {
+            margin-right: 70px;
+        }
     }
     &__info-box, &__categories-box, &__clients-box{
         position: relative;
+
+        @media screen and (min-width: 1290px) {
+            margin-right: 60px;
+            flex-shrink: 0;
+        }
+    }
+    &__clients-box{
+        margin-bottom: 40px;
+
+        @media screen and (min-width: 1290px) {
+            margin-bottom: 0;
+        }
     }
     &__title-box{
         display: flex;
@@ -28,6 +56,13 @@
         padding-bottom: 11px;
         margin-bottom: 5px;
         width: 100vw;
+
+        @media screen and (min-width: 1290px) {
+            width: auto;
+            background-color: transparent;
+            justify-content: start;
+            padding: 0;
+        }
     }
     &__title-svg{
         width: 10px;
@@ -36,24 +71,40 @@
         rotate: 90deg;
         position: absolute;
         top: 20px;
-        left: 66%;
+        left: 70%;
+
+        @media screen and (min-width: 1290px) {
+            display: none;
+        }
     }
     &__list{
         display: flex;
         flex-direction: column;
         gap: 20px;
         align-items: center;
+        justify-content: center;
         margin-bottom: 20px;
         margin-top: 15px;
 
         display: none;
+
+        @media screen and (min-width: 1290px) {
+            display: flex;
+            margin: 0;
+            flex-wrap: wrap;
+            align-items: start;
+        }
     }
     &__checkbox{
         position: absolute;
         top: 14.5px;
-        left: 66%;
+        left: 70%;
         opacity: 0;
         z-index: 2;
+
+        @media screen and (min-width: 1290px) {
+            display: none;
+        }
     }
     &__checkbox:checked ~ &__list{
         display: flex;
@@ -66,6 +117,10 @@
         font-weight: 600;
         line-height: 28px;
         color: #FFF;
+
+        @media screen and (min-width: 1290px) {
+            margin-bottom: 10px;
+        }
     }
     &__link{
         font-size: 17px;
@@ -73,11 +128,27 @@
         line-height: 24px;
         color: #FFF;
     }
-    &__clients-box{
-        margin-bottom: 40px;
-    }
     &__svg{
         display: none;
+
+        @media screen and (min-width: 1290px) {
+            display: block;
+            width: 20px;
+            height: 20px;
+            fill: $grey-light-color;
+        }
+    }
+    &__svg-box{
+        @media screen and (min-width: 1290px) {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            border: solid $grey-color;
+            flex-shrink: 0;
+        }
     }
     &__tel-box{
         margin-bottom: 30px;
@@ -94,10 +165,22 @@
         font-size: 20px;
         font-weight: 600;
         line-height: 28px;
-        color: #FFBC57;
+        color: $yellow-color;
     }
     &__location-box, &__time-box{
         margin-bottom: 30px;
+    }
+    &__tel-box, &__location-box, &__time-box{
+        @media screen and (min-width: 1290px) {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 32px;
+        }
+    }
+    &__time-box{
+        @media screen and (min-width: 1290px) {
+            margin-bottom: 0;
+        }
     }
     &__location, &__time{
         font-size: 20px;
@@ -106,6 +189,11 @@
         color: #FFF;
         max-width: 200px;
         text-align: center;
+        font-style: normal;
+
+        @media screen and (min-width: 1290px) {
+            text-align: start;
+        }
     }
     &__subtitle{
         font-size: 17px;
@@ -114,11 +202,30 @@
         color: #FFF;
         margin-bottom: 10px;
         text-align: center;
+
+        @media screen and (min-width: 1290px) {
+            text-align: start;
+        }
+    }
+    &__sn-box{
+        @media screen and (min-width: 1290px) {
+            display: none;
+        }
+    }
+    &__sn-box-desktop{
+        display: none;
+        @media screen and (min-width: 1290px) {
+            display: block;
+        }
     }
     &__sn-list{
         display: flex;
         justify-content: center;
         gap: 15px;
+
+        @media screen and (min-width: 1290px) {
+            justify-content: start;
+        }
     }
     &__sn-svg{
         width: 40px;
@@ -133,7 +240,7 @@
         margin-bottom: 60px;
     }
     &__card{
-        fill: #B1B1B1;
+        fill: $grey-light-color;
         width: 70px;
         height: 30px;
     }
@@ -145,7 +252,13 @@
         font-weight: 400;
         line-height: 22px; 
         text-align: center;
-        color: #B1B1B1;
+        color: $grey-light-color;
+
+        @media screen and (min-width: 1290px) {
+            position: absolute;
+            bottom: 20px;
+            left: 36%;
+        }
     }
     &__line{
         position: absolute;
@@ -153,6 +266,6 @@
         left: 0;
         right: 0;
         height: 1px;
-        background-color: #B1B1B1;
+        background-color: $grey-light-color;
     }
 }
