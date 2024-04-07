@@ -7,6 +7,10 @@
         flex-direction: column;
         align-items: center;
         position: relative;
+
+        @media screen and (min-width: 1290px) {
+            align-items: start;
+        }
     }
     &__location{
         display: flex;
@@ -14,6 +18,7 @@
         gap: 5px;
         align-items: center;
         margin-bottom: 30px;
+        align-self: flex-start;
     }
     &__location-svg{
         width: 8px;
@@ -27,9 +32,21 @@
     &__location-active{
         color: $yellow-color;
     }
-
+    &__box{
+        @media screen and (min-width: 1290px) {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0 30px;
+        }
+    }
     &__title-box{
         margin-bottom: 20px;
+
+        @media screen and (min-width: 1290px) {
+            position: absolute;
+            top: 65px;
+            right: 0;
+        }
     }
     &__name{
         font-size: 30px;
@@ -37,11 +54,22 @@
         line-height: 1.33;
         color: $dark-color;
         margin-bottom: 20px;
+
+        @media screen and (min-width: 1290px) {
+            font-size: 40px;
+            margin-bottom: 30px;
+            max-width: 630px;
+        }
     }
     &__info{
         display: flex;
         flex-direction: column;
         gap: 10px;
+
+        @media screen and (min-width: 1290px) {
+            flex-direction: row;
+            gap: 40px;
+        }
     }
     &__info-item{
         display: flex;
@@ -73,32 +101,76 @@
         line-height: 1.4; 
         color: $grey-color;
     }
+    &__img-box{
+        position: relative;
+        max-width: 630px;
+        margin-left: auto;
+        margin-right: auto;
+
+        @media screen and (min-width: 1290px) {
+            margin: 0;
+        }
+    }
     &__img{
         margin-bottom: 20px;
         width: 100%;
-        max-width: 290px;
+        max-width: 410px;
         margin-left: auto;
         margin-right: auto;
+
+        @media screen and (min-width: 1290px) {
+            max-width: 630px;
+        }
     }
     &__img-btn{
         display: none;
+        width: 60px;
+        height: 60px;
+        background-color: #FFF;
+        border-radius: 50%;
+        padding: 20px;
+        padding-right: 25px;
 
-        @media screen and (min-width: 1200px) {
+        @media screen and (min-width: 1290px) {
             display: block;
+            position: absolute;
+            top: 239px;
+            left: 20px;
         }
+    }
+    &__img-svg{
+        width: 20px;
+        height: 20px;
+        fill: $yellow-color;
+    }
+    &__right-btn{
+        padding-right: 20px;
+        padding-left: 25px;
+        right: 20px;
+        left: auto;
     }
     &__images{
         display: none;
 
-        @media screen and (min-width: 1200px) {
-            display: block;
+        @media screen and (min-width: 1290px) {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
         }
+    }
+    &__other-img{
+        width: 100px;
+        height: 100px;
     }
     &__btn-points{
         display: flex;
         gap: 10px;
         justify-content: center;
         padding-bottom: 30px;
+
+        @media screen and (min-width: 1290px) {
+            display: none;
+        }
     }
     &__point-svg{
         width: 15px;
@@ -113,6 +185,14 @@
         padding-bottom: 30px;
         padding-left: 20px;
         padding-right: 20px;
+
+        @media screen and (min-width: 1290px) {
+            max-width: 600px;
+            margin-top: 180px;
+        }
+        @media screen and (min-width: 1320px) {
+            max-width: 630px;
+        }
     }
     &__prise-box{
         display: flex;
@@ -120,12 +200,20 @@
         align-items: center;
         padding-bottom: 30px;
         border-bottom: solid $light-color;
+
+        @media screen and (min-width: 1290px) {
+            flex-direction: row;
+        }
     }
     &__prise{
         font-size: 30px;
         font-weight: 600;
-        line-height: 40px;
+        line-height: 1.33;
         color: $dark-color;
+
+        @media screen and (min-width: 1290px) {
+            margin-right: 20px;
+        }
     }
     &__old-prise{
         color: #E03D3D;
@@ -134,6 +222,13 @@
         line-height: 1.4;
         text-decoration-line: line-through;
         margin-bottom: 15px;
+
+        @media screen and (min-width: 1290px) {
+            margin-right: auto;
+            align-self: flex-end;
+            margin-bottom: 0;
+            align-self: center;
+        }
     }
     &__like-box{
         display: flex;
@@ -161,6 +256,10 @@
         flex-wrap: wrap;
         gap: 30px;
         padding-top: 30px;
+
+        @media screen and (min-width: 1290px) {
+            justify-content: start;
+        }
     }
     &__properties-svg{
         width: 24px;
@@ -183,6 +282,10 @@
         border-radius: 8px;
         background-color: $light-color;
         width: 100%;
+
+        @media screen and (min-width: 1290px) {
+            width: 280px;
+        }
     }
     &__materials{
         display: flex;
@@ -215,6 +318,10 @@
         line-height: 1.4; 
         color: $yellow-color;
         margin-bottom: 30px;
+
+        @media screen and (min-width: 1290px) {
+            justify-content: start;
+        }
     }
     &__show-all-svg{
         width: 24px;
@@ -225,6 +332,11 @@
         display: flex;
         flex-direction: column;
         gap: 20px;
+
+        @media screen and (min-width: 1290px) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
     }
     &__amount{
         display: flex;
@@ -234,6 +346,7 @@
         border-radius: 8px;
         border: solid $grey-light-color;
         background-color: $light-color;
+        min-width: 110px;
     }
     &__amount-btn{
         background-color: transparent;
@@ -290,6 +403,12 @@
         flex-wrap: wrap;
         gap: 20px;
         justify-content: center;
+
+        @media screen and (min-width: 1290px) {
+            margin-left: auto;
+            margin-right: 20px;
+            gap: 190px;
+        }
     }
     &__phone{
         display: flex;
