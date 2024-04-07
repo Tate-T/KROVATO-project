@@ -1,5 +1,13 @@
 .questions {
     background-color: $light-color;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    input {
+        position: absolute;
+        opacity: 0;
+        z-index: -1;
+    }
 
     &__container {
         display: flex;
@@ -8,18 +16,168 @@
         justify-content: center;
     }
 
+    &__checkbox:checked+&__paragraph {
+        display: flex;
+    }
+
+    &__item {
+        position: relative;
+        margin-bottom: 15px;
+        padding: 15px;
+
+        width: 410px;
+        gap: 10px;
+        border-radius: 8px;
+        background: #FFF;
+        box-shadow: -3px 4px 15px 0px rgba(0, 0, 0, 0.06);
+
+        @media screen and (min-width: 1290px) {
+            width: 1070px;
+        }
+    }
+
+    &__item:nth-child(1):hover, &__item:nth-child(1):focus, &__item:nth-child(1):active {
+        padding: 13px;
+    }
+
+    &__item:hover,
+    &__item:focus,
+    &__item:active {
+        border-radius: 8px;
+        border: 2px solid $yellow-color;
+        outline: none;
+        padding: 14px;
+    }
+
+    &__item:last-child {
+        margin-bottom: 0px;
+    }
+
+    &__item>input:checked~.questions__paragraph {
+        max-height: 500px;
+    }
+
     &__title {
         display: flex;
         justify-content: center;
-        color: $dark-color;
         text-align: center;
-        font-size: 40px;
+        margin-bottom: 40px;
+
+        font-size: 30px;
         font-weight: 600;
-        line-height: 1.2;
+        line-height: 1.33;
+        color: $dark-color;
+
+        @media screen and (min-width: 1290px) {
+            font-size: 40px;
+            line-height: 1.2;
+        }
     }
 
-    &__icon {
-        width: 40px;
-        height: 40px;
+    &__item:nth-child(1)>&__box>&__icon {
+        width: 43px;
+        height: 50px;
+    }
+
+    &__item:nth-child(2)>&__box>&__icon {
+        width: 43px;
+        height: 50px;
+    }
+
+    &__item:nth-child(3)>&__box>&__icon {
+        width: 43px;
+        height: 50px;
+    }
+
+    &__item:nth-child(4)>&__box>&__icon {
+        width: 43px;
+        height: 50px;
+    }
+
+    &__item:nth-child(5)>&__box>&__icon {
+        width: 43px;
+        height: 50px;
+    }
+
+    &__subtitle {
+        color: $dark-color;
+        font-size: 19px;
+        font-weight: 600;
+        line-height: 1.26;
+        width: 286px;
+
+        margin-left: 15px;
+
+        @media screen and (min-width: 1290px) {
+            width: 946px;
+            height: 24px;
+        }
+
+        &-button {
+            width: 24px;
+            height: 24px;
+            transform: rotate(90deg);
+            text-align: center;
+            transition: all 0.35s;
+
+            position: absolute;
+            top: 37px;
+            right: 15px;
+
+            margin-left: 15px;
+            margin-top: auto;
+            margin-bottom: auto;
+            margin-right: auto;
+        }
+    }
+
+    &__item:nth-child(2)>&__subtitle-button {
+        top: 45px;
+
+        @media screen and (min-width: 1290px) {
+            top: 37px;
+        }
+    }
+
+    &__item:nth-child(2)>input:checked+&__subtitle-button {
+        top: 35px;
+
+        @media screen and (min-width: 1290px) {
+            top: 27px;
+        }
+    }
+
+    input:checked+&__subtitle-button {
+        top: 27px;
+        transform: rotate(270deg);
+    }
+
+    &__paragraph {
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.35s;
+    }
+
+    &__text {
+        color: $dark-color;
+        font-size: 16px;
+        line-height: 1.87;
+
+        &-box {
+            margin-bottom: 24px;
+        }
+
+        &-box:first-child {
+            margin-top: 10px;
+        }
+
+        &-box:last-child {
+            margin-bottom: 0px;
+        }
+    }
+
+    &__box {
+        display: flex;
+        align-items: center;
     }
 }
