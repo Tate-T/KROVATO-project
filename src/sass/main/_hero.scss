@@ -1,0 +1,103 @@
+.hero {
+    background-color: $light-color;
+    padding-top: 40px;
+    padding-bottom: 60px;
+
+    &__container {
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
+
+    @media screen and (min-width: 1290px) {
+        padding-top: 30px;
+        padding-bottom: 70px;
+    }
+
+    &__icon1 {
+        width: 50px;
+        height: 20px;
+        fill: $yellow-color;
+    }
+
+    &__icon2 {
+        width: 70px;
+        height: 20px;
+        fill: $yellow-color;
+    }
+
+    &__button1 {
+        display: none;
+
+        @media screen and (min-width: 1290px) {
+            display: block;
+            width: 60px;
+            height: 60px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            background-color: #fff;
+            border-radius: 50%;
+        
+            position: absolute;
+            left: 21px;
+            top: 180px;
+        }
+    }
+
+    &__button2 {
+        display: none;
+
+        @media screen and (min-width: 1290px) {
+            display: block;
+            width: 60px;
+            height: 60px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            background-color: #fff;
+            border-radius: 50%;
+        
+            position: absolute;
+            right: 21px;
+            top: 180px;
+        }
+    }
+
+    &__slide {
+        width: 410px;
+        height: 600px;
+        background-image: url(../images/mobile/slide-1@1x.webp);
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+            background-image: url(../images/mobile/slide-1@2x.webp);
+        }
+
+        @media screen and (min-width: 1290px) {
+            width: 1290px;
+            height: 420px;
+            background-image: url(../images/desktop/slide-1@1x.webp);
+
+            @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+                background-image: url(../images/desktop/slide-1@2x.webp);
+            }
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        gap: 10px;
+
+        position: absolute;
+        bottom: 20px;
+    }
+
+    &__point {
+        width: 15px;
+        height: 15px;
+    }
+}
