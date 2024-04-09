@@ -1,0 +1,121 @@
+.kyiv {
+  padding-top: 50px;
+
+  &__title {
+    color: $dark-color;
+    text-align: center;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 133%;
+    margin-bottom: 40px;
+
+    @media screen and (min-width: 768px) {
+      font-size: 40px;
+      line-height: 120%;
+      text-align: left;
+      max-width: 520px;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+  &__icon {
+    width: 70px;
+    height: 70px;
+    fill: $yellow-color;
+    display: block;
+    flex-shrink: 0;
+  }
+  &__text {
+    color: $dark-color;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 140%;
+    max-width: 520px;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  &__element {
+    color: $dark-color;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 140%;
+    margin-bottom: 40px;
+    max-width: 520px;
+  }
+  @media screen and (min-width: 1200px) {
+    &__container {
+      display: flex;
+      gap: 30px;
+      position: relative;
+    }
+  }
+  &__container {
+      position: relative;
+    }
+  &__square {
+    position: absolute;
+    top: 80%;
+    right: 50%;
+    width: 250px;
+    height: 250px;
+    border-radius: 420px;
+    background-color: $yellow-color;
+    overflow: hidden;
+    padding: 57px 25px;
+    border: 3px solid $light-color;
+
+    @media screen and (min-width: 768px) {
+      top: 72%;
+      left: 0;
+      width: 420px;
+      height: 420px;
+      padding: 107px 40px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      top: 33%;
+      right: 20%;
+      width: 420px;
+      height: 420px;
+      padding: 107px 40px;
+    }
+
+    &-title {
+      color: #fff;
+      text-align: center;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 113%;
+      margin-bottom: 10px;
+      max-width: 200px;
+      @media screen and (min-width: 768px) {
+        font-size: 26px;
+        line-height: 131%;
+        margin-bottom: 20px;
+        max-width: max-content;
+      }
+    }
+    &-text {
+      color: #fff;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 129%;
+      max-width: 200px;
+
+      @media screen and (min-width: 768px) {
+        font-size: 20px;
+        line-height: 140%;
+        max-width: max-content;
+      }
+    }
+  }
+}
