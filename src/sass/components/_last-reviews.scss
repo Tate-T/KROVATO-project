@@ -350,9 +350,10 @@
     @media screen and (min-width: 1290px) {
       position: absolute;
       bottom: 51px;
+      left: 105px;
 
       height: 6px;
-      width: 1125px;
+      width: 800px;
       display: block;
 
       background-color: #e3e2e2;
@@ -365,14 +366,18 @@
     @media screen and (min-width: 1290px) {
       position: absolute;
       bottom: 25px;
-      left: 170px;
+      left: 180px;
 
       width: 60px;
       height: 60px;
       border-radius: 50%;
-      display: block;
+      
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
       background-color: #ffffff;
+      cursor: pointer;
     }
   }
 
