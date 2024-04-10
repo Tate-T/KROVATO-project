@@ -3,11 +3,25 @@
 
   background-color: $light-color;
 
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__box {
+    max-width: 520px;
+  }
+
   &__title {
     color: $dark-color;
     font-size: 30px;
     font-weight: 600;
     line-height: 1.33;
+
+    @media screen and (min-width: 1290px) {
+      font-size: 40px;
+    }
   }
 
   &__subtitle {
@@ -43,6 +57,10 @@
     &:focus {
       background-color: #f3ab3f;
     }
+
+    @media screen and (min-width: 1290px) {
+      margin: 40px 0 0;
+    }
   }
 
   &__span {
@@ -60,5 +78,9 @@
 
   &__img {
     width: 480px;
+
+    @media screen and (min-width: 1290px) {
+      width: 740px;
+    }
   }
 }
