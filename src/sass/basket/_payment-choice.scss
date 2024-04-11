@@ -1,0 +1,49 @@
+.payment__title{
+color: var(--Theme-Dark, #2B2929);
+font-family: "Roboto";
+font-size: 26px;
+font-style: normal;
+font-weight: 600;
+line-height: 34px; 
+}
+
+.payment__icon{
+    width: 60px;
+    height: 60px;
+    background-color: #FFBC57;
+    border-radius: 50%;
+    fill: white;
+    padding: 10px;
+}
+
+.payment__box{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.visa, .mastercard, .privatpay, .privatbank, .monobank{
+    width: 48px;
+    height: 32px;
+}
+
+.payment__list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 28px;
+    margin-top: 30px;
+    margin-bottom: 34px;
+}
+
+.payment__item{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.payment__input{
+    width: 24px;
+height: 24px;
+}
+
