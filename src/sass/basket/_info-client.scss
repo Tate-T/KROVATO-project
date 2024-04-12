@@ -1,10 +1,6 @@
 .info {
     background: var(--Theme-Light, #f8f8f8);
 
-  @media screen and (min-width: 1290px) {
-      background: var(--Theme-Light, #f8f8f8);
-    }
-
   &__box-bg {
     border-radius: 8px;
     background: #fff;
@@ -78,7 +74,7 @@
     height: 60px;
     background-color: #ffbc57;
     border-radius: 50%;
-    padding-top: 15px;
+      padding-top: 15px;
       padding-bottom: 13px;
       padding-left: 15px;
       padding-right: 13px;
