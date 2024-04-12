@@ -10,6 +10,19 @@
 
     & * {
       max-width: 410px;
+
+      @media screen and (min-width: 1290px) {
+        max-width: 1070px;
+      }
+    }
+  }
+
+  &__align {
+    @media screen and (min-width: 1290px) {
+      width: 100%;
+
+      display: flex;
+      justify-content: flex-start;
     }
   }
 
@@ -18,11 +31,20 @@
     font-size: 30px;
     font-weight: 600;
     line-height: 1.33;
+
+    @media screen and (min-width: 1290px) {
+      font-size: 48px;
+    }
   }
 
   &__img {
     max-width: 410px;
     margin: 30px 0 40px;
+
+    @media screen and (min-width: 1290px) {
+      margin: 40px 0 40px;
+      max-width: 1070px;
+    }
   }
 
   &__descr {
@@ -38,6 +60,10 @@
     font-size: 20px;
     font-weight: 600;
     line-height: 1.4;
+
+     @media screen and (min-width: 1290px) {
+      margin: 40px 0 30px;
+    }
   }
 
   &__list {
@@ -49,6 +75,10 @@
   &__item {
     display: flex;
     gap: 15px;
+
+    @media screen and (min-width: 1290px) {
+      justify-content: center;
+    }
 
     &::before {
       content: "";
@@ -71,6 +101,10 @@
     @media screen and (min-width: 480px) {
       max-width: 363px;
     }
+
+    @media screen and (min-width: 1290px) {
+      max-width: 1023px;
+    }
   }
 
   &__text {
@@ -87,6 +121,11 @@
     justify-content: center;
     align-items: center;
     gap: 30px;
+
+    @media screen and (min-width: 1290px) {
+      flex-direction: row;
+      gap: 446px;
+    }
   }
 
   &__button {

@@ -2,6 +2,11 @@
     padding-bottom: 60px;
     background-color: $light-color;
 
+    &__box{
+        @media screen and (min-width:1290px){
+            max-width: calc(100% - 440px);
+        }
+    }
     &__title{
         font-size: 26px;
         font-weight: 600;

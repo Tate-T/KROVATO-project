@@ -2,6 +2,19 @@
   padding: 40px 0;
   background-color: #e9e9e9;
 
+  overflow: hidden;
+
+  @media screen and (min-width: 1290px) {
+    padding: 70px 0 30px;
+  }
+
+  &__container {
+    @media screen and (min-width: 1290px) {
+      position: relative;
+      display: flex;
+    }
+  }
+
   &__title {
     color: $dark-color;
     font-size: 40px;
@@ -151,6 +164,18 @@
 
   &__list {
     margin: 0 0 30px;
+
+    @media screen and (min-width: 1290px) {
+      position: absolute;
+      top: 0;
+      left: 553px;
+      z-index: 1;
+
+      display: flex;
+      gap: 30px;
+
+      // opacity: 0.4;
+    }
   }
 
   &__item {
@@ -193,6 +218,11 @@
 
     &:not(:first-child) {
       display: none;
+
+      @media screen and (min-width: 1290px) {
+        display: block;
+        width: 450px;
+      }
     }
   }
 
@@ -230,10 +260,16 @@
   }
 
   &__time {
+    display: none;
+
     color: $grey-color;
     text-align: right;
     font-size: 17px;
     line-height: 1.41;
+
+    @media screen and (min-width: 480px) {
+      display: block;
+    }
   }
 
   &__review {
@@ -270,6 +306,10 @@
     display: flex;
     gap: 10px;
     justify-content: center;
+
+    @media screen and (min-width: 1290px) {
+      display: none;
+    }
   }
 
   &__circle {
@@ -287,5 +327,67 @@
     border-radius: 50%;
 
     background-color: #fff;
+  }
+
+  &__block2 {
+    display: none;
+
+    @media screen and (min-width: 1290px) {
+      position: relative;
+
+      display: block;
+      // padding: 401px 0 0 0;
+      height: 466px;
+      width: 969px;
+
+      overflow-x: hidden;
+    }
+  }
+
+  &__scrollbar {
+    display: none;
+
+    @media screen and (min-width: 1290px) {
+      position: absolute;
+      bottom: 51px;
+      left: 105px;
+
+      height: 6px;
+      width: 800px;
+      display: block;
+
+      background-color: #e3e2e2;
+    }
+  }
+
+  &__bg2 {
+    display: none;
+
+    @media screen and (min-width: 1290px) {
+      position: absolute;
+      bottom: 25px;
+      left: 180px;
+
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      background-color: #ffffff;
+      cursor: pointer;
+    }
+  }
+
+  &__arrow {
+    display: none;
+
+    @media screen and (min-width: 1290px) {
+      width: 24px;
+      height: 24px;
+      display: block;
+    }
   }
 }

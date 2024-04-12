@@ -2,6 +2,10 @@
     padding-bottom: 40px;
     background-color: $light-color;
 
+    &__container{
+        display: flex;
+        gap: 30px;
+    }
     &__title{
         font-size: 26px;
         font-weight: 600;
