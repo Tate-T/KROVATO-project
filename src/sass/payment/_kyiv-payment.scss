@@ -10,12 +10,22 @@
     font-size: 30px;
     font-weight: 600;
     line-height: 1.33;
+
+    @media screen and (min-width: 1290px) {
+      font-size: 40px;
+    }
   }
 
   &__list {
     display: flex;
     flex-direction: column;
     gap: 30px;
+
+    @media screen and (min-width: 1290px) {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
   }
 
   &__bg {
@@ -46,14 +56,9 @@
   }
 
   &__text {
-    color: var(--Theme-Dark, $dark-color);
+    color: $dark-color;
     text-align: center;
-
-    /* Base font - text */
-    font-family: "Proxima Nova";
     font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 30px; /* 187.5% */
+    line-height: 1.87;
   }
 }
