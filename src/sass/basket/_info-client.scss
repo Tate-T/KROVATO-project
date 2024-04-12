@@ -1,5 +1,5 @@
 .info {
-    background: var(--Theme-Light, #f8f8f8);
+    background: var(--Theme-Light, $light-color);
 
   &__box-bg {
     border-radius: 8px;
@@ -22,7 +22,7 @@
   }
 
   &__title {
-    color: var(--Theme-Dark, #2b2929);
+    color: var(--Theme-Dark, $dark-color);
     font-family: "Roboto";
     font-size: 30px;
     font-style: normal;
@@ -32,7 +32,7 @@
     margin-bottom: 80px;
 
     @media screen and (min-width: 1290px) {
-      color: var(--Theme-Dark, #2b2929);
+      color: var(--Theme-Dark, $dark-color);
       font-family: "Roboto";
       font-size: 40px;
       font-style: normal;
@@ -44,7 +44,7 @@
   }
 
   &__title-label {
-    color: var(--Theme-Dark, #2b2929);
+    color: var(--Theme-Dark, $dark-color);
     font-family: "Roboto";
     font-size: 20px;
     font-style: normal;
@@ -52,7 +52,7 @@
     line-height: 28px;
 
     @media screen and (min-width: 1290px) {
-      color: var(--Theme-Dark, #2b2929);
+      color: var(--Theme-Dark, $dark-color);
       font-family: "Roboto";
       font-size: 26px;
       font-style: normal;
@@ -64,7 +64,7 @@
   &__label-icon {
     width: 40px;
     height: 40px;
-    background-color: #ffbc57;
+    background-color: $yellow-color;
     border-radius: 50%;
     padding: 10px;
     fill: white;
@@ -72,7 +72,7 @@
     @media screen and (min-width: 1290px) {
       width: 60px;
     height: 60px;
-    background-color: #ffbc57;
+    background-color: $yellow-color;
     border-radius: 50%;
       padding-top: 15px;
       padding-bottom: 13px;
@@ -113,7 +113,7 @@
   }
 
   &__label-checkbox {
-    color: var(--Theme-Grey, #535353);
+    color: var(--Theme-Grey, $grey-color);
     font-family: "Roboto";
     font-size: 16px;
     font-style: normal;
@@ -141,7 +141,7 @@
 }
 
 .location-pages-bl {
-  color: var(--Theme-Grey, #535353);
+  color: var(--Theme-Grey, $grey-color);
 
   font-family: "Roboto";
   font-size: 16px;
@@ -150,7 +150,7 @@
   line-height: 30px;
 
   @media screen and (min-width: 1290px) {
-    color: var(--Theme-Grey, #535353);
+    color: var(--Theme-Grey, $grey-color);
 
     font-family: "Roboto";
     font-size: 16px;
@@ -161,7 +161,7 @@
 }
 
 .location-pages-yl {
-  color: var(--Theme-Yellow, #ffbc57);
+  color: var(--Theme-Yellow, $yellow-color);
 
   font-family: "Roboto";
   font-size: 16px;
@@ -170,7 +170,7 @@
   line-height: 30px;
 
   @media screen and (min-width: 1290px) {
-    color: var(--Theme-Yellow, #ffbc57);
+    color: var(--Theme-Yellow, $yellow-color);
 
     font-family: "Roboto";
     font-size: 16px;

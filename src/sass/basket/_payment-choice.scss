@@ -1,5 +1,5 @@
 .payment {
-  background: var(--Theme-Light, #f8f8f8);
+  background: var(--Theme-Light, $light-color);
   margin-top: 5px;
 
   &__box-bg {
@@ -22,7 +22,7 @@
   }
 
   &__title {
-    color: var(--Theme-Dark, #2b2929);
+    color: var(--Theme-Dark, $dark-color);
 
     font-family: "Roboto";
     font-size: 20px;
@@ -31,7 +31,7 @@
     line-height: 28px;
 
     @media screen and (min-width: 1290px) {
-      color: var(--Theme-Dark, #2b2929);
+      color: var(--Theme-Dark, $dark-color);
       font-family: "Roboto";
       font-size: 26px;
       font-style: normal;
@@ -43,7 +43,7 @@
   &__icon {
     width: 40px;
     height: 40px;
-    background-color: #ffbc57;
+    background-color: $yellow-color;
     border-radius: 50%;
     fill: white;
     padding-top: 5px;
@@ -54,7 +54,7 @@
     @media screen and (min-width: 1290px) {
       width: 60px;
       height: 60px;
-      background-color: #ffbc57;
+      background-color: $yellow-color;
       border-radius: 50%;
       fill: white;
       padding-top: 15px;
@@ -100,7 +100,7 @@
   }
 
   &__label {
-    color: var(--Theme-Dark, #2b2929);
+    color: var(--Theme-Dark, $dark-color);
     font-family: "Roboto";
     font-size: 17px;
     font-style: normal;
@@ -108,7 +108,7 @@
     line-height: 24px;
 
     @media screen and (min-width: 1290px) {
-      color: var(--Theme-Dark, #2b2929);
+      color: var(--Theme-Dark, $dark-color);
       font-family: "Roboto";
       font-size: 17px;
       font-style: normal;
