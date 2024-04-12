@@ -1,6 +1,10 @@
 .kyiv-payment {
   padding: 60px 0;
   background-color: $light-color;
+  
+  @media screen and (min-width: 1290px) {
+    padding: 70px 0;
+  }
 
   &__title {
     margin: 0 0 40px;
