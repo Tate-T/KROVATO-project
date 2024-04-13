@@ -1,18 +1,12 @@
 .info {
-    background: var(--Theme-Light, #f8f8f8);
-
-  @media screen and (min-width: 1290px) {
-      background: var(--Theme-Light, #f8f8f8);
-    }
+    background: var(--Theme-Light, #F8F8F8);
 
   &__box-bg {
-    border-radius: 8px;
-    background: #fff;
-    padding: 30px 0 30px 27px;
-    box-shadow: -3px 4px 15px 0px rgba(0, 0, 0, 0.06);
+    background: white;
     width: 410px;
     margin-left: auto;
     margin-right: auto;
+    padding: 30px;
 
     @media screen and (min-width: 1290px) {
       border-radius: 8px;
@@ -26,29 +20,51 @@
   }
 
   &__title {
-    color: var(--Theme-Dark, #2b2929);
+    color: var(--Theme-Dark, $dark-color);
     font-family: "Roboto";
     font-size: 30px;
     font-style: normal;
     font-weight: 600;
     line-height: 48px;
-    margin-top: 30px;
-    margin-bottom: 80px;
+    margin-top: 20px;
+    margin-bottom: 40px;
 
     @media screen and (min-width: 1290px) {
-      color: var(--Theme-Dark, #2b2929);
+      color: var(--Theme-Dark, $dark-color);
       font-family: "Roboto";
       font-size: 40px;
       font-style: normal;
       font-weight: 600;
       line-height: 48px;
-      margin-top: 30px;
-      margin-bottom: 80px;
+      margin-top: 20px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__number{
+  color: var(--Theme-Yellow, #FFBC57);
+    font-family: "Roboto";
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 48px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+
+    @media screen and (min-width: 1290px) {
+      color: var(--Theme-Yellow, #FFBC57);
+      font-family: "Roboto";
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 48px;
+      margin-top: 20px;
+      margin-bottom: 40px;
     }
   }
 
   &__title-label {
-    color: var(--Theme-Dark, #2b2929);
+    color: var(--Theme-Dark, $dark-color);
     font-family: "Roboto";
     font-size: 20px;
     font-style: normal;
@@ -56,7 +72,7 @@
     line-height: 28px;
 
     @media screen and (min-width: 1290px) {
-      color: var(--Theme-Dark, #2b2929);
+      color: var(--Theme-Dark, $dark-color);
       font-family: "Roboto";
       font-size: 26px;
       font-style: normal;
@@ -68,7 +84,7 @@
   &__label-icon {
     width: 40px;
     height: 40px;
-    background-color: #ffbc57;
+    background-color: $yellow-color;
     border-radius: 50%;
     padding: 10px;
     fill: white;
@@ -76,9 +92,9 @@
     @media screen and (min-width: 1290px) {
       width: 60px;
     height: 60px;
-    background-color: #ffbc57;
+    background-color: $yellow-color;
     border-radius: 50%;
-    padding: 15px;
+    padding: 15px 13px 13px 15px;
     fill: white;
     }
   }
@@ -114,7 +130,7 @@
   }
 
   &__label-checkbox {
-    color: var(--Theme-Grey, #535353);
+    color: var(--Theme-Grey, $grey-color);
     font-family: "Roboto";
     font-size: 16px;
     font-style: normal;
@@ -142,7 +158,7 @@
 }
 
 .location-pages-bl {
-  color: var(--Theme-Grey, #535353);
+  color: var(--Theme-Grey, $grey-color);
 
   font-family: "Roboto";
   font-size: 16px;
@@ -151,7 +167,7 @@
   line-height: 30px;
 
   @media screen and (min-width: 1290px) {
-    color: var(--Theme-Grey, #535353);
+    color: var(--Theme-Grey, $grey-color);
 
     font-family: "Roboto";
     font-size: 16px;
@@ -162,7 +178,7 @@
 }
 
 .location-pages-yl {
-  color: var(--Theme-Yellow, #ffbc57);
+  color: var(--Theme-Yellow, $yellow-color);
 
   font-family: "Roboto";
   font-size: 16px;
@@ -171,7 +187,7 @@
   line-height: 30px;
 
   @media screen and (min-width: 1290px) {
-    color: var(--Theme-Yellow, #ffbc57);
+    color: var(--Theme-Yellow, $yellow-color);
 
     font-family: "Roboto";
     font-size: 16px;
