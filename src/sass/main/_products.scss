@@ -224,4 +224,34 @@
             height: 50px;
         }
     }
+
+    &__last-button {
+        display: flex;
+        width: 410px;
+        height: 50px;
+        padding-top: 8px 20px 8px 20px;
+        border-radius: 8px;
+        background-color: $yellow-color;
+        gap: 15px;
+        justify-content: center;
+        align-items: center;
+        margin: 30px auto 0 auto;
+
+        @media screen and (min-width: 1290px) {
+            display: none;
+        }
+    }
+
+    &__button-icon {
+        fill: #FFF;
+        width: 24px;
+        height: 24px;
+    }
+
+    &__button-text {
+        color: #FFF;
+        font-size: 19px;
+        font-weight: 600;
+        line-height: 1.26;
+    }
 }
