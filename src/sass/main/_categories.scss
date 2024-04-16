@@ -1,6 +1,7 @@
 .categories {
-    background-color: $light-color;
     padding-bottom: 80px;
+
+    background-color: $light-color;
 
     @media screen and (min-width: 1290px) {
         padding-bottom: 70px;
@@ -14,11 +15,12 @@
 
     &__title {
         text-align: left;
+        margin-bottom: 40px;
+
         color: $dark-color;
         font-size: 30px;
         font-weight: 600;
         line-height: 1.33;
-        margin-bottom: 40px;
 
         @media screen and (min-width: 1290px) {
             font-size: 40px;
@@ -33,89 +35,92 @@
         column-gap: 10px;
 
         @media screen and (min-width: 1290px) {
-            width: 1290px;
             row-gap: 24px;
             column-gap: 10px;
+            width: 1290px;
         }
     }
 
     &__item {
-        width: 200px;
-        height: 240px;
-        border-radius: 8px;
-        background-color: #fff;
-        background-repeat: no-repeat;
-        flex-basis: calc((100% - 10px) / 2);
         position: relative;
 
+        flex-basis: calc((100% - 10px) / 2);
+        width: 200px;
+        height: 240px;
+
+        background-color: #fff;
+        background-repeat: no-repeat;
+        border-radius: 8px;
+
         @media screen and (min-width: 1290px) {
+            flex-basis: calc((100% - 40px) / 5);
             width: 250px;
             height: 300px;
-            flex-basis: calc((100% - 40px) / 5);
         }
     }
 
     &__subtitle {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+
         color: $dark-color;
         font-size: 19px;
         line-height: 1.26;
         font-weight: 600;
 
-        position: absolute;
-        top: 15px;
-        left: 15px;
-
         @media screen and (min-width: 1290px) {
-            font-size: 20px;
-            line-height: 1.4;
-
             top: 20px;
             left: 20px;
+
+            font-size: 20px;
+            line-height: 1.4;
         }
     }
 
     &__number {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+
         color: $grey-light-color;
         font-size: 19px;
         font-weight: 600;
         line-height: 1.26;
 
-        position: absolute;
-        top: 15px;
-        right: 15px;
-
         @media screen and (min-width: 1290px) {
-            font-size: 20px;
-            line-height: 1.4;
-
             top: 20px;
             right: 20px;
+
+            font-size: 20px;
+            line-height: 1.4;
         }
     }
 
     &__button {
+        position: absolute;
+        bottom: 15px;
+        right: 15px;
+        
         width: 40px;
         height: 40px;
+
         background-color: transparent;
         border-radius: 50%;
         border: solid 2px $yellow-color;
 
-        position: absolute;
-        bottom: 15px;
-        right: 15px;
-
         @media screen and (min-width: 1290px) {
-            width: 50px;
-            height: 50px;
-
             bottom: 20px;
             right: 20px;
+            width: 50px;
+            height: 50px;
         }
     }
 
     &__icon {
         width: 18px;
         height: 18px;
+
         fill: $yellow-color;
 
         @media screen and (min-width: 1290px) {
@@ -127,80 +132,200 @@
     &__item:nth-child(1) {
         background-image: url(../images/mobile/bed@1x.webp);
 
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url(../images/mobile/bed@2x.webp);
+        }
+
         @media screen and (min-width: 1290px) {
             background-image: url(../images/desktop/bed@1x.webp);
+
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url(../images/desktop/bed@2x.webp);
+            }
         }
     }
 
     &__item:nth-child(2) {
         background-image: url(../images/mobile/matress@1x.webp);
 
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url(../images/mobile/matress@2x.webp);
+        }
+
         @media screen and (min-width: 1290px) {
             background-image: url(../images/desktop/matress@1x.webp);
+
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url(../images/desktop/matress@2x.webp);
+            }
         }
     }
 
     &__item:nth-child(3) {
         background-image: url(../images/mobile/furniture@1x.webp);
 
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url(../images/mobile/furniture@2x.webp);
+        }
+
         @media screen  and (min-width: 1290px) {
             background-image: url(../images/desktop/furniture@1x.webp);
+
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url(../images/desktop/furniture@2x.webp);
+            }
         }
     }
 
     &__item:nth-child(4) {
         background-image: url(../images/mobile/shafa@1x.webp);
 
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url(../images/mobile/shafa@2x.webp);
+        }
+
         @media screen and (min-width: 1290px) {
             background-image: url(../images/desktop/shafa@1x.webp);
+
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url(../images/desktop/shafa@2x.webp);
+            }
         }
     }
 
     &__item:nth-child(5) {
         background-image: url(../images/mobile/komod@1x.webp);
 
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url(../images/mobile/komod@2x.webp);
+        }
+
         @media screen and (min-width: 1290px) {
             background-image: url(../images/desktop/komod@1x.webp);
+
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url(../images/desktop/komod@2x.webp);
+            }
         }
     }
 
     &__item:nth-child(6) {
         background-image: url(../images/mobile/shelf@1x.webp);
 
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url(../images/mobile/shelf@2x.webp);
+        }
+
         @media screen and (min-width: 1290px) {
             background-image: url(../images/desktop/shelf@1x.webp);
+
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url(../images/desktop/shelf@2x.webp);
+            }
         }
     }
 
     &__item:nth-child(7) {
         background-image: url(../images/mobile/table@1x.webp);
 
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url(../images/mobile/table@2x.webp);
+        }
+
         @media screen and (min-width: 1290px) {
             background-image: url(../images/desktop/table@1x.webp);
+
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url(../images/desktop/table@2x.webp);
+            }
         }
     }
 
     &__item:nth-child(8) {
         background-image: url(../images/mobile/chair@1x.webp);
 
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url(../images/mobile/chair@2x.webp);
+        }
+
         @media screen and (min-width: 1290px) {
             background-image: url(../images/desktop/cheirs@1x.webp);
+
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url(../images/desktop/chairs@2x.webp);
+            }
         }
     }
 
     &__item:nth-child(9) {
         background-image: url(../images/mobile/furniture-walls@1x.webp);
 
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url(../../images/mobile/furniture-walls@2x.webp);
+        }
+
         @media screen and (min-width: 1290px) {
             background-image: url(../images/desktop/furniture-walls@1x.webp);
+
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url(../images/desktop/furniture-walls@2x.webp);
+            }
         }
     }
 
     &__item:nth-child(10) {
         background-image: url(../images/mobile/kitchen@1x.webp);
 
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url(../images/mobile/kitchen@2x.webp);
+        }
+
         @media screen and (min-width: 1290px) {
             background-image: url(../images/desktop/kitchens@1x.webp);
+
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url(../images/desktop/kitchens@2x.webp);
+            }
         }
     }
 }

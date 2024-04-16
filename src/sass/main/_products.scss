@@ -1,6 +1,7 @@
 .products {
-    background-color: $light-color;
     padding-bottom: 60px;
+
+    background-color: $light-color;
 
     @media screen and (min-width: 1290px) {
         padding-bottom: 80px;
@@ -15,11 +16,12 @@
     }
 
     &__title {
+        text-align: left;
+
         color: $dark-color;
         font-size: 30px;
         font-weight: 600;
         line-height: 1.33;
-        text-align: left;
 
         @media screen and (min-width: 1290px) {
             font-size: 40px;
@@ -29,11 +31,9 @@
         &-box {
             display: flex;
             align-items: center;
-            margin-left: auto;
-            margin-right: auto;
+            margin: 0 auto 40px auto;
             gap: 30px;
             width: 410px;
-            margin-bottom: 40px;
 
             @media screen and (min-width: 1200px) {
                 width: 850px;
@@ -51,12 +51,13 @@
 
     &__link {
         display: none;
+        align-items: center;
+        gap: 10px;
+
         color: $yellow-color;
         font-size: 19px;
         font-weight: 600;
         line-height: 1.26;
-        gap: 10px;
-        align-items: center;
 
         @media screen and (min-width: 1290px) {
             display: flex;
@@ -66,18 +67,21 @@
     &__arrow {
         width: 24px;
         height: 24px;
+
         fill: $yellow-color;
     }
 
     &__item { 
+        position: relative;
+
+        padding: 20px;
         width: 410px;
         height: 488px;
+
+        background: #FFF;
         border-radius: 8px;
         border: 1px solid #E3E2E2;
-        background: #FFF;
         box-shadow: -3px 4px 15px 0px rgba(0, 0, 0, 0.06);
-        position: relative;
-        padding: 20px;
 
         @media screen and (min-width: 1290px) {
             width: 300px;
@@ -105,22 +109,24 @@
     }
 
     &__size {
+        margin-bottom: 10px;
+
         color: $grey-color;
         font-size: 13px;
         font-weight: 300;
         line-height: 1.69;
-        margin-bottom: 10px;
     }
 
     &__subtitle-desktop {
+        display: none;
+        align-items: center;
+        width: 260px;
+        height: 52px;
+
         color: $dark-color;
         font-weight: 600;
         font-size: 18px;
         line-height: 1.26;
-        width: 260px;
-        height: 52px;
-        display: none;
-        align-items: center;
 
         @media screen and (min-width: 1290px) {
             display: flex;
@@ -130,9 +136,10 @@
     &__subtitle-mobile {
         display: flex;
         align-items: center;
-        color: $dark-color;
         width: 370px;
         height: 52px;
+
+        color: $dark-color;
         font-size: 20px;
         font-weight: 600;
         line-height: 1.4;
@@ -145,13 +152,14 @@
     &__stock {
         display: flex;
         align-items: center;
-        gap: 5px;
         margin-top: 10px;
         margin-bottom: 20px;
+        gap: 5px;
 
         &-arrow {
             width: 24px;
             height: 24px;
+
             fill: #82B09D;
         }
     
@@ -167,7 +175,9 @@
         position: absolute;
         left: 20px;
         bottom: 56px;
+
         height: 22px;
+
         color: #E03D3D;
         font-size: 15px;
         line-height: 1.46;
@@ -182,6 +192,7 @@
         position: absolute;
         left: 20px;
         bottom: 20px;
+
         color: $dark-color;
         font-size: 26px;
         font-weight: 600;
@@ -197,6 +208,7 @@
         position: absolute;
         right: 20px;
         bottom: 20px;
+
         display: flex;
         gap: 10px;
     }
@@ -227,15 +239,16 @@
 
     &__last-button {
         display: flex;
-        width: 410px;
-        height: 50px;
-        padding: 8px 20px 8px 20px;
-        border-radius: 8px;
-        background-color: $yellow-color;
-        gap: 15px;
         justify-content: center;
         align-items: center;
+        padding: 8px 20px 8px 20px;
         margin: 30px auto 0 auto;
+        gap: 15px;
+        width: 410px;
+        height: 50px;
+
+        border-radius: 8px;
+        background-color: $yellow-color;
 
         @media screen and (min-width: 1290px) {
             display: none;
@@ -243,9 +256,10 @@
     }
 
     &__button-icon {
-        fill: #FFF;
         width: 24px;
         height: 24px;
+        
+        fill: #FFF;
     }
 
     &__button-text {
