@@ -24,9 +24,7 @@
         }
 
         &-box {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            @extend %flex-center;
             margin: 0 auto 40px auto;
             gap: 30px;
 
@@ -45,8 +43,7 @@
     }
 
     &__link {
-        display: flex;
-        align-items: center;
+        @extend %flex-center;
         gap: 10px;
 
         color: $yellow-color;
@@ -73,8 +70,7 @@
     }
 
     &__arrow {
-        display: flex;
-        align-items: center;
+        @extend %flex-center;
         margin-left: auto;
         width: 50px;
         height: 20px;
@@ -117,8 +113,7 @@
     }
 
     &__item:nth-child(1) {
-        display: flex;
-        justify-content: center;
+        @extend %flex-center;
         text-align: center;
         margin-right: auto;
         margin-left: auto;
@@ -141,8 +136,7 @@
     }
 
     &__circles {
-        display: flex;
-        justify-content: center;
+        @extend %flex-center;
         margin-top: 20px;
         gap: 10px;
 

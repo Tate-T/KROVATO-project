@@ -11,9 +11,7 @@
     }
 
     &__container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @extend %flex-center;
         flex-direction: column;
     }
 
@@ -61,8 +59,7 @@
     }
 
     &__title {
-        display: flex;
-        justify-content: center;
+        @extend %flex-center;
         text-align: center;
         margin-bottom: 40px;
 

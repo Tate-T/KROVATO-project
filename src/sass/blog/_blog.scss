@@ -15,9 +15,7 @@
     }
 
     &__pages-svg {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @extend %flex-center;
         width: 10px;
         height: 10px;
 
@@ -60,10 +58,9 @@
     }
 
     &__list {
-        display: flex;
+        @extend %flex-center;
         flex-wrap: wrap;
         flex-direction: column;
-        justify-content: center;
         margin-left: auto;
         margin-right: auto;
         gap: 30px;
@@ -124,8 +121,7 @@
     }
 
     &__subtitle {
-        display: flex;
-        align-items: center;
+        @extend %flex-center;
         margin: 30px;
         width: 350px;
         height: 102px;
@@ -149,9 +145,7 @@
     }
 
     &__main-button {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @extend %flex-center;
         margin: 30px auto 0px auto;
         padding: 8px 20px;
         gap: 15px;
