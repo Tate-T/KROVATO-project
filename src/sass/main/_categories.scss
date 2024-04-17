@@ -8,8 +8,7 @@
     }
 
     &__container {
-        display: flex;
-        justify-content: center;
+        @extend %flex-center3;
         flex-direction: column;
     }
 
