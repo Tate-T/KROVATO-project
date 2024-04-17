@@ -24,9 +24,7 @@
         }
 
         &-box {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @extend %flex-center;
             margin: 0 auto 23px auto;
             gap: 30px;
 
@@ -78,8 +76,7 @@
     }
 
     &__arrow {
-        display: flex;
-        align-items: center;
+        @extend %flex-center;
         margin-left: auto;
         width: 50px;
         height: 20px;
@@ -102,9 +99,8 @@
     }
 
     &__list {
-        display: flex;
+        @extend %flex-center;
         flex-direction: column;
-        justify-content: center;
         margin-left: auto;
         margin-right: auto;
         gap: 30px;
@@ -135,8 +131,7 @@
     }
 
     &__subtitle {
-        display: flex;
-        align-items: center;
+        @extend %flex-center;
         margin: 30px;
         width: 350px;
         height: 102px;
@@ -160,9 +155,7 @@
     }
 
     &__main-button {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @extend %flex-center;
         padding: 8px 20px 8px 20px;
         margin: 30px auto 0 auto;
         gap: 15px;

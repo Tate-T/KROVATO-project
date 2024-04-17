@@ -11,9 +11,7 @@
     }
 
     &__container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @extend %flex-center;
         flex-direction: column;
     }
 
@@ -63,8 +61,7 @@
     }
 
     &__title {
-        display: flex;
-        justify-content: center;
+        @extend %flex-center;
         text-align: center;
         margin-bottom: 40px;
 
@@ -134,7 +131,7 @@
     }
 
     &__item:nth-child(2)>&__subtitle-button {
-        top: 45px;
+        top: 37px;
 
         @media screen and (min-width: 1290px) {
             top: 37px;
@@ -142,7 +139,7 @@
     }
 
     &__item:nth-child(2)>input:checked+&__subtitle-button {
-        top: 35px;
+        top: 27px;
 
         @media screen and (min-width: 1290px) {
             top: 27px;

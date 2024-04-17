@@ -1,11 +1,12 @@
 @import './utils/vars.scss';
-@import './utils/mixins';
+@import './utils/placeholders.scss';
+@import './utils/mixins.scss';
 @import './common/base.scss';
 @import './common/reset.scss';
-@import './components/header';
-@import './payment/topic';
-@import './payment/kyiv-payment';
-@import './payment/payment-types';
+@import './components/header.scss';
+@import './payment/topic.scss';
+@import './payment/kyiv-payment.scss';
+@import './payment/payment-types.scss';
 @import './components/questions2.scss';
 @import './components/options2.scss';
 @import './components/footer.scss';

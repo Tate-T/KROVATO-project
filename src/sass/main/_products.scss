@@ -8,8 +8,7 @@
     }
 
     &__list {
-        display: flex;
-        justify-content: center;
+        @extend %flex-center;
         flex-wrap: wrap;
         column-gap: 30px;
         row-gap: 30px;
@@ -238,9 +237,7 @@
     }
 
     &__last-button {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @extend %flex-center;
         padding: 8px 20px 8px 20px;
         margin: 30px auto 0 auto;
         gap: 15px;
