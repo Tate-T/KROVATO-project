@@ -1,7 +1,8 @@
 .questions {
-    background-color: $light-color;
     padding-top: 60px;
     padding-bottom: 60px;
+
+    background-color: $light-color;
 
     input {
         position: absolute;
@@ -11,22 +12,23 @@
 
     &__container {
         display: flex;
-        flex-direction: column;
-        align-items: center;
         justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
 
-    &__checkbox:checked+&__paragraph {
+    &__checkbox:checked + &__paragraph {
         display: flex;
     }
 
     &__item {
         position: relative;
-        margin-bottom: 15px;
-        padding: 15px;
 
-        width: 410px;
+        padding: 15px;
+        margin-bottom: 15px;
         gap: 10px;
+        width: 410px;
+
         border-radius: 8px;
         background: #FFF;
         box-shadow: -3px 4px 15px 0px rgba(0, 0, 0, 0.06);
@@ -43,10 +45,11 @@
     &__item:hover,
     &__item:focus,
     &__item:active {
+        padding: 14px;
+
         border-radius: 8px;
         border: 2px solid $yellow-color;
         outline: none;
-        padding: 14px;
     }
 
     &__item:last-child {
@@ -63,10 +66,10 @@
         text-align: center;
         margin-bottom: 40px;
 
+        color: $dark-color;
         font-size: 30px;
         font-weight: 600;
         line-height: 1.33;
-        color: $dark-color;
 
         @media screen and (min-width: 1290px) {
             font-size: 40px;
@@ -100,13 +103,13 @@
     }
 
     &__subtitle {
+        margin-left: 15px;
+        width: 286px;
+
         color: $dark-color;
         font-size: 19px;
         font-weight: 600;
         line-height: 1.26;
-        width: 286px;
-
-        margin-left: 15px;
 
         @media screen and (min-width: 1290px) {
             width: 946px;
@@ -114,20 +117,17 @@
         }
 
         &-button {
-            width: 24px;
-            height: 24px;
-            transform: rotate(90deg);
-            text-align: center;
-            transition: all 0.35s;
-
             position: absolute;
             top: 37px;
             right: 15px;
 
-            margin-left: 15px;
-            margin-top: auto;
-            margin-bottom: auto;
-            margin-right: auto;
+            text-align: center;
+            margin: auto auto auto 15px;
+            width: 24px;
+            height: 24px;
+            transform: rotate(90deg);
+
+            transition: all 0.35s;
         }
     }
 
@@ -155,6 +155,7 @@
     &__paragraph {
         max-height: 0;
         overflow: hidden;
+
         transition: all 0.35s;
     }
 
