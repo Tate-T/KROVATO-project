@@ -1,6 +1,8 @@
 .payment-types {
   padding: 60px 0;
 
+  overflow-x: hidden;
+
   @media screen and (min-width: 1290px) {
     padding: 70px 0;
   }
