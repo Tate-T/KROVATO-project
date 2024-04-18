@@ -3,10 +3,8 @@
   padding: 40px 0 60px;
 
   &__container {
-    display: flex;
+    @extend %flex-center;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
 
     & * {
       max-width: 410px;
@@ -19,18 +17,14 @@
 
   &__align {
     @media screen and (min-width: 1290px) {
-      width: 100%;
-
       display: flex;
       justify-content: flex-start;
+      width: 100%;
     }
   }
 
   &__title {
-    color: $dark-color;
-    font-size: 30px;
-    font-weight: 600;
-    line-height: 1.33;
+    @include font($dark-color, 1.33, 30px, 600);
 
     @media screen and (min-width: 1290px) {
       font-size: 48px;
@@ -38,8 +32,8 @@
   }
 
   &__img {
-    max-width: 410px;
     margin: 30px 0 40px;
+    max-width: 410px;
 
     @media screen and (min-width: 1290px) {
       margin: 40px 0 40px;
@@ -48,20 +42,14 @@
   }
 
   &__descr {
-    color: $dark-color;
-    font-size: 16px;
-    line-height: 1.87;
+    @include font($dark-color, 1.87, 16px, 400);
   }
 
   &__subtitle {
     margin: 40px 0 20px;
+    @include font($dark-color, 1.4, 20px, 600);
 
-    color: $dark-color;
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 1.4;
-
-     @media screen and (min-width: 1290px) {
+    @media screen and (min-width: 1290px) {
       margin: 40px 0 30px;
     }
   }
@@ -84,8 +72,7 @@
       content: "";
 
       display: block;
-      width: 32px;
-      height: 32px;
+      @include size(32px, 32px);
 
       background-image: url(../images/check.svg);
     }
@@ -93,10 +80,7 @@
 
   &__paragraph {
     width: 80%;
-
-    color: $dark-color;
-    font-size: 16px;
-    line-height: 1.87;
+    @include font($dark-color, 1.87, 16px, 400);
 
     @media screen and (min-width: 480px) {
       max-width: 363px;
@@ -109,17 +93,12 @@
 
   &__text {
     margin: 40px 0;
-
-    color: $dark-color;
-    font-size: 16px;
-    line-height: 1.87;
+    @include font($dark-color, 1.87, 16px, 400);
   }
 
   &__buttons {
-    display: flex;
+    @extend %flex-center;
     flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
     gap: 30px;
 
     @media screen and (min-width: 1290px) {
@@ -139,12 +118,10 @@
   }
 
   &__btn {
+    @extend %flex-center2;
     width: 100%;
-    border-radius: 8px;
-
-    display: flex;
-    align-items: center;
     gap: 15px;
+    border-radius: 8px;
 
     background-color: $yellow-color;
 
@@ -160,18 +137,13 @@
     }
 
     & > span {
-      color: #fff;
       text-align: center;
-      font-size: 19px;
-      font-weight: 600;
-      line-height: 1.26;
+      @include font(#fff, 1.26, 19px, 600);
     }
   }
 
   &__icon {
-    width: 24px;
-    height: 24px;
-
+    @include size(24px, 24px);
     fill: #fff;
 
     &--right {

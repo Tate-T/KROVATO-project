@@ -1,36 +1,32 @@
 .promotions {
-    padding-bottom: 60px;
+    @include block-model(0 0 60px 0, none, 0, 0);
     background-color: $light-color;
 
     @media screen and (min-width: 1290px) {
-        padding-bottom: 70px;
+        @include block-model(0 0 70px 0, none, 0, 0);
     }
 
     &__title {
         text-align: left;
-        width: 215px;
+        @include size(215px, auto);
         @include font($dark-color, 1.33, 30px, 600);
 
         @media screen and (min-width: 1290px) {
-            width: 91px;
+            @include size(91px, auto);
             @include font($dark-color, 1.2, 40px, 600);
         }
 
         &-box {
             @extend %flex-center;
-            margin: 0 auto 40px auto;
+            @include block-model(0, none, 0, 0 auto 40px auto);
             gap: 30px;
 
             @media screen and (min-width: 1200px) {
-                width: 410px;
+                @include size(410px, auto);
             }
 
             @media screen and (min-width: 1290px) {
-                width: 1260px;
-            }
-
-            @media screen and (min-width: 1320px ) {
-                width: 1290px;
+                @include size(1290px, auto);
             }
         }
     }
@@ -43,7 +39,7 @@
 
     &__couple {
         display: none;
-        margin-left: auto;
+        @include block-model(0, none, 0, 0 0 0 auto);
         gap: 20px;
 
         @media screen and (min-width: 1290px) {
@@ -58,22 +54,20 @@
 
     &__arrow {
         @extend %flex-center;
-        margin-left: auto;
+        @include block-model(0, none, 0, 0 0 0 auto);
         @include size(50px, 20px);
         fill: $yellow-color;
     }
 
     &__arrow1 {
-        margin-right: auto;
-        margin-left: 0;
-        width: 57px;
+        @include block-model(0, none, 0, 0 auto 0 0);
+        @include size(57px, auto);
     }
 
     &__button {
         @include size(60px, 60px);
-
         background-color: #fff;
-        border-radius: 50%;
+        @include block-model(0, none, 50%, 0);
     }
 
     &__list {
@@ -91,14 +85,13 @@
 
     &__photo {
         @include size(410px, 288px);
-        border-radius: 8px;
+        @include block-model(0, none, 8px, 0);
     }
 
     &__item:nth-child(1) {
         @extend %flex-center;
         text-align: center;
-        margin-right: auto;
-        margin-left: auto;
+        @include block-model(0, none, 0, 0 auto 0 auto);
     }
 
     &__photo2 {
@@ -119,7 +112,7 @@
 
     &__circles {
         @extend %flex-center;
-        margin-top: 20px;
+        @include block-model(0, none, 0, 20px 0 0 0);
         gap: 10px;
 
         @media screen and (min-width: 1290px) {
@@ -130,15 +123,13 @@
     &__circle {
         &:nth-child(3) > .promotions__round {
             background-color: $yellow-color;
-            border: 3px solid #fff;
+            @include block-model(0, 3px solid #fff, 0, 0);
         }
     }
 
     &__round {
         @include size(15px, 15px);
-        
         background-color: #fff;
-        border: 2px solid $grey-light-color;
-        border-radius: 50%;
+        @include block-model(0, 2px solid $grey-light-color, 50%, 0);
     }
 }

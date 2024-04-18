@@ -5,9 +5,7 @@
   background-color: $light-color;
 
   &__container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @extend %flex-center;
   }
 
   &__box {
@@ -24,7 +22,6 @@
 
   &__subtitle {
     @include block-model(0, none, 0, 30px 0 20px);
-
     @include font($dark-color, 1.3, 26px, 600);
   }
 
@@ -34,9 +31,7 @@
 
   &__btn {
     @include block-model(13px 20px, none, 8px, 40px auto 20px);
-
-    display: flex;
-    align-items: center;
+    @extend %flex-center2;
     gap: 10px;
 
     background-color: $yellow-color;
@@ -59,7 +54,6 @@
 
   &__icon {
     @include size(24px 24px);
-
     fill: #fff;
   }
 
