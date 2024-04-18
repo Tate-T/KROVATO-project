@@ -175,7 +175,6 @@
     }
 
     &__box {
-        display: flex;
-        align-items: center;
+        @extend %flex-center2;
     }
 }

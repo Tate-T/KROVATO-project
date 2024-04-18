@@ -143,8 +143,7 @@
     }
 
     &__list-link {
-        display: flex;
-        align-items: center;
+        @extend %flex-center2;
         margin-left: 30px;
         gap: 10px;
 
