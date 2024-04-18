@@ -10,7 +10,7 @@
 	font-weight: $font-weight;
 }
 
-@mixin block-model($padding, $border, $border-radius, $margin) {
+@mixin block-model($padding: 0, $border: none, $border-radius: 0, $margin: 0) {
 	padding: $padding;
 	border: $border;
 	border-radius: $border-radius; 
