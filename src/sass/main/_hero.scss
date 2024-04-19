@@ -1,31 +1,23 @@
 .hero {
-    padding-top: 40px;
-    padding-bottom: 60px;
-
+    @include block-model(40px 0 60px 0, none, 0, 0);
     background-color: $light-color;
 
     @media screen and (min-width: 1290px) {
-        padding-top: 30px;
-        padding-bottom: 70px;
+        @include block-model(30px 0 70px 0, none, 0, 0);
     }
 
     &__container {
         position: relative;
-
         @extend %flex-center;
     }
 
     &__icon1 {
-        width: 50px;
-        height: 20px;
-
+        @include size(50px, 20px);
         fill: $yellow-color;
     }
 
     &__icon2 {
-        width: 70px;
-        height: 20px;
-
+        @include size(70px, 20px);
         fill: $yellow-color;
     }
 
@@ -35,13 +27,9 @@
         top: 180px;
 
         display: none;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        width: 60px;
-        height: 60px;
-
+        @include block-model(20px 0 20px 0, none, 50%, 0);
+        @include size(60px, 60px);
         background-color: #fff;
-        border-radius: 50%;
 
         @media screen and (min-width: 1290px) {
             display: block;
@@ -54,13 +42,9 @@
         top: 180px;
 
         display: none;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        width: 60px;
-        height: 60px;
-
+        @include block-model(20px 0 20px 0, none, 50%, 0);
+        @include size(60px, 60px);
         background-color: #fff;
-        border-radius: 50%;
 
         @media screen and (min-width: 1290px) {
             display: block;
@@ -68,25 +52,19 @@
     }
 
     &__slide {
-        width: 410px;
-        height: 600px;
-
-        background-image: url(../images/mobile/slide-1@1x.webp);
-        background-repeat: no-repeat;
-        background-size: contain;
+        @include size(410px, 600px);
+        background: url(../images/mobile/slide-1@1x.webp) center / contain no-repeat;
 
         @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-            background-image: url(../images/mobile/slide-1@2x.webp);
+            background: url(../images/mobile/slide-1@2x.webp) center / contain no-repeat;
         }
 
         @media screen and (min-width: 1290px) {
-            width: 1290px;
-            height: 420px;
-
-            background-image: url(../images/desktop/slide-1@1x.webp);
+            @include size(1290px, 420px);
+            background: url(../images/desktop/slide-1@1x.webp) center / contain no-repeat;
 
             @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-                background-image: url(../images/desktop/slide-1@2x.webp);
+                background: url(../images/desktop/slide-1@2x.webp) center / contain no-repeat;
             }
         }
     }
@@ -97,13 +75,11 @@
         
         @extend %flex-center;
         flex-direction: row;
-        margin-left: auto;
-        margin-right: auto;
+        @include block-model(0, none, 0, 0 auto 0 auto);
         gap: 10px;
     }
 
     &__point {
-        width: 15px;
-        height: 15px;
+        @include size(15px, 15px)
     }
 }

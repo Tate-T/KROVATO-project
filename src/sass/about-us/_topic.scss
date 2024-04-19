@@ -12,13 +12,11 @@
 
   @media screen and (min-width: 1290px) {
     @include block-model(0);
-
     background: transparent;
   }
 
   &__container {
-    display: flex;
-    align-items: center;
+    @extend %flex-center2;
     flex-direction: column;
 
     @media screen and (min-width: 1290px) {
@@ -51,7 +49,6 @@
   &__subtitle {
     max-width: 450px;
     @include block-model(0, none, 0, 30px 0 20px);
-
     @include font($dark-color, 1.4, 20px, 600);
     text-align: center;
 
@@ -62,9 +59,8 @@
   }
 
   &__text {
-    max-width: 450px;
-
     text-align: center;
+    max-width: 450px;
     @include font($dark-color, 1.87, 16px, 400);
 
     @media screen and (min-width: 1290px) {

@@ -1,7 +1,6 @@
 .last-reviews {
   padding: 40px 0;
   background-color: #e9e9e9;
-
   overflow: hidden;
 
   @media screen and (min-width: 1290px) {
@@ -16,10 +15,7 @@
   }
 
   &__title {
-    color: $dark-color;
-    font-size: 40px;
-    font-weight: 600;
-    line-height: 1.2;
+    @include font($dark-color, 1.2, 40px, 600);
   }
 
   &__flex {
@@ -30,41 +26,28 @@
   }
 
   &__bg {
-    width: 80px;
-    height: 80px;
-    padding: 24px 11px 24px;
-    border-radius: 50%;
-
+    @include size(80px, 80px);
+    @include block-model(24px 11px 24px, none, 50%, 0);
     background-color: #fff;
   }
 
   &__icon {
-    width: 57px;
-    height: 32px;
-
+    @include size(57px, 32px); 
     fill: $yellow-color;
   }
 
   &__subtitle {
     margin: 0 0 10px;
-
-    color: $dark-color;
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 1.4;
+    @include font($dark-color, 1.4, 20px, 600);
   }
 
   &__opinion {
-    display: flex;
-    align-items: center;
+    @extend %flex-center2;
     gap: 10px;
   }
 
   &__rating {
-    color: #f90;
-    font-size: 19px;
-    font-weight: 600;
-    line-height: 1.26;
+    @include font(#f90, 1.26, 19px, 600);
   }
 
   &__stars {
@@ -72,8 +55,7 @@
   }
 
   &__starlet {
-    width: 24px;
-    height: 24px;
+    @include size(24px, 24px);
 
     &--main {
       fill: #ff9900;
@@ -85,21 +67,13 @@
   }
 
   &__text {
-    color: $grey-color;
-    font-size: 13px;
-    font-weight: 300;
-    line-height: 1.69;
+    @include font($grey-color, 1.69, 13px, 300);
   }
 
   &__btn {
-    width: 210px;
-    height: 50px;
-    padding: 13px 13.5px;
-    border-radius: 8px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include size(210px, 50px);
+    @include block-model(13px 13.5px, none, 8px, 0);
+    @extend %flex-center;
     gap: 15px;
 
     background-color: $yellow-color;
@@ -113,11 +87,8 @@
   }
 
   &__span {
-    color: #fff;
     text-align: center;
-    font-size: 13px;
-    font-weight: 600;
-    line-height: 1.26;
+    @include font(#fff, 1.26, 13px, 600);
 
     @media screen and (min-width: 413px) {
       font-size: 16px;
@@ -125,8 +96,7 @@
   }
 
   &__chat {
-    width: 24px;
-    height: 24px;
+    @include size(24px, 24px);
 
     &--first {
       fill: #fff;
@@ -138,17 +108,13 @@
   }
 
   &__link {
-    display: flex;
-    align-items: center;
+    @extend %flex-center2;
     gap: 15px;
   }
 
   &__link > span {
-    color: $grey-color;
     text-align: center;
-    font-size: 13px;
-    font-weight: 600;
-    line-height: 1.26;
+    @include font($grey-color, 1.26, 13px, 600);
 
     @media screen and (min-width: 413px) {
       font-size: 16px;
@@ -156,9 +122,8 @@
   }
 
   &__buttons {
-    margin: 0 0 40px;
-
     display: flex;
+    margin: 0 0 40px;
     gap: 30px;
   }
 
@@ -181,9 +146,7 @@
   &__item {
     position: relative;
 
-    padding: 20px;
-    border-radius: 8px;
-    border: 1px solid #e3e2e2;
+    @include block-model(20px, 1px solid #e3e2e2, 8px, 0);
 
     background-color: #fff;
     box-shadow: -3px 4px 15px 0px rgba(0, 0, 0, 0.06);
@@ -196,8 +159,7 @@
       right: 20px;
 
       display: block;
-      width: 6px;
-      height: 51px;
+      @include size(6px, 51px);
 
       background-color: $grey-light-color;
     }
@@ -210,8 +172,7 @@
       right: 20px;
 
       display: block;
-      width: 6px;
-      height: 99px;
+      @include size(6px, 99px);
 
       background-color: $light-color;
     }
@@ -231,17 +192,12 @@
   }
 
   &__case {
-    width: 50px;
-    height: 50px;
-    padding: 14px;
-    border-radius: 50%;
-    border: 1px solid $yellow-color;
+    @include size(50px, 50px);
+    @include block-model(14px, 1px solid $yellow-color, 50%, 0);
   }
 
   &__profile {
-    width: 22px;
-    height: 22px;
-
+    @include size(22px, 22px);
     fill: $grey-color;
   }
 
@@ -254,18 +210,13 @@
   }
 
   &__name {
-    color: $dark-color;
-    font-size: 17px;
-    line-height: 1.41;
+    @include font($dark-color, 1.41, 17px, 400);
   }
 
   &__time {
     display: none;
-
-    color: $grey-color;
     text-align: right;
-    font-size: 17px;
-    line-height: 1.41;
+    @include font($grey-color, 1.41, 17px, 400);
 
     @media screen and (min-width: 480px) {
       display: block;
@@ -275,10 +226,7 @@
   &__review {
     max-width: 95%;
     margin: 30px 0;
-
-    color: $grey-color;
-    font-size: 16px;
-    line-height: 1.87;
+    @include font($grey-color, 1.87, 16px, 400);
 
     @media screen and (min-width: 480px) {
       max-width: 354px;
@@ -286,8 +234,7 @@
   }
 
   &__block {
-    display: flex;
-    align-items: center;
+    @extend %flex-center2;
     gap: 10px;
   }
 
@@ -296,16 +243,12 @@
   }
 
   &__product {
-    color: $grey-color;
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 1.4;
+    @include font($grey-color, 1.4, 20px, 600);
   }
 
   &__circles {
-    display: flex;
+    @extend %flex-center3;
     gap: 10px;
-    justify-content: center;
 
     @media screen and (min-width: 1290px) {
       display: none;
@@ -315,17 +258,13 @@
   &__circle {
     &:nth-child(3) > .last-reviews__round {
       border: 2px solid #fff;
-
       background-color: $yellow-color;
     }
   }
 
   &__round {
-    width: 15px;
-    height: 15px;
-    border: 2px solid $grey-light-color;
-    border-radius: 50%;
-
+    @include size(15px, 15px);
+    @include block-model(0, 2px solid $grey-light-color, 50%, 0);
     background-color: #fff;
   }
 
@@ -337,9 +276,7 @@
 
       display: block;
       // padding: 401px 0 0 0;
-      height: 466px;
-      width: 969px;
-
+      @include size(969px, 466px);
       overflow-x: hidden;
     }
   }
@@ -352,9 +289,8 @@
       bottom: 51px;
       left: 105px;
 
-      height: 6px;
-      width: 800px;
       display: block;
+      @include size(800px, 6px);
 
       background-color: #e3e2e2;
     }
@@ -368,13 +304,12 @@
       bottom: 25px;
       left: 180px;
 
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      
       display: flex;
       justify-content: center;
       align-items: center;
+
+      @include size(60px, 60px);
+      border-radius: 50%;
 
       background-color: #ffffff;
       cursor: pointer;
@@ -383,10 +318,9 @@
 
   &__arrow {
     display: none;
+    @include size(24px, 24px);
 
     @media screen and (min-width: 1290px) {
-      width: 24px;
-      height: 24px;
       display: block;
     }
   }

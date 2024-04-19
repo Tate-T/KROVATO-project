@@ -10,7 +10,6 @@
 
   &__title {
     @include block-model(0, none, 0, 0 0 40px);
-
     @include font($dark-color, 1.2, 40px, 600);
     text-align: center;
   }
@@ -26,9 +25,8 @@
   }
 
   &__item {
-    display: flex;
+    @extend %flex-center2;
     flex-direction: column;
-    align-items: center;
   }
 
   &__icon {

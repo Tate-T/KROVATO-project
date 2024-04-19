@@ -1,9 +1,9 @@
 .products {
-    padding-bottom: 60px;
+    @include block-model(0 0 60px 0, none, 0, 0);
     background-color: $light-color;
 
     @media screen and (min-width: 1290px) {
-        padding-bottom: 80px;
+        @include block-model(0 0 80px 0, none, 0, 0);
     }
 
     &__list {
@@ -22,20 +22,20 @@
 
         &-box {
             @extend %flex-center2;
-            margin: 0 auto 40px auto;
+            @include block-model(0, none, 0, 0 auto 40px auto);
+            @include size(410px, auto);
             gap: 30px;
-            width: 410px;
 
             @media screen and (min-width: 1200px) {
-                width: 850px;
+                @include size(850px, auto);
             }
 
             @media screen and (min-width: 1290px) {
-                width: 960px;
+                @include size(960px, auto);
             }
 
             @media screen and (min-width: 1320px) {
-                width: 1290px;
+                @include size(1290px, auto);
             }
         }
     }
@@ -72,7 +72,7 @@
 
     &__photo-mobile {
         display: block;
-        margin-bottom: 20px;
+        @include block-model(0, none, 0, 0 0 20px 0);
 
         @media screen and (min-width: 1290px) {
             display: none;
@@ -81,7 +81,7 @@
 
     &__photo-desktop {
         display: none;
-        margin-bottom: 20px;
+        @include block-model(0, none, 0, 0 0 20px 0);
 
         @media screen and (min-width: 1290px) {
             display: block;
@@ -89,7 +89,7 @@
     }
 
     &__size {
-        margin-bottom: 10px;
+        @include block-model(0, none, 0, 0 0 10px 0);
         @include font($grey-color, 1.69, 13px, 300);
     }
 
@@ -115,8 +115,7 @@
 
     &__stock {
         @extend %flex-center2;
-        margin-top: 10px;
-        margin-bottom: 20px;
+        @include block-model(0, none, 0, 10px 0 20px 0);
         gap: 5px;
 
         &-arrow {
@@ -133,8 +132,8 @@
         position: absolute;
         left: 20px;
         bottom: 56px;
-
-        height: 22px;
+        
+        @include size(auto, 22px);
 
         @include font(#E03D3D, 1.46, 15px, 400);
         text-decoration: line-through;
@@ -187,8 +186,10 @@
 
     &__last-button {
         @extend %flex-center;
-        @extend %styles-for-products-button;
+        @include block-model(8px 20px 8px 20px, none, 8px, 30px auto 0 auto);
         @include size(410px, 50px);
+        gap: 15px;
+        background-color: $yellow-color;
 
         @media screen and (min-width: 1290px) {
             display: none;

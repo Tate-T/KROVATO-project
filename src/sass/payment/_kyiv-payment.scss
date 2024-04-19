@@ -1,21 +1,16 @@
 .kyiv-payment {
-  padding: 60px 0;
-
+  @include block-model(60px 0, none, 0, 0);
   overflow-x: hidden;
   background-color: $light-color;
   
   @media screen and (min-width: 1290px) {
-    padding: 70px 0;
+    @include block-model(70px 0, none, 0, 0);
   }
 
   &__title {
-    margin: 0 0 40px;
-
-    color: $dark-color;
     text-align: center;
-    font-size: 30px;
-    font-weight: 600;
-    line-height: 1.33;
+    margin: 0 0 40px;
+    @include font($dark-color, 1.33, 30px, 600);
 
     @media screen and (min-width: 1290px) {
       font-size: 40px;
@@ -35,36 +30,24 @@
   }
 
   &__bg {
-    width: 100px;
-    height: 100px;
-    margin: 0 auto;
-    padding: 25px;
-    border-radius: 50%;
-
+    @include size(100px, 100px);
+    @include block-model(25px, none, 50%, 0 auto);
     background-color: $yellow-color;
   }
 
   &__icon {
-    width: 50px;
-    height: 50px;
-
+    @include size(50px, 50px);
     fill: #fff;
   }
 
   &__subtitle {
-    margin: 20px 0;
-
-    color: $dark-color;
     text-align: center;
-    font-size: 26px;
-    font-weight: 600;
-    line-height: 1.3;
+    margin: 20px 0;
+    @include font($dark-color, 1.3, 26px, 600);
   }
 
   &__text {
-    color: $dark-color;
     text-align: center;
-    font-size: 16px;
-    line-height: 1.87;
+    @include font($dark-color, 1.87, 16px, 400);
   }
 }
