@@ -1,32 +1,25 @@
 .blog {
-    padding-bottom: 60px;
-
+    @include block-model(0 0 60px 0, none, 0, 0);
     background-color: $light-color;
 
     @media screen and (min-width: 1290px) {
-        padding-bottom: 70px;
+        @include block-model(0 0 70px 0, none, 0, 0);
     }
     
     &__pages {
-        display: flex;
-        align-items: center;
-        margin-bottom: 40px;
+        @extend %flex-center2;
+        @include block-model(0, none, 0, 0 0 40px 0);
         gap: 10px;
     }
 
     &__pages-svg {
         @extend %flex-center;
-        width: 10px;
-        height: 10px;
-
+        @include size(10px, 10px);
         fill: $grey-color;
     }
 
     &__page {
-        color: $grey-color;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 30px;
+        @include font($grey-color, 1.87, 16px, 400);
     }
 
     &__active-page {
@@ -35,25 +28,17 @@
 
     &__title {
         text-align: center;
-        margin-bottom: 40px;
-
-        color: $dark-color;
-        font-size: 30px;
-        font-weight: 600;
-        line-height: 1.33;
+        @include block-model(0, none, 0, 0 0 40px 0);
+        @include font($dark-color, 1.33, 30px,  600);
 
         @media screen and (min-width: 1290px) {
             text-align: left;
-
-            font-size: 40px;
-            line-height: 1.2;
+            @include font($dark-color, 1.2, 40px, 600);
         }
     }
 
     &__title-arrow {
-        width: 24px;
-        height: 24px;
-
+        @include  size(24px, 24px);
         fill: $yellow-color;
     }
 
@@ -61,25 +46,21 @@
         @extend %flex-center;
         flex-wrap: wrap;
         flex-direction: column;
-        margin-left: auto;
-        margin-right: auto;
+        @include block-model(0, none, 0, 0 auto 0 auto);
+        @include size(410px, auto);
         gap: 30px;
-        width: 410px;
 
         @media screen and (min-width: 1290px) {
             flex-direction: row;
-            width: 100%;
+            @include size(100%, auto);
         }
     }
 
     &__item {
-        padding-bottom: 20px;
-        width: 410px;
-        height: 476px;
+        @include block-model(0, 1px solid #E3E2E2, 8px, 0);
+        @include size(410px, 476px);
 
         background-color: #fff;
-        border-radius: 8px;
-        border: 1px solid #E3E2E2;
         box-shadow: -3px 4px 15px 0px rgba(0, 0, 0, 0.06);
 
         @media screen and (min-width: 1290px) {
@@ -112,72 +93,49 @@
     }
 
     &__photo {
-        width: 410px;
-        height: 270px;
-
-        border-radius: 8px;
-
-        @media screen and (min-width: 1290px) {}
+        @include size(410px, 270px);
+        @include block-model(0, none, 8px, 0);
     }
 
     &__subtitle {
         @extend %flex-center;
-        margin: 30px;
-        width: 350px;
-        height: 102px;
-
-        color: $dark-color;
-        font-size: 26px;
-        font-weight: 600;
-        line-height: 1.31;
+        @include block-model(0, none, 0, 30px);
+        @include size(350px, 102px);
+        @include font($dark-color, 1.31, 26px, 600);
     }
 
     &__list-link {
-        display: flex;
-        align-items: center;
-        margin-left: 30px;
+        @extend %flex-center2;
+        @include block-model(0, none, 0, 30px);
         gap: 10px;
-
-        color: $yellow-color;
-        font-size: 19px;
-        font-weight: 600;
-        line-height: 1.26;
+        @include font($yellow-color, 1.26, 19px, 600);
     }
 
     &__main-button {
         @extend %flex-center;
-        margin: 30px auto 0px auto;
-        padding: 8px 20px;
+        @include block-model(8px 20px, none, 8px, 30px auto 0px auto);
+        @include size(410px, 50px);
         gap: 15px;
-        width: 410px;
-        height: 50px;
-
-        border-radius: 8px;
         background-color: $yellow-color;
 
         @media screen and (min-width: 1290px) {
-            width: 300px;
+            @include size(300px, 50px);
         }
 
         &-arrow {
-            width: 24px;
-            height: 24px;
-
+            @include size(24px, 24px);
             fill: #FFF;
         }
 
         &-text {
-            color: #FFF;
-            font-size: 19px;
-            font-weight: 600;
-            line-height: 1.26;
+            @include font(#FFF, 1.26, 19px, 600);
         }
     }
 
     &__list2 {
         display: none;
         justify-content: center;
-        margin: 30px auto 0px auto;
+        @include block-model(0, none, 0, 30px auto 0px auto);
         gap: 10px;
 
         @media screen and (min-width: 1290px) {
@@ -186,15 +144,12 @@
     }
 
     &__item2 {
-        padding-top: 15px;
-        width: 50px;
-        height: 50px;
-
-        border-radius: 8px;
+        @include size(50px, 50px);
+        @include block-model(13px 22px 13px 22px, none, 8px, 0);
     }
 
     &__item2:nth-child(1) {
-        border: 1px solid var(--Theme-Grey-light, #B1B1B1);
+        @include block-model(15px, 1px solid $grey-light-color, 8px, 0);
         background: #FFF;
     }
 
@@ -203,63 +158,56 @@
     }
 
     &__item2:nth-child(3) {
-        border: 1px solid var(--Theme-Grey-light, #B1B1B1);
+        @include block-model(13px 15px 13px 15px, 1px solid $grey-light-color, 8px, 0);
         background: #FFF;
     }
 
     &__item2:nth-child(4) {
-        border: 1px solid var(--Theme-Grey-light, #B1B1B1);
+        @include block-model(13px 15px 13px 15px, 1px solid $grey-light-color, 8px, 0);
         background: #FFF;
     }
 
     &__item2:nth-child(5) {
-        border: 1px solid var(--Theme-Grey-light, #B1B1B1);
+        @include block-model(13px 15px 13px 15px, 1px solid $grey-light-color, 8px, 0);
         background: #FFF;
     }
 
     &__item2:nth-child(6) {
-        border: 1px solid var(--Theme-Grey-light, #B1B1B1);
+        @include block-model(13px 15px 13px 15px, 1px solid $grey-light-color, 8px, 0);
         background: #FFF;
     }
 
     &__item2:nth-child(7) {
-        border: 1px solid var(--Theme-Grey-light, #B1B1B1);
+        @include block-model(13px 15px 13px 15px, 1px solid $grey-light-color, 8px, 0);
         background: #FFF;
     }
 
     &__item2:nth-child(8) {
-        border: 1px solid var(--Theme-Grey-light, #B1B1B1);
+        @include block-model(13px 15px 13px 15px, 1px solid $grey-light-color, 8px, 0);
         background: #FFF;
     }
 
     &__item2:nth-child(9) {
-        border: 1px solid var(--Theme-Grey-light, #B1B1B1);
+        @include block-model(13px 15px 13px 15px, 1px solid $grey-light-color, 8px, 0);
         background: #FFF;
     }
 
     &__item2:nth-child(10) {
-        border: 1px solid var(--Theme-Grey-light, #B1B1B1);
+        @include block-model(13px 15px 13px 15px, 1px solid $grey-light-color, 8px, 0);
         background: #FFF;
     }
 
     &__item2:nth-child(11) {
-        border: 1px solid var(--Theme-Grey-light, #B1B1B1);
+        @include block-model(15px, 1px solid $grey-light-color, 8px, 0);
         background: #FFF;
     }
 
     &__button {
-        margin-left: auto;
-        margin-right: auto;
-        height: 20px;
+        @include block-model(0, none, 0, 0 auto 0 auto);
+        @include size(auto, 20px);
         
-        color: $grey-color;
-        font-size: 17px;
-        line-height: 1.42;
         background-color: #FFF;
-    }
-
-    &__item2:nth-child(1) > &__button {
-        margin-left: 18px;
+        @include font($grey-color, 1.42, 17px, 400);
     }
 
     &__item2:nth-child(2)>&__button {
@@ -268,6 +216,6 @@
     }
 
     &__item2:nth-child(11) > &__button {
-        margin-left: 22px;
+        @include block-model(0, none, 0, 0 0 0 7px);
     }
 }
