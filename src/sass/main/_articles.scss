@@ -1,44 +1,32 @@
 .articles {
-    padding-top: 60px;
-    padding-bottom: 60px;
-
+    @include block-model(60px 0 60px 0, none, 0, 0);
     background-color: $light-color;
 
     @media screen and (min-width: 1290px) {
-        padding-top: 70px;
+        @include block-model(70px 0 0 0, none, 0, 0);
     }
 
     &__title {
-        width: 410px;
-
-        color: $dark-color;
-        font-size: 30px;
-        font-weight: 600;
-        line-height: 1.33;
+        @include size(410px, auto);
+        @include font($dark-color, 1.33, 30px, 600);
 
         @media screen and (min-width: 1290px) {
-            width: 610px;
-
-            font-size: 40px;
-            line-height: 1.2;
+            @include size(610px, auto);
+            @include font($dark-color, 1.2, 40px, 600);
         }
 
         &-box {
             @extend %flex-center;
-            margin: 0 auto 23px auto;
+            @include block-model(0, none, 0, 0 auto 23px auto);
             gap: 30px;
 
             @media screen and (min-width: 1200px) {
-                width: 410px;
+                @include size(410px, auto);
             }
 
             @media screen and (min-width: 1290px) {
-                margin-bottom: 40px;
-                width: 1260px;
-            }
-
-            @media screen and (min-width: 1320px) {
-                width: 1290px;
+                @include block-model(0, none, 0, 0 0 40px 0);
+                @include size(1290px, auto);
             }
         }
     }
@@ -48,10 +36,7 @@
         align-items: center;
         gap: 10px;
 
-        color: $yellow-color;
-        font-size: 19px;
-        font-weight: 600;
-        line-height: 1.26;
+        @include font($yellow-color, 1.26, 19px, 600);
 
         @media screen and (min-width: 1290px) {
             display: flex;

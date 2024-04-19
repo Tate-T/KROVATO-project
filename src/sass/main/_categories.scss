@@ -1,10 +1,9 @@
 .categories {
-    padding-bottom: 80px;
-
+    @include block-model(0 0 80px 0, none, 0, 0);
     background-color: $light-color;
 
     @media screen and (min-width: 1290px) {
-        padding-bottom: 70px;
+        @include block-model(0 0 70px 0, none, 0, 0);
     }
 
     &__container {
@@ -14,12 +13,8 @@
 
     &__title {
         text-align: left;
-        margin-bottom: 40px;
-
-        color: $dark-color;
-        font-size: 30px;
-        font-weight: 600;
-        line-height: 1.33;
+        @include block-model(0, none, 0, 0 0 40px 0);
+        @include font($dark-color, 1.33, 30px, 600);
 
         @media screen and (min-width: 1290px) {
             font-size: 40px;
@@ -30,13 +25,12 @@
     &__list {
         display: flex;
         flex-wrap: wrap;
-        row-gap: 10px;
-        column-gap: 10px;
+        gap: 10px;
 
         @media screen and (min-width: 1290px) {
             row-gap: 24px;
             column-gap: 10px;
-            width: 1290px;
+            @include size(1290px, auto);
         }
     }
 
@@ -44,17 +38,14 @@
         position: relative;
 
         flex-basis: calc((100% - 10px) / 2);
-        width: 200px;
-        height: 240px;
+        @include size(200px, 240px);
 
-        background-color: #fff;
-        background-repeat: no-repeat;
-        border-radius: 8px;
+        background: no-repeat #fff;
+        @include block-model(0, none, 8px, 0);
 
         @media screen and (min-width: 1290px) {
             flex-basis: calc((100% - 40px) / 5);
-            width: 250px;
-            height: 300px;
+            @include size(250px, 300px);
         }
     }
 
@@ -63,17 +54,13 @@
         top: 15px;
         left: 15px;
 
-        color: $dark-color;
-        font-size: 19px;
-        line-height: 1.26;
-        font-weight: 600;
+        @include font($dark-color, 1.26, 19px, 600);
 
         @media screen and (min-width: 1290px) {
             top: 20px;
             left: 20px;
 
-            font-size: 20px;
-            line-height: 1.4;
+            @include font($dark-color, 1.4, 20px, 600);
         }
     }
 
@@ -82,17 +69,13 @@
         top: 15px;
         right: 15px;
 
-        color: $grey-light-color;
-        font-size: 19px;
-        font-weight: 600;
-        line-height: 1.26;
+        @include font($grey-light-color, 1.26, 19px, 600);
 
         @media screen and (min-width: 1290px) {
             top: 20px;
             right: 20px;
 
-            font-size: 20px;
-            line-height: 1.4;
+            @include font($grey-light-color, 1.4, 20px, 600);
         }
     }
 
@@ -101,30 +84,23 @@
         bottom: 15px;
         right: 15px;
         
-        width: 40px;
-        height: 40px;
-
+        @include size(40px, 40px);
         background-color: transparent;
-        border-radius: 50%;
-        border: solid 2px $yellow-color;
+        @include block-model(0, solid 2x $yellow-color, 50%, 0);
 
         @media screen and (min-width: 1290px) {
             bottom: 20px;
             right: 20px;
-            width: 50px;
-            height: 50px;
+            @include size(50px, 50px);
         }
     }
 
     &__icon {
-        width: 18px;
-        height: 18px;
-
+        @include size(18px, 18px);
         fill: $yellow-color;
 
         @media screen and (min-width: 1290px) {
-            width: 22px;
-            height: 22px;
+            @include size(22px, 22px);
         }
     }
 
