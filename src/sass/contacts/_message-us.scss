@@ -87,7 +87,7 @@
     }
     &__btn{
         padding: 8px 20px;
-        background-color: #FFBC57;
+        background-color: $yellow-color;
         border: none;
         border-radius: 8px;
 
@@ -96,8 +96,15 @@
         line-height: 1.6;
         color: #FFF;
 
+        transition-property: background-color;
+        transition-duration: 1000ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
         @media screen and (min-width: 1290px) {
             max-width: 240px;
         }
+    }
+    &__btn:hover, &__btn:focus{
+        background-color: #ee9c22;
     }
  }
