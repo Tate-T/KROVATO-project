@@ -1,13 +1,38 @@
+.backdrop {
+  position: fixed;
+  top: 160px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  overflow-y: scroll;
+
+  &.is-hidden {
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
 .catalog-modal {
   width: 100%;
 
+  background-color: #fff;
+
   &__item {
-    padding: 10px 35px;
+    box-shadow: 0px -2px 0px 0px #e2e2e2 inset;
   }
 
   &__box {
+    padding: 10px 35px;
+
     display: flex;
     align-items: center;
+    justify-content: center;
   }
 
   &__icon {
@@ -28,10 +53,14 @@
   }
 
   &__arrow {
+    margin: -8px 0 0;
+
     width: 24px;
     height: 24px;
 
     transform: rotate(-90deg);
+
+    transition: 250ms;
   }
 
   &__position {
@@ -46,24 +75,35 @@
     width: 24px;
     height: 24px;
 
-    // &:checked + .catalog-modal__acordeon {
-    //   display: flex;
-    // }
+    opacity: 0;
+
+    &:checked ~ .catalog-modal__acordeon {
+      display: flex;
+    }
 
     &:checked ~ .catalog-modal__box {
       background-color: #ffbc57;
     }
+
+    &:checked ~ .catalog-modal__box > .catalog-modal__arrow {
+      transform: rotate(90deg);
+      margin: 10px 0 0;
+    }
   }
 
   &__acordeon {
+    padding: 20px 177px 30px 35px;
+
     display: none;
     flex-direction: column;
-    gap: 40px;
+    gap: 35px;
+
+    background-color: #f8f8f8;
   }
 
   &__paragraph {
     color: #2b2929;
     font-size: 19px;
-    line-height: 1;
+    line-height: 1.3;
   }
 }
