@@ -49,19 +49,9 @@
   }
 
   &__gradient {
-    position: absolute;
-    top: 335px;
-    z-index: 0;
-
+    @extend %position10;
     @include size(100%, 145px);
-    max-width: 450px;
-
-    background: linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(255, 255, 255, 0.8) 33.85%,
-      #fff 72.4%
-    );
+    background: linear-gradient( 180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 33.85%, #fff 72.4%);
 
     @media screen and (min-width: 1290px) {
         max-width: 1290px;
@@ -69,10 +59,9 @@
   }
 
   &__button {
-    position: absolute;
-    inset: 420px 210px 0px;
-
+    @extend %position11;
     background-color: transparent;
+    @extend %animation-of-button;
   }
 
   &__icon {

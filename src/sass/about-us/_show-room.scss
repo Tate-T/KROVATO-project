@@ -53,7 +53,7 @@
   }
 
   &__icon {
-    @include size(24px 24px);
+    @include size(24px, 24px);
     fill: #fff;
   }
 

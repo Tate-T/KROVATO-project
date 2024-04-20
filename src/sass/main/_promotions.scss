@@ -35,6 +35,7 @@
         @extend %flex-center;
         gap: 10px;
         @include font($yellow-color, 1.26, 19px, 600);
+        @extend %animation-of-button;
     }
 
     &__couple {

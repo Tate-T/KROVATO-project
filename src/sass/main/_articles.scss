@@ -11,7 +11,7 @@
         @include font($dark-color, 1.33, 30px, 600);
 
         @media screen and (min-width: 1290px) {
-            @include size(610px, auto);
+            @include size(645px, auto);
             @include font($dark-color, 1.2, 40px, 600);
         }
 
@@ -35,8 +35,8 @@
         display: none;
         align-items: center;
         gap: 10px;
-
         @include font($yellow-color, 1.26, 19px, 600);
+        @extend %animation-of-button;
 
         @media screen and (min-width: 1290px) {
             display: flex;
@@ -60,7 +60,7 @@
 
     &__arrow {
         @extend %flex-center;
-        margin-left: auto;
+        @include block-model(0, none, 0, 0 0 0 auto);
         @include size(50px, 20px);
         fill: $yellow-color;
     }
