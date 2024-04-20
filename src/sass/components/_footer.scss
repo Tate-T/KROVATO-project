@@ -60,12 +60,10 @@
         }
     }
     &__title-svg{
+        @extend %position16;
         @include size(10px, 10px);
         fill: #FFF;
         rotate: 90deg;
-        position: absolute;
-        top: 20px;
-        left: 70%;
 
         transition-property: rotate;
         transition-duration: 500ms;
@@ -93,11 +91,7 @@
         }
     }
     &__checkbox{
-        position: absolute;
-        top: 14.5px;
-        left: 70%;
-        opacity: 0;
-        z-index: 2;
+        @extend %position17;
 
         @media screen and (min-width: 1290px) {
             display: none;
@@ -117,11 +111,7 @@
         }
     }
     &__link{
-        font-size: 17px;
-        font-weight: 400;
-        line-height: 24px;
-        color: #FFF;
-        @include font(#FFF, 1.4, px, 400);
+        @include font(#FFF, 1.4, 17px, 400);
 
         transition-property: color;
         transition-duration: 500ms;
@@ -235,11 +225,7 @@
         width: 89px;
     }
     &__text{
-        font-size: 15px;
-        font-weight: 400;
-        line-height: 22px; 
         text-align: center;
-        color: $grey-light-color;
         @include font($grey-light-color, 1.47, 15px, 400);
 
         @media screen and (min-width: 1290px) {
@@ -249,10 +235,7 @@
         }
     }
     &__line{
-        position: absolute;
-        bottom: 70px;
-        left: 0;
-        right: 0;
+        @extend %position18;
         height: 1px;
         background-color: $grey-light-color;
     }

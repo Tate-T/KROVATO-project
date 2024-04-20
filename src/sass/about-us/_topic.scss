@@ -16,12 +16,12 @@
   }
 
   &__container {
-    @extend %flex-center2;
+    @extend %flex-center;
     flex-direction: column;
 
     @media screen and (min-width: 1290px) {
       max-width: 1290px;
-      @include block-model(71px 50px 71px 50px, none, 8px);
+      @include block-model(71px 50px 71px 50px, none, 8px, 0 auto 0 auto);
 
       align-items: flex-start;
 

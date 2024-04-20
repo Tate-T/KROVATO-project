@@ -17,8 +17,7 @@
         @include font($dark-color, 1.33, 30px, 600);
 
         @media screen and (min-width: 1290px) {
-            font-size: 40px;
-            line-height: 1.2;
+            @include font($dark-color, 1.2, 40px, 600);
         }
     }
 
@@ -36,10 +35,8 @@
 
     &__item {
         position: relative;
-
         flex-basis: calc((100% - 10px) / 2);
         @include size(200px, 240px);
-
         background: no-repeat #fff;
         @include block-model(0, none, 8px, 0);
 
@@ -50,10 +47,7 @@
     }
 
     &__subtitle {
-        position: absolute;
-        top: 15px;
-        left: 15px;
-
+        @extend %position7;
         @include font($dark-color, 1.26, 19px, 600);
 
         @media screen and (min-width: 1290px) {
@@ -65,10 +59,7 @@
     }
 
     &__number {
-        position: absolute;
-        top: 15px;
-        right: 15px;
-
+        @extend %position8;
         @include font($grey-light-color, 1.26, 19px, 600);
 
         @media screen and (min-width: 1290px) {
@@ -80,10 +71,7 @@
     }
 
     &__button {
-        position: absolute;
-        bottom: 15px;
-        right: 15px;
-        
+        @extend %position9;
         @include size(40px, 40px);
         background-color: transparent;
         @include block-model(10px, solid 2px $yellow-color, 50%, 0);

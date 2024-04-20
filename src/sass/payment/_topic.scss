@@ -51,19 +51,19 @@
 
     @media screen and (min-width: 1290px) {
       text-align: left;
-      font-size: 40px;
+      @include font($dark-color, 1.33, 40px, 600);
     }
   }
 
   &__subtitle {
     text-align: center;
-    margin: 30px 0 20px;
+    @include block-model(0, none, 0, 30px 0 30px);
     @include font($dark-color, 1.4, 20px, 600);
 
     @media screen and (min-width: 1290px) {
       max-width: 450px;
       text-align: left;
-      font-size: 26px;
+      @include font($dark-color, 1.4, 26px, 600);
     }
   }
 
@@ -74,7 +74,7 @@
     @media screen and (min-width: 1290px) {
       max-width: 450px;
       text-align: left;
-      font-size: 20px;
+      @include font($dark-color, 1.87, 20px, 400);
     }
   }
 }
