@@ -1,12 +1,9 @@
 .about {
-  padding-top: 40px;
-  padding-bottom: 100px;
-
+  @include block-model(40px 0 100px 0, none, 0, 0);
   background-color: #fff;
 
   @media screen and (min-width: 1290px) {
-    padding-top: 70px;
-    padding-bottom: 150px;
+    @include block-model(70px 0 150px 0, none, 0, 0);
   }
 
   &__container {
@@ -15,32 +12,22 @@
 
   &__title {
     @extend %flex-center;
-    margin: 0 auto 40px auto;
-    width: 410px;
-
-    color: $dark-color;
-    font-size: 30px;
-    font-weight: 600;
-    line-height: 1.3;
+    @include block-model(0, none, 0, 0 auto 40px auto);
+    @include size(410px, auto);
+    @include font($dark-color, 1.3, 30px, 600);
 
     @media screen and (min-width: 1290px) {
       text-align: center;
-      margin-bottom: 30px;
-      width: 1070px;
-
-      font-size: 40px;
-      line-height: 1.2;
+      @include block-model(0, none, 0, 0 auto 30px auto);
+      @include size(1070px, auto);
+      @include font($dark-color, 1.2, 40px, 600);
     }
   }
 
   &__text {
-    margin-left: auto;
-    margin-right: auto;
-    width: 1000px;
-
-    color: $dark-color;
-    font-size: 16px;
-    line-height: 1.87;
+    @include block-model(0, none, 0, 0 auto 0 auto);
+    @include size(1000px, auto);
+    @include font($dark-color, 1.87, 16px, 400);
   }
 
   &__text1 {
@@ -48,14 +35,13 @@
 
     @media screen and (min-width: 1290px) {
       display: block;
-      width: 1070px;
+      @include size(1070px, auto);
     }
   }
 
   &__text2 {
     display: block;
-    width: 412px;
-    height: 280px;
+    @include size(412px, 280px);
 
     @media screen and (min-width: 1290px) {
       display: none;
@@ -67,9 +53,8 @@
     top: 335px;
     z-index: 0;
 
-    width: 100%;
+    @include size(100%, 145px);
     max-width: 450px;
-    height: 145px;
 
     background: linear-gradient(
       180deg,
@@ -91,9 +76,7 @@
   }
 
   &__icon {
-    width: 60px;
-    height: 60px;
-
+    @include size(60px, 60px);
     fill: $yellow-color;
   }
 }

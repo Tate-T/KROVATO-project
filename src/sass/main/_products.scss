@@ -94,7 +94,8 @@
     }
 
     &__subtitle-desktop {
-        @extend %flex-center2;
+        display: none;
+        align-items: center;
         @include size(260px, 52px);
         @include font($dark-color, 1.26, 18px, 600);
 
