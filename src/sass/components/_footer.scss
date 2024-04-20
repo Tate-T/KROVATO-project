@@ -10,10 +10,8 @@
     }
 
     &__container{
-        display: flex;
+        @extend %flex-center;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
 
         @media screen and (min-width: 1290px) {
             flex-direction: row;
@@ -22,8 +20,7 @@
         }
     }
     &__logo{
-        width: 250px;
-        height: 50px;
+        @include size(250px, 50px);
         margin-bottom: 40px;
         flex-shrink: 0;
 
@@ -47,9 +44,7 @@
         }
     }
     &__title-box{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @extend %flex-center;
         gap: 20px;
         background-color: #1A1A1A;
         padding-top: 11px;
@@ -65,24 +60,26 @@
         }
     }
     &__title-svg{
-        width: 10px;
-        height: 10px;
+        @include size(10px, 10px);
         fill: #FFF;
         rotate: 90deg;
         position: absolute;
         top: 20px;
         left: 70%;
 
+        transition-property: rotate;
+        transition-duration: 500ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+
         @media screen and (min-width: 1290px) {
             display: none;
         }
     }
     &__list{
-        display: flex;
+        @extend %flex-center;
         flex-direction: column;
         gap: 20px;
-        align-items: center;
-        justify-content: center;
         margin-bottom: 20px;
         margin-top: 15px;
 
@@ -113,10 +110,7 @@
         rotate: 270deg;
     }
     &__title{
-        font-size: 20px;
-        font-weight: 600;
-        line-height: 28px;
-        color: #FFF;
+        @include font(#FFF, 1.4, 20px, 600);
 
         @media screen and (min-width: 1290px) {
             margin-bottom: 10px;
@@ -127,24 +121,30 @@
         font-weight: 400;
         line-height: 24px;
         color: #FFF;
+        @include font(#FFF, 1.4, px, 400);
+
+        transition-property: color;
+        transition-duration: 500ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    &__link:hover, &__link:focus{
+        color: $yellow-color;
     }
     &__svg{
         display: none;
 
         @media screen and (min-width: 1290px) {
             display: block;
-            width: 20px;
-            height: 20px;
+            @include size(20px, 20px);
             fill: $grey-light-color;
         }
     }
     &__svg-box{
         @media screen and (min-width: 1290px) {
-            width: 50px;
-            height: 50px;
+            @include size(50px, 50px);
             display: flex;
-            justify-content: center;
             align-items: center;
+            justify-content: center;
             border-radius: 50%;
             border: solid $grey-color;
             flex-shrink: 0;
@@ -154,18 +154,14 @@
         margin-bottom: 30px;
     }
     &__tel-list{
-        display: flex;
+        @extend %flex-center2;
         flex-direction: column;
-        align-items: center;
         gap: 5px;
         margin-bottom: 10px;
     }
     &__tel-text{
         text-align: center;
-        font-size: 20px;
-        font-weight: 600;
-        line-height: 28px;
-        color: $yellow-color;
+        @include font($yellow-color, 1.4, 20px, 600);
     }
     &__location-box, &__time-box{
         margin-bottom: 30px;
@@ -183,10 +179,7 @@
         }
     }
     &__location, &__time{
-        font-size: 20px;
-        font-weight: 600;
-        line-height: 28px;
-        color: #FFF;
+        @include font(#FFF, 1.4, 20px, 600);
         max-width: 200px;
         text-align: center;
         font-style: normal;
@@ -196,10 +189,7 @@
         }
     }
     &__subtitle{
-        font-size: 17px;
-        font-weight: 400;
-        line-height: 24px;
-        color: #FFF;
+        @include font(#FFF, 1.4, 17px, 400);
         margin-bottom: 10px;
         text-align: center;
 
@@ -219,8 +209,7 @@
         }
     }
     &__sn-list{
-        display: flex;
-        justify-content: center;
+        @extend %flex-center3;
         gap: 15px;
 
         @media screen and (min-width: 1290px) {
@@ -228,8 +217,7 @@
         }
     }
     &__sn-svg{
-        width: 40px;
-        height: 40px;
+        @include size(40px, 40px);
     }
     &__join, &__help{
         margin-bottom: 30px;
@@ -241,8 +229,7 @@
     }
     &__card{
         fill: $grey-light-color;
-        width: 70px;
-        height: 30px;
+        @include size(70px, 30px);
     }
     &__card:last-child{
         width: 89px;
@@ -253,6 +240,7 @@
         line-height: 22px; 
         text-align: center;
         color: $grey-light-color;
+        @include font($grey-light-color, 1.47, 15px, 400);
 
         @media screen and (min-width: 1290px) {
             position: absolute;
