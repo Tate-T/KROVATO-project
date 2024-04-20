@@ -67,7 +67,7 @@
             @include block-model(0, none, 0, 5px 0 41px 0);
 
             @media screen and (min-width: 429px) {
-                @include block-model(0, none, 0, 5px 0 0 0);
+                @include block-model(0, none, 0, 5px 0 0 20px);
             }
         }
     }
