@@ -5,24 +5,17 @@
     font-family: 'Montserrat';
 
     &__pages{
-        display: flex;
-        align-items: center;
+        @extend %flex-center2;
         gap: 5px;
         margin-bottom: 40px;
     }
     &__pages-svg{
-        width: 10px;
-        height: 10px;
+        @include size(10px, 10px);
         fill: $grey-color;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @extend %flex-center;
     }
     &__page{
-        color: $grey-color;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 30px; 
+        @include font($grey-color, 1.875, 16px, 400);
     }
     &__active-page{
         color: $yellow-color;
@@ -35,10 +28,7 @@
     }
 
     &__title{
-        color: $dark-color;
-        font-size: 30px;
-        font-weight: 600;
-        line-height: 1.33;
+        @include font($dark-color, 1.33, 30px, 600);
         margin-bottom: 40px;
 
         @media screen and (min-width: 768px){
@@ -62,8 +52,7 @@
         }
     }
     &__svg{
-        width: 20px;
-        height: 20px;
+        @include size(20px, 20px);
         fill: #FFF;
     }
     &__item{
@@ -78,27 +67,18 @@
         }
     }
     &__svg-container{
-        width: 50px;
-        height: 50px;
+        @include size(50px, 50px);
         background-color: $yellow-color;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @extend %flex-center;
         border-radius: 50%;
         flex-shrink: 0;
     }
     &__subtitle{
-        font-size: 17px;
-        font-weight: 400;
-        line-height: 24px;
-        color: $grey-light-color;
+        @include font($grey-light-color, 1.4, 17px, 400);
         margin-bottom: 5px;
     }
     &__link{
-        font-size: 18px;
-        font-weight: 600;
-        line-height: 28px;
-        color: $dark-color;
+        @include font($dark-color, 1.56, 18px, 600);
         transition-property: color;
         transition-duration: 500ms;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -112,14 +92,10 @@
         margin-top: 20px;
     }
     &__sn-svg{
-        width: 30px;
-        height: 30px;
+        @include size(30px, 30px);
     }
     &__address, &__time{
-        font-size: 18px;
-        font-weight: 600;
-        line-height: 28px;
-        color: $dark-color;
+        @include font($dark-color, 1.56, 18px, 600);
         font-style: normal;
         max-width: 235px;
         transition-property: color;
@@ -142,9 +118,8 @@
         }
     }
     &__img-box{
-        display: flex;
+        @extend %flex-center2;
         flex-direction: column;
-        align-items: center;
 
         @media screen and (min-width: 1290px){
             flex-direction: row;
