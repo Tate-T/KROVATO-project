@@ -40,6 +40,13 @@
         background: no-repeat #fff;
         @include block-model(0, none, 8px, 0);
 
+        &:hover {
+            border: 2px solid $yellow-color;
+
+            transition-duration: 1000ms;
+            transition-property: border;
+        }
+
         @media screen and (min-width: 1290px) {
             flex-basis: calc((100% - 40px) / 5);
             @include size(250px, 300px);
@@ -72,15 +79,28 @@
 
     &__button {
         @extend %position9;
+        display: none;
         @include size(40px, 40px);
         background-color: transparent;
+        fill: transparent;
         @include block-model(10px, solid 2px $yellow-color, 50%, 0);
+
+        transition-property: fill;
+        transition-duration: 1000ms;
 
         @media screen and (min-width: 1290px) {
             bottom: 20px;
             right: 20px;
             @include size(50px, 50px);
         }
+    }
+
+    &__item:hover > &__button {
+        display: block;
+        fill: $yellow-color;
+
+        transition-property: fill;
+        transition-duration: 1000ms;
     }
 
     &__icon {
