@@ -117,6 +117,18 @@
         @include size(410px, 50px);
         gap: 15px;
         background-color: $yellow-color;
+        border: 2px solid transparent;
+
+        transition-property: background-color border;
+        transition-duration: 2500ms;
+
+        &:hover, &:focus {
+            border: 2px solid $yellow-color;
+            background-color: #FFF;
+
+            transition-property: background-color border;
+            transition-duration: 2500ms;
+        }
 
         @media screen and (min-width: 1290px) {
             @include size(300px, 50px);
@@ -125,10 +137,30 @@
         &-arrow {
             @include size(24px, 24px);
             fill: #FFF;
+
+            transition-property: fill;
+            transition-duration: 500ms;
+        }
+
+        &:hover > &-arrow {
+            fill: $yellow-color;
+
+            transition-property: fill;
+            transition-duration: 500ms;
         }
 
         &-text {
             @include font(#FFF, 1.26, 19px, 600);
+
+            transition-property: color;
+            transition-duration: 500ms;
+        }
+
+        &:hover > &-text {
+            color: $yellow-color;
+
+            transition-property: color;
+            transition-duration: 500ms;
         }
     }
 
@@ -143,79 +175,66 @@
         }
     }
 
-    &__item2 {
-        @include size(50px, 50px);
-        @include block-model(13px 22px 13px 22px, none, 8px, 0);
-    }
-
-    &__item2:nth-child(1) {
-        @include block-model(15px, 1px solid $grey-light-color, 8px, 0);
+    &__item2:nth-child(1) > &__button {
+        @include block-model(13px 11px 13px 18px, 1px solid $grey-light-color, 8px, 0);
         background: #FFF;
+
+        transition-property: background-color fill border;
+        transition-duration: 500ms;
+
+        &:hover, &:focus {
+            @include block-model(13px 11px 13px 18px, none, 8px, 0);
+            background-color: $yellow-color;
+        }
     }
 
-    &__item2:nth-child(2) {
+    &__item2:nth-child(1) > &__button:hover > &__pages-svg {
+        fill: #FFF;
+    }
+
+    &__item2:nth-child(2) > &__button {
+        @include block-model(13px 15px 13px 15px, none, 8px, 0);
         background: $yellow-color;
-    }
-
-    &__item2:nth-child(3) {
-        @include block-model(13px 15px 13px 15px, 1px solid $grey-light-color, 8px, 0);
-        background: #FFF;
-    }
-
-    &__item2:nth-child(4) {
-        @include block-model(13px 15px 13px 15px, 1px solid $grey-light-color, 8px, 0);
-        background: #FFF;
-    }
-
-    &__item2:nth-child(5) {
-        @include block-model(13px 15px 13px 15px, 1px solid $grey-light-color, 8px, 0);
-        background: #FFF;
-    }
-
-    &__item2:nth-child(6) {
-        @include block-model(13px 15px 13px 15px, 1px solid $grey-light-color, 8px, 0);
-        background: #FFF;
-    }
-
-    &__item2:nth-child(7) {
-        @include block-model(13px 15px 13px 15px, 1px solid $grey-light-color, 8px, 0);
-        background: #FFF;
-    }
-
-    &__item2:nth-child(8) {
-        @include block-model(13px 15px 13px 15px, 1px solid $grey-light-color, 8px, 0);
-        background: #FFF;
-    }
-
-    &__item2:nth-child(9) {
-        @include block-model(13px 15px 13px 15px, 1px solid $grey-light-color, 8px, 0);
-        background: #FFF;
-    }
-
-    &__item2:nth-child(10) {
-        @include block-model(13px 15px 13px 15px, 1px solid $grey-light-color, 8px, 0);
-        background: #FFF;
-    }
-
-    &__item2:nth-child(11) {
-        @include block-model(15px, 1px solid $grey-light-color, 8px, 0);
-        background: #FFF;
-    }
-
-    &__button {
-        @include block-model(0, none, 0, 0 auto 0 auto);
-        @include size(auto, 20px);
-        
-        background-color: #FFF;
-        @include font($grey-color, 1.42, 17px, 400);
-    }
-
-    &__item2:nth-child(2)>&__button {
-        background-color: $yellow-color;
         color: #FFF;
     }
 
     &__item2:nth-child(11) > &__button {
-        @include block-model(0, none, 0, 0 0 0 7px);
+        @include block-model(13px 5px 13px 22px, 1px solid $grey-light-color, 8px, 0);
+        background: #FFF;
+
+        transition-property: background-color fill border;
+        transition-duration: 500ms;
+
+        &:hover, &:focus {
+            @include block-model(13px 5px 13px 22px, none, 8px, 0);
+            background-color: $yellow-color;
+
+            transition-property: background-color color border;
+            transition-duration: 500ms;
+        }
+    }
+
+    &__item2:nth-child(11) > &__button:hover > &__pages-svg {
+        fill: #FFF;
+    }
+
+    &__button {
+        @include block-model(13px 15px 13px 15px, 1px solid $grey-light-color, 8px, 0);
+        @include size(50px, 50px);
+        
+        background-color: #FFF;
+        @include font($grey-color, 1.42, 17px, 400);
+
+        transition-property: background-color color border;
+        transition-duration: 500ms;
+
+        &:hover, &:focus {
+            @include block-model(13px 15px 13px 15px, 1px solid transparent, 8px, 0);
+            background-color: $yellow-color;
+            color: #FFF;
+
+            transition-property: background-color color border;
+            transition-duration: 500ms;
+        }
     }
 }
