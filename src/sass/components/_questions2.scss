@@ -3,7 +3,9 @@
     background-color: $light-color;
 
     input {
-        @extend %position12;
+        @extend %position20;
+        @include size(999px, 50px);
+        // outline: 2px solid red;
     }
 
     &__container {
@@ -87,7 +89,7 @@
 
     &__subtitle {
         @include block-model(0, none, 0, 0 0 0 15px);
-        @include size(286px, auto);
+        @include size(100%, auto);
         @include font($dark-color, 1.26, 19px, 600);
 
         @media screen and (min-width: 1290px) {

@@ -3,9 +3,9 @@
     background-color: $light-color;
 
     input {
-        position: absolute;
-        opacity: 0;
-        z-index: -1;
+        @extend %position20;
+        @include size(999px, 50px);
+        // outline: 2px solid red;
     }
 
     &__container {
@@ -13,13 +13,12 @@
         flex-direction: column;
     }
 
-    &__checkbox:checked + &__paragraph {
+    &__checkbox:checked+&__paragraph {
         display: flex;
     }
 
     &__item {
         position: relative;
-
         @include block-model(15px, none, 8px, 0 0 15px 0);
         @include size(410px, auto);
         gap: 10px;
@@ -32,7 +31,9 @@
         }
     }
 
-    &__item:nth-child(1):hover, &__item:nth-child(1):focus, &__item:nth-child(1):active {
+    &__item:nth-child(1):hover,
+    &__item:nth-child(1):focus,
+    &__item:nth-child(1):active {
         @include block-model(13px, 2px solid $yellow-color, 8px, 0 0 15px 0);
     }
 
@@ -88,7 +89,7 @@
 
     &__subtitle {
         @include block-model(0, none, 0, 0 0 0 15px);
-        @include size(286px, auto);
+        @include size(100%, auto);
         @include font($dark-color, 1.26, 19px, 600);
 
         @media screen and (min-width: 1290px) {
