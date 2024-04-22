@@ -29,36 +29,39 @@
         width: 300px;
     }
     &__svg{
-        width: 80px;
-        height: 80px;
+        @include size(80px, 80px);
         flex-shrink: 0;
     }
     &__title{
-        font-size: 20px;
-        font-weight: 600;
-        line-height: 28px;
-        color: $dark-color;
+        @include font($dark-color, 1.4, 20px, 600);
         margin-bottom: 11px;
     }
     &__text{
-        font-size: 15px;
-        font-weight: 400;
-        line-height: 22px;
-        color: $grey-color;
+        @include font($grey-color, 1.47, 15px, 400);
         margin-bottom: 11px;
     }
     &__link{
-        font-size: 15px;
-        font-weight: 400;
-        line-height: 22px;
-        color: $yellow-color;
-        display: flex;
-        align-items: center;
+        @extend %flex-center2;
+        @include font($yellow-color, 1.47, 15px, 400);
         gap: 5px;
+
+        transition-property: color;
+        transition-duration: 500ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    &__link:hover, &__link:active{
+        color: #ee9c22;
+    }
+    &__link:hover &__arrow, &__link:active &__arrow{
+        fill: #ee9c22;
     }
     &__arrow{
-        width: 24px;
-        height: 24px;
+        @include size(24px, 24px);
         fill: $yellow-color;
+
+        transition-property: fill;
+        transition-duration: 500ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     }
-}
+} 
