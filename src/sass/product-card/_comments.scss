@@ -11,10 +11,7 @@
         }
     }
     &__title{
-        font-size: 30px;
-        font-weight: 600;
-        line-height: 1.33;
-        color: $dark-color;
+        @include font($dark-color, 1.3, 30px, 600);
         margin-bottom: 10px;
     }
     &__item{
@@ -32,48 +29,37 @@
         margin-bottom: 10px;
     }
     &__summ-text{
-        font-size: 17px;
-        line-height: 1.4;
-        color: #6A6A6A;
+        @include font(#6A6A6A, 1.4, 17px, 400);
         margin-right: 31px;
     }
     &__stars{
         display: flex;
     }
     &__star-svg{
-        width: 24px;
-        height: 24px;
+        @include size(24px, 24px);
         fill: $yellow-color;
     }
 
     &__user-box{
-        display: flex;
+        @extend %flex-center2;
         flex-wrap: wrap;
-        align-items: center;
         gap: 10px 20px;
         margin-bottom: 20px;
     }
     &__user-svg{
-        width: 50px;
-        height: 50px;
+        @include size(50px, 50px);
         flex-shrink: 0;
     }
     &__user-name{
-        font-size: 17px;
-        line-height: 1.4;
-        color: $dark-color;
+        @include font($dark-color, 1.4, 17px, 400);
         flex-shrink: 0;
     }
     &__text{
-        font-size: 16px;
-        line-height: 1.875;
-        color: $dark-color;
+        @include font($dark-color, 1.875, 16px, 400);
         margin-bottom: 20px;
     }
     &__date{
-        font-size: 17px;
-        line-height: 1.4;
-        color: $grey-color;
+        @include font($grey-color, 1.4, 17px, 400);
     }
     &__reviews{
         display: flex;
@@ -88,26 +74,41 @@
     &__review-btn{
         background-color: transparent;
         border: none;
-        display: flex;
+        @extend %flex-center2;
         gap: 10px;
-        align-items: center;
+        @include font($grey-color, 1.4, 17px, 400);
+
+        transition-property: color;
+        transition-duration: 500ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    &__review-btn:hover, &__review-btn:focus{
+        color: #ee9c22;
+    }
+    &__review-btn:hover &__review-svg, &__review-btn:focus &__review-svg{
+        fill: #ee9c22;
+    }
+    &__review-btn:hover &__review-number, &__review-btn:focus &__review-number{
+        background-color: #ee9c22;
     }
     &__review-number{
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @extend %flex-center;
         background-color: $yellow-color;
-        width: 21px;
-        height: 21px;
-        color: #FFF;
-        font-size: 13px;
-        font-weight: 700;
+        @include size(21px, 21px);
         border-radius: 50%;
+        @include font(#FFF, normal, 13px, 700);
+
+        transition-property: background-color;
+        transition-duration: 500ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     }
     &__review-svg{
-        width: 24px;
-        height: 24px;
+        @include size(24px, 24px);
         fill: $yellow-color;
+
+        transition-property: fill;
+        transition-duration: 500ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     }
     &__answers{
         border-top: solid $yellow-color;
@@ -118,34 +119,26 @@
         gap: 30px;
     }
     &__answer-user{
-        display: flex;
+        @extend %flex-center2;
         gap: 10px;
-        align-items: center;
         flex-wrap: wrap;
         margin-bottom: 20px;
     }
     &__answer-svg{
-        width: 24px;
-        height: 24px;
+        @include size(24px, 24px);
         fill: $yellow-color;
         flex-shrink: 0;
     }
     &__admin-svg{
-        width: 50px;
-        height: 50px;
+        @include size(50px, 50px);
         fill: #FFF;
         stroke: $yellow-color;
     }
     &__answer-name{
-        font-size: 19px;
-        font-weight: 600;
-        line-height: 1.26;
-        color: $dark-color;
+        @include font($dark-color, 1.26, 19px, 600);
     }
     &__answer-text{
-        font-size: 16px;
-        line-height: 1.875;
-        color: $dark-color;
+        @include font($dark-color, 1.875, 16px, 400);
     }
     &__response{
         background-color: $light-color;
@@ -154,14 +147,12 @@
         border-radius: 8px;
     }
     &__response-box{
-        display: flex;
-        align-items: center;
+        @extend %flex-center2;
         gap: 15px;
         margin-bottom: 30px;
     }
     &__response-svg{
-        width: 32px;
-        height: 32px;
+        @include size(32px, 32px);
         fill: $yellow-color;
     }
     &__response-form{
@@ -180,9 +171,7 @@
         border-radius: 8px;
         border: solid #D1D5D5;
         background: #FFF;
-        font-size: 16px;
-        line-height: 1.875;
-        color: $grey-color;
+        @include font($grey-color, 1.875, 16px, 400);
 
         @media screen and (min-width: 1290px) {
             width: 350px;
@@ -201,26 +190,32 @@
     }
     &__response-submit{
         padding: 8px 20px;
-        justify-content: center;
-        align-items: center;
         border-radius: 8px;
         background-color: $yellow-color;
-        font-size: 19px;
-        font-weight: 600;
-        line-height: 1.26;
-        color: #FFF;
+        @include font(#FFF, 1.26, 19px, 600);
+
+        transition-property: background-color;
+        transition-duration: 500ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    &__response-submit:hover, &__response-submit:focus{
+        background-color: #ee9c22;
     }
     &__response-decline{
         padding: 8px 20px;
-        justify-content: center;
-        align-items: center;
         border-radius: 8px;
         border: 0.5px solid $yellow-color;
         background-color: #FFF;
-        font-size: 19px;
-        font-weight: 600;
-        line-height: 1.26;
-        color: $yellow-color;
+        @include font($yellow-color, 1.26, 19px, 600);
+
+        transition-property: background-color, border-color, color;
+        transition-duration: 500ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    &__response-decline:hover, &__response-decline:focus{
+        background-color: #ee9c22;
+        border-color: #ee9c22;
+        color: #FFF;
     }
     &__show-more{
         display: flex;
@@ -228,16 +223,37 @@
         gap: 15px;
         border-radius: 8px;
         background-color: $yellow-color;
-        font-size: 19px;
-        font-weight: 600;
-        line-height: 1.26;
-        color: #FFF;
+        @include font(#FFF, 1.26, 19px, 600);
         margin-left: auto;
         margin-right: auto;
+
+        transition-property: background-color;
+        transition-duration: 500ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+        animation-name: btn-animation;
+        animation-iteration-count: infinite;
+        animation-duration: 3000ms;
+        animation-delay: 5000ms;
+    }
+    &__show-more:hover, &__show-more:focus{
+        background-color: #ee9c22;
     }
     &__show-more-svg{
-        width: 24px;
-        height: 24px;
+        @include size(24px, 24px);
         fill: #FFF;
+    }
+}
+
+@keyframes btn-animation{
+    0%{
+        background-color: $yellow-color;
+    }
+    50%{
+        background-color: #f09a1a;
+        transform: scale(1.15);
+    }
+    100%{
+        background-color: $yellow-color;
     }
 }
