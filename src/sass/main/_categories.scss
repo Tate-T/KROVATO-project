@@ -38,13 +38,13 @@
         flex-basis: calc((100% - 10px) / 2);
         @include size(200px, 240px);
         background: no-repeat #fff;
-        @include block-model(0, none, 8px, 0);
+        @include block-model(0, 2px solid $light-color, 8px, 0);
+
+        transition-duration: 500ms;
+        transition-property: border;
 
         &:hover {
             border: 2px solid $yellow-color;
-
-            transition-duration: 1000ms;
-            transition-property: border;
         }
 
         @media screen and (min-width: 1290px) {
@@ -57,12 +57,19 @@
         @extend %position7;
         @include font($dark-color, 1.26, 19px, 600);
 
+        transition-duration: 500ms;
+        transition-property: color;
+
         @media screen and (min-width: 1290px) {
             top: 20px;
             left: 20px;
 
             @include font($dark-color, 1.4, 20px, 600);
         }
+    }
+
+    &__item:hover > &__subtitle {
+        color: $yellow-color;
     }
 
     &__number {
@@ -79,14 +86,13 @@
 
     &__button {
         @extend %position9;
-        display: none;
+        opacity: 0;
         @include size(40px, 40px);
         background-color: transparent;
-        fill: transparent;
         @include block-model(10px, solid 2px $yellow-color, 50%, 0);
 
-        transition-property: fill;
-        transition-duration: 1000ms;
+        transition-property: opacity;
+        transition-duration: 500ms;
 
         @media screen and (min-width: 1290px) {
             bottom: 20px;
@@ -96,11 +102,8 @@
     }
 
     &__item:hover > &__button {
-        display: block;
+        opacity: 1;
         fill: $yellow-color;
-
-        transition-property: fill;
-        transition-duration: 1000ms;
     }
 
     &__icon {
