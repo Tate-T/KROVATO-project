@@ -1,0 +1,141 @@
+.price {
+  padding-top: 120px;
+
+  &__title {
+    @include font($dark-color, 133%, 30px, 600);
+    text-align: center;
+    margin-bottom: 40px;
+
+    @media screen and (min-width: 768px) {
+      @include font($dark-color, 120%, 40px, 600);
+      margin-bottom: 20px;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  &__item {
+    display: flex;
+    padding: 15px 10px;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    flex-direction: column;
+
+    @media screen and (min-width: 768px) {
+      justify-content: space-between;
+      flex-direction: row;
+    }
+  }
+  &__item::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: calc(100% - 20px);
+    border-bottom: 1px dashed $grey-color;
+
+    @media screen and (min-width: 768px) {
+      top: 50%;
+    }
+  }
+  &__free {
+    display: none;
+    @media screen and (min-width: 768px) {
+      text-align: center;
+      background-color: #fff;
+      z-index: 3;
+      display: block;
+      @include font($grey-color, 141%, 17px, 400);
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+  }
+  &__text {
+    background-color: #fff;
+    z-index: 3;
+    // padding-right: 10px;
+    @include font($grey-color, 141%, 17px, 400);
+    margin-bottom: 20px;
+  }
+  &__price {
+    background-color: #fff;
+    z-index: 3;
+    padding-left: 10px;
+    @include font($grey-color, 141%, 17px, 400);
+  }
+  &__element:first-child {
+    display: none;
+    @media screen and (min-width: 768px) {
+      background-color: $grey-color;
+      z-index: 4;
+      border-radius: 8px;
+      position: relative;
+      display: flex;
+    }
+  }
+  &__text1 {
+    @media screen and (min-width: 768px) {
+      background-color: transparent;
+      @include font(#fff, 140%, 20px, 600);
+      width: 420px;
+      text-align: center;
+    }
+  }
+  &__text2 {
+    width: 320px;
+    text-align: center;
+    @media screen and (min-width: 768px) {
+      width: 200px;
+      text-align: left;
+    }
+    @media screen and (min-width: 1290px) {
+      width: 420px;
+    }
+  }
+  &__discleimer{
+    @include font($dark-color, 188%, 16px, 400);
+  }
+  &__mobile-suptitle {
+    @include font($dark-color, 131%, 26px, 600);
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  // &__element{
+  //   justify-content: flex-start;
+  // }
+  &__price2 {
+    width: 320px;
+    text-align: center;
+
+    @media screen and (min-width: 768px) {
+      width: 200px;
+      text-align: right;
+    }
+  }
+  &__mobile-title {
+    margin-bottom: 10px;
+
+    @media screen and (min-width: 768px) {
+      margin-bottom: 40px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    &__text1 {
+      background-color: transparent;
+      @include font(#fff, 140%, 20px, 600);
+      width: 420px;
+      text-align: center;
+    }
+    &__mobile-list {
+      display: none;
+    }
+    &__mobile-title2{
+      display: none;
+    }
+    &__mobile-suptitle{
+      display: none;
+    }
+  }
+}
