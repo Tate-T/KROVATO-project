@@ -6,6 +6,31 @@
     @include block-model(70px 0 150px 0, none, 0, 0);
   }
 
+  input {
+    position: absolute;
+    inset: 410px 215px 0px;
+    @include size(50px, 50px);
+    // outline: 2px solid red;
+    opacity: 0;
+    z-index: 3;
+
+    @media screen and (min-width: 768px) {
+      inset: 410px 359px 0px;
+    }
+
+    @media screen and (min-width: 1290px) {
+      inset: 405px 635px 0px;
+    }
+  }
+
+  input:checked {
+    inset: 1095px 360px 0px;
+
+    @media screen and (min-width: 1290px) {
+      inset: 1010px 635px 0px;
+    }
+  }
+
   &__container {
     position: relative;
   }
@@ -29,27 +54,49 @@
     }
   }
 
+  &__box {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    padding: 0px;
+    padding-bottom: 50px;
+  }
+
   &__text {
     @include block-model(0, none, 0, 0 auto 0 auto);
     @include size(1000px, auto);
     @include font($dark-color, 1.87, 16px, 400);
+    transition: all 0.35s;
   }
 
   &__text1 {
     display: none;
+    max-height: 270px;
 
     @media screen and (min-width: 1290px) {
       display: block;
       @include size(1070px, auto);
     }
+
+    input:checked+& {
+      max-height: 900px;
+
+      @media screen and (min-width: 1290px) {
+        max-height: 1000px;
+      }
+    }
   }
 
   &__text2 {
     display: block;
-    @include size(290px, 450px);
+    @include size(290px, auto);
+
+    input:checked+& {
+      max-height: 1000px;
+    }
 
     @media screen and (min-width: 440px) {
-      @include size(412px, 280px);
+      @include size(412px, auto);
     }
 
     @media screen and (min-width: 1290px) {
@@ -70,16 +117,40 @@
     @media screen and (min-width: 1290px) {
         max-width: 1290px;
     }
+
+    input:checked ~ & {
+      inset: 945px 0 0px;
+      opacity: 0
+    }
   }
 
   &__button {
     @extend %position11;
     background-color: transparent;
     @extend %animation-of-button;
+    cursor: pointer;
 
     @media screen and (min-width: 440px) {
-      inset: 400px 210px 0px;
+      inset: -260px 210px 0px;
+
+      input:checked~.about__subaccordion>& {
+        inset: 1150px 0px 0px;
+        transform: rotate(180deg);
+      }
     }
+
+    @media screen and (min-width: 1290px) {
+      inset: 405px 635px 0px;
+
+      input:checked~.about__subaccordion>& {
+        inset: 1065px 615px 0px;
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__text1 {
+    transition: max-height 0.5s ease-in-out;
   }
 
   &__icon {
