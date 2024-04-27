@@ -33,5 +33,17 @@
     <script>
       AOS.init();
     </script>
+    <script>
+      document.getElementById('about__button').addEventListener('click', function() {
+      document.getElementById('about__text').classList.add('hidden');
+      this.classList.add('hidden');
+      });
+    </script>
+    <script>
+      function toggleText() {
+      const content = document.querySelector('.about__box');
+      content.classList.toggle('open');
+      }
+    </script>
   </body>
 </html>
