@@ -11,17 +11,6 @@
     @media screen and (min-width: 1290px) {
       position: relative;
       display: flex;
-      justify-content: center;
-    }
-  }
-
-  &__box3 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    @media screen and (min-width: 1290px) {
-      display: block;
     }
   }
 
@@ -43,7 +32,7 @@
   }
 
   &__icon {
-    @include size(57px, 32px);
+    @include size(57px, 32px); 
     fill: $yellow-color;
   }
 
@@ -137,22 +126,52 @@
     gap: 30px;
   }
 
-  &__swiper {
-    @include size(100%, 370px);
-
-    @media screen and (min-width: 480px) {
-      @include size(450px, 370px);
-    }
+  &__list {
+    margin: 0 0 30px;
 
     @media screen and (min-width: 1290px) {
-      @include block-model(0, none, 0, 0 0 0 104px);
+      position: absolute;
+      top: 0;
+      left: 553px;
+      z-index: 1;
+
+      display: flex;
+      gap: 30px;
+
+      // opacity: 0.4;
     }
   }
 
-  &__slide {
+  &__item {
+    position: relative;
     @include block-model(20px, 1px solid #e3e2e2, 8px, 0);
-
     background-color: #fff;
+    box-shadow: -3px 4px 15px 0px rgba(0, 0, 0, 0.06);
+
+    &::before {
+      content: "";
+      @extend %position14;
+      display: block;
+      @include size(6px, 51px);
+      background-color: $grey-light-color;
+    }
+
+    &::after {
+      content: "";
+      @extend %position15;
+      display: block;
+      @include size(6px, 99px);
+      background-color: $light-color;
+    }
+
+    &:not(:first-child) {
+      display: none;
+
+      @media screen and (min-width: 1290px) {
+        display: block;
+        width: 450px;
+      }
+    }
   }
 
   &__flex2 {
@@ -207,10 +226,89 @@
   }
 
   &__img {
-    @include size(50px);
+    width: 50px;
   }
 
   &__product {
     @include font($grey-color, 1.4, 20px, 600);
+  }
+
+  &__circles {
+    @extend %flex-center3;
+    gap: 10px;
+
+    @media screen and (min-width: 1290px) {
+      display: none;
+    }
+  }
+
+  &__circle {
+    &:nth-child(3) > .last-reviews__round {
+      border: 2px solid #fff;
+      background-color: $yellow-color;
+    }
+  }
+
+  &__round {
+    @include size(15px, 15px);
+    @include block-model(0, 2px solid $grey-light-color, 50%, 0);
+    background-color: #fff;
+  }
+
+  &__block2 {
+    display: none;
+
+    @media screen and (min-width: 1290px) {
+      position: relative;
+
+      display: block;
+      // padding: 401px 0 0 0;
+      @include size(969px, 466px);
+      overflow-x: hidden;
+    }
+  }
+
+  &__scrollbar {
+    display: none;
+
+    @media screen and (min-width: 1290px) {
+      position: absolute;
+      bottom: 51px;
+      left: 105px;
+
+      display: block;
+      @include size(800px, 6px);
+
+      background-color: #e3e2e2;
+    }
+  }
+
+  &__bg2 {
+    display: none;
+
+    @media screen and (min-width: 1290px) {
+      position: absolute;
+      bottom: 25px;
+      left: 180px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @include size(60px, 60px);
+      border-radius: 50%;
+
+      background-color: #ffffff;
+      cursor: pointer;
+    }
+  }
+
+  &__arrow {
+    display: none;
+    @include size(24px, 24px);
+
+    @media screen and (min-width: 1290px) {
+      display: block;
+    }
   }
 }
