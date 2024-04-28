@@ -1,6 +1,10 @@
 .options {
+<<<<<<< Updated upstream
     padding-bottom: 40px;
 
+=======
+    @include block-model(70px 0 40px 0, none, 0, 0);
+>>>>>>> Stashed changes
     background-color: #fff;
 
     &__container {
