@@ -8,26 +8,47 @@
 
   input {
     position: absolute;
-    inset: 410px 215px 0px;
     @include size(50px, 50px);
-    // outline: 2px solid red;
+    outline: 2px solid red;
     opacity: 0;
     z-index: 3;
+    inset: 385px 160px 0px;
+    cursor: pointer;
+
+    @media screen and (min-width: 440px) {
+      inset: 410px 220px 0px;
+    }
 
     @media screen and (min-width: 768px) {
       inset: 410px 359px 0px;
     }
 
+    @media screen and (min-width: 1200px) {
+      inset: 410px 577px 0px;
+    }
+
     @media screen and (min-width: 1290px) {
-      inset: 405px 635px 0px;
+      inset: 410px 640px 0px;
     }
   }
 
   input:checked {
-    inset: 1095px 360px 0px;
+    inset: 1575px 145px 0px;
+
+    @media screen and (min-width: 440px) {
+      inset: 1225px 217px 0px;
+    }
+
+    @media screen and (min-width: 768px) {
+      inset: 1220px 359px 0px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      inset: 1220px 577px 0px;
+    }
 
     @media screen and (min-width: 1290px) {
-      inset: 1010px 635px 0px;
+      inset: 1095px 635px 0px;
     }
   }
 
@@ -54,12 +75,29 @@
     }
   }
 
-  &__box {
-    display: block;
-    overflow: hidden;
+  &__box1 {
+    display: none;
     width: 100%;
     padding: 0px;
     padding-bottom: 50px;
+    overflow: hidden;
+
+    @media screen and (min-width: 1290px) {
+      display: block;
+    }
+  }
+
+  &__box2 {
+    display: block;
+    width: 100%;
+    padding: 0px;
+    padding-bottom: 50px;
+    overflow: hidden;
+    max-height: 1500px;
+
+    @media screen and (min-width: 1290px) {
+      display: none;
+    }
   }
 
   &__text {
@@ -72,9 +110,11 @@
   &__text1 {
     display: none;
     max-height: 270px;
+    gap: 40px;
 
     @media screen and (min-width: 1290px) {
-      display: block;
+      display: flex;
+      flex-direction: column;
       @include size(1070px, auto);
     }
 
@@ -85,14 +125,27 @@
         max-height: 1000px;
       }
     }
+
+    &-span {
+      width: 1070px;
+      height: 280px;
+
+      &-paragraph {
+        padding-left: 20px;
+      }
+    }
   }
 
   &__text2 {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
     @include size(290px, auto);
+    max-height: 270px;
+    overflow: hidden;
 
-    input:checked+& {
-      max-height: 1000px;
+    input:checked + & {
+      max-height: 1500px;
     }
 
     @media screen and (min-width: 440px) {
@@ -101,6 +154,12 @@
 
     @media screen and (min-width: 1290px) {
       display: none;
+    }
+
+    &-span {
+      &-paragraph {
+        padding-left: 20px;
+      }
     }
   }
 
@@ -128,13 +187,28 @@
     @extend %position11;
     background-color: transparent;
     @extend %animation-of-button;
+    opacity: 1;
     cursor: pointer;
 
+    input:checked~.about__subaccordion>& {
+      inset: 1625px 0px 0px;
+      transform: rotate(180deg);
+    }
+
     @media screen and (min-width: 440px) {
-      inset: -260px 210px 0px;
+      inset: 395px 215px 0px;
 
       input:checked~.about__subaccordion>& {
-        inset: 1150px 0px 0px;
+        inset: 1275px 0px 0px;
+        transform: rotate(180deg);
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      inset: 400px 350px 0px;
+
+      input:checked~.about__subaccordion>& {
+        inset: 1275px 100px 0px;
         transform: rotate(180deg);
       }
     }
@@ -143,7 +217,7 @@
       inset: 405px 635px 0px;
 
       input:checked~.about__subaccordion>& {
-        inset: 1065px 615px 0px;
+        inset: 1150px 615px 0px;
         transform: rotate(180deg);
       }
     }
@@ -156,5 +230,13 @@
   &__icon {
     @include size(60px, 60px);
     fill: $yellow-color;
+
+    @media screen and (min-width: 440px) {
+      @include size(60px, 60px);
+    }
+
+    input:checked ~ .about__subaccordion > .about__button > & {
+      @include size(60px, 60px);
+    }
   }
 }

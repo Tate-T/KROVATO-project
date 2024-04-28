@@ -81,6 +81,7 @@
     }
 
     &__item {
+        cursor: pointer;
         flex-basis: calc((100% - 60px) / 3);
     }
 

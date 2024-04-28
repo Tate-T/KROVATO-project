@@ -74,6 +74,7 @@
         @include size(290px, 420px);
         background: #FFF;
         box-shadow: -3px 4px 15px 0px rgba(0, 0, 0, 0.06);
+        cursor: pointer;
 
         @media screen and (min-width: 440px) {
             @include size(410px, 488px);

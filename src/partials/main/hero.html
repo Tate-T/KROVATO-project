@@ -5,10 +5,14 @@
                 <use href="../images/symbol-defs.svg#icon-main-hero-left"></use>
             </svg>
         </button>
-        <div class="hero__slider">
-            <div class="hero__slide"></div>
-        </div>
-        <ul class="hero__list">
+        <swiper-container class="mySwiper hero__slider" navigation="true" pagination="true" keyboard="true" mousewheel="true" css-mode="true">
+            <swiper-slide class="hero__slide"></swiper-slide>
+            <swiper-slide class="hero__slide"></swiper-slide>
+            <swiper-slide class="hero__slide"></swiper-slide>
+            <swiper-slide class="hero__slide"></swiper-slide>
+            <swiper-slide class="hero__slide"></swiper-slide>
+        </swiper-container>
+        <!-- <ul class="hero__list">
             <li class="hero__item">
                 <svg  data-aos="zoom-in" data-aos-duration="3000" class="hero__point">
                     <use href="../images/symbol-defs.svg#empty-hero-point"></use>
@@ -34,7 +38,7 @@
                     <use href="../images/symbol-defs.svg#empty-hero-point"></use>
                 </svg>
             </li>
-        </ul>
+        </ul> -->
         <button data-aos="fade-left" type="button" class="hero__button2">
             <svg class="hero__icon2">
                 <use href="../images/symbol-defs.svg#icon-main-hero-right"></use>

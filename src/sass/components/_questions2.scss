@@ -4,8 +4,21 @@
 
     input {
         @extend %position20;
-        @include size(500px, 50px);
+        @include size(290px, 50px);
         // outline: 2px solid red;
+        cursor: pointer;
+
+        @media screen and (min-width: 440px) {
+            @include size(410px, 50px);
+        }
+
+        @media screen and (min-width: 768px) {
+            @include size(738px, 50px);
+        }
+
+        @media screen and (min-width: 1290px) {
+            @include size(1070px, 50px);
+        }
     }
 
     &__container {
@@ -20,11 +33,19 @@
     &__item {
         position: relative;
         @include block-model(15px, none, 8px, 0 0 15px 0);
-        @include size(410px, auto);
+        @include size(290px, auto);
         gap: 10px;
 
         background: #FFF;
         box-shadow: -3px 4px 15px 0px rgba(0, 0, 0, 0.06);
+
+        @media screen and (min-width: 440px) {
+            @include size(410px, auto);
+        }
+
+        @media screen and (min-width: 768px) {
+            @include size(738px, auto);
+        }
 
         @media screen and (min-width: 1290px) {
             @include size(1070px, auto);
@@ -53,7 +74,7 @@
     }
 
     &__item>input:checked~.questions__paragraph {
-        max-height: 500px;
+        max-height: 1000px;
     }
 
     &__title {
@@ -90,7 +111,15 @@
     &__subtitle {
         @include block-model(0, none, 0, 0 0 0 15px);
         @include size(290px, auto);
-        @include font($dark-color, 1.26, 19px, 600);
+        @include font($dark-color, 1.26, 15px, 600);
+
+        @media screen and (min-width: 440px) {
+            @include font($dark-color, 1.26, 19px, 600);
+        }
+
+        @media screen and (min-width: 768px) {
+            @include size(600px, auto);
+        }
 
         @media screen and (min-width: 1290px) {
             @include size(946px, 24px);
@@ -100,25 +129,37 @@
             @extend %position13;
             text-align: center;
             @include block-model(0, none, 0, auto auto auto 15px);
-            @include size(24px, 24px);
+            @include size(20px, 20px);
             transform: rotate(90deg);
 
             transition: all 0.35s;
+
+            @media screen and (min-width: 440px) {
+                @include size(24px, 24px);
+            }
         }
     }
 
     &__item:nth-child(2)>&__subtitle-button {
-        top: 45px;
+        top: 40px;
 
-        @media screen and (min-width: 1290px) {
+        @media screen and (min-width: 440px) {
+            top: 45px;
+        }
+
+        @media screen and (min-width: 768px) {
             top: 37px;
         }
     }
 
     &__item:nth-child(2)>input:checked+&__subtitle-button {
-        top: 35px;
+        top: 30px;
 
-        @media screen and (min-width: 1290px) {
+        @media screen and (min-width: 440px) {
+            top: 35px;
+        }
+
+        @media screen and (min-width: 768px) {
             top: 27px;
         }
     }
