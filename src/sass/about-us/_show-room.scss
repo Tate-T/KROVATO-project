@@ -5,7 +5,10 @@
   background-color: $light-color;
 
   &__container {
-    @extend %flex-center;
+    @media screen and (min-width: 1290px) {
+      display: flex;
+      justify-content: center;
+    }
   }
 
   &__box {
