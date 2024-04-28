@@ -1,0 +1,213 @@
+.reviews{
+    background-color: $light-color;
+    padding-top: 20px;
+    padding-bottom: 60px;
+
+    &__container{
+        display: flex;
+        gap: 30px;
+    }
+    &__location{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        margin-bottom: 40px;
+    }
+    &__location-svg{
+        width: 10px;
+        height: 10px;
+        fill: $grey-color;
+    }
+    &__location-link{
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.875; 
+        color: $grey-color;
+    }
+    &__location-active{
+        color: $yellow-color;
+    }
+    &__title{
+        font-size: 40px;
+        font-weight: 600;
+        line-height: 1.2;
+        margin-bottom: 40px;
+        color: $dark-color;
+    }
+    &__list-filter{
+        display: flex;
+        gap: 30px;
+        margin-bottom: 40px;
+        padding-bottom: 20px;
+        border-bottom: 3px solid #FFF;
+    }
+    &__filter{
+        font-size: 15px;
+        font-weight: 600;
+        line-height: 1.4;
+        color: $dark-color;
+        position: relative;
+
+        @media screen and (min-width: 768px) {
+            font-size: 20px;
+        }
+    }
+    &__filter-active{
+        color: $yellow-color;
+    }
+    &__filter-active::after{
+        content: '';
+        background-color: $yellow-color;
+        height: 3px;
+        display: block;
+        border-radius: 2px;
+        width: calc(100% + 4px);
+        position: absolute;
+        bottom: -23px;
+        left: 0;
+    }
+    &__list{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin-bottom: 30px;
+    }
+    &__item{
+        padding: 20px;
+        background-color: #FFF;
+        border-radius: 8px;
+        border: 1px solid #E3E2E2;
+
+        @media screen and (min-width: 768px) {
+            padding: 30px;
+        }
+    }
+    &__item-box{
+        width: 50px;
+        height: 50px;
+        border: 0.5px solid $yellow-color;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 20px;
+    }
+    &__user-logo{
+        width: 15px;
+        height: 15px;
+    }
+    &__user-box{
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 30px;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+    &__user-name{
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 1.4;
+        color: $dark-color;
+        margin-right: auto;
+    }
+    &__list-star{
+        display: flex;
+        margin-right: 20px;
+    }
+    &__svg-star{
+        width: 24px;
+        height: 24px;
+        fill: $yellow-color;
+    }
+    &__text{
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.875;
+        color: $grey-color;
+        margin-bottom: 30px;
+    }
+    &__img, &__type-icon{
+        width: 100%;
+        max-width: 50px;
+        height: 50px;
+        flex-shrink: 0;
+    }
+    &__type-icon{
+        fill: #FFF;
+        stroke: $yellow-color;
+    }
+    &__type{
+        font-size: 15px;
+        font-weight: 600;
+        line-height: 1.4;
+        color: $grey-color;
+
+        @media screen and (min-width: 768px) {
+            font-size: 20px;
+        }
+    }
+    &__img-box{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    &__list-button{
+        display: none;
+
+        @media screen and (min-width: 768px) {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+            justify-content: center;
+        }
+    }
+    &__button-more{
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;
+        border: 1px solid $grey-light-color;
+        background: #FFF;
+
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 1.4;
+        color: $grey-color;
+    }
+    &__btn-active{
+        color: #FFF;
+        background-color: $yellow-color;
+        border: none;
+    }
+    &__arrow{
+        width: 15px;
+        height: 15px;
+        fill: $grey-color;
+    }
+    &__more-button{
+        padding: 8px 20px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        border-radius: 8px;
+        background-color: $yellow-color;
+
+        font-size: 19px;
+        font-weight: 600;
+        line-height: 1.26;
+        color: #FFF;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &__icon-more{
+        width: 24px;
+        height: 24px;
+        fill: #FFF;
+    }
+
+}
+.leave-review{
+    margin-top: 250px;
+}
