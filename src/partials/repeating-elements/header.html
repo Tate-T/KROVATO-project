@@ -5,48 +5,54 @@
         <a href="./about-us.html" class="header__link">Про нас</a>
         <a href="./payment.html" class="header__link">Оплата</a>
         <a href="./delivery.html" class="header__link">Доставка та збірка</a>
-        <a href="./all-rewiews.html" class="header__link">Відгуки</a>
+        <a href="./reviews.html" class="header__link">Відгуки</a>
         <a href="./blog.html" class="header__link">Блог</a>
         <a href="./contacts.html" class="header__link">Контакти</a>
       </nav>
 
-      <ul class="header-networks">
+      <ul class="header__networks">
         <p class="header__text">Допомога і консультація:</p>
         <li class="header__network">
           <svg class="header__icon">
-            <use href="./images/symbol-defs.svg#icon-whatsapp"></use>
+            <use href="./images/symbol-defs.svg#icon-location-whatsapp"></use>
           </svg>
         </li>
         <li class="header__network">
           <svg class="header__icon">
-            <use href="./images/symbol-defs.svg#icon-telegram"></use>
+            <use href="./images/symbol-defs.svg#icon-location-telegram"></use>
           </svg>
         </li>
         <li class="header__network">
           <svg class="header__icon">
-            <use href="./images/symbol-defs.svg#icon-Viber"></use>
+            <use href="./images/symbol-defs.svg#icon-location-viber"></use>
           </svg>
         </li>
       </ul>
-      <select class="header__select">
-        <option class="header__option" selected disabled value>UA</option>
-        <option class="header__option" disabled value>ENG</option>
-      </select>
+      <p class="header__select">
+        UA
+        <span>
+          <svg class="header__select-icon">
+            <use href="./images/symbol-defs.svg#icon-main-hero-right"></use>
+          </svg>
+        </span>
+      </p>
     </div>
     <div class="header__filter">
       <div class="header__mobile">
         <svg class="header__menu">
           <use href="./images/symbol-defs.svg#icon-menu"></use>
         </svg>
-        <svg class="header__logo">
-          <use href="./images/symbol-defs.svg#icon-logo-black"></use>
-        </svg>
+        <a href="./index.html">
+          <svg class="header__logo">
+            <use href="./images/symbol-defs.svg#icon-logo-black"></use>
+          </svg>
+        </a>
         <svg class="header__ringtone">
           <use href="./images/symbol-defs.svg#icon-call"></use>
         </svg>
       </div>
 
-      <button class="header__btn">
+      <button class="header__btn" data-catalog-modal-open>
         <svg class="header__katalog">
           <use href="./images/symbol-defs.svg#icon-catalog"></use>
         </svg>
@@ -56,43 +62,45 @@
       <svg class="header__search">
         <use href="./images/symbol-defs.svg#icon-search"></use>
       </svg>
-    </div>
-    <div class="header__call">
-      <svg class="header__phone">
-        <use href="./images/symbol-defs.svg#icon-call"></use>
-      </svg>
-      <p class="header__hours">Щодня з 9:00 до 18:00</p>
-      <h2 class="header__number">067 929-45-45</h2>
-      <svg class="header__more">
-        <use href="./images/symbol-defs.svg#icon-main-hero-right"></use>
-      </svg>
-    </div>
-    <ul class="header__mobile-list">
-      <!-- <a href="./catalog.html" class="header__btn-link"> -->
+
+      <div class="header__call">
+        <svg class="header__phone">
+          <use href="./images/symbol-defs.svg#icon-call"></use>
+        </svg>
+        <div>
+          <p class="header__hours">Щодня з 9:00 до 18:00</p>
+          <h2 class="header__number">067 929-45-45</h2>
+        </div>
+
+        <svg class="header__more">
+          <use href="./images/symbol-defs.svg#icon-main-hero-right"></use>
+        </svg>
+      </div>
+      <ul class="header__mobile-list">
         <button class="header__mobile-button" data-catalog-modal-open>
           <svg class="header__katalog">
             <use href="./images/symbol-defs.svg#icon-catalog"></use>
           </svg>
           Каталог
         </button>
-      <!-- </a> -->
 
-      <li class="header__mobile-item">
-        <svg class="header__mobile-icon">
-          <use href="./images/symbol-defs.svg#icon-header-search"></use>
-        </svg>
-      </li>
-      <li class="header__mobile-item">
-        <svg class="header__mobile-icon">
-          <use href="./images/symbol-defs.svg#icon-header-heart"></use>
-        </svg>
-      </li>
-      <li class="header__mobile-item">
-        <svg class="header__mobile-icon">
-          <use href="./images/symbol-defs.svg#icon-header-basket"></use>
-        </svg>
-      </li>
-    </ul>
+        <li class="header__mobile-item">
+          <svg class="header__mobile-icon">
+            <use href="./images/symbol-defs.svg#icon-header-search"></use>
+          </svg>
+        </li>
+        <li class="header__mobile-item">
+          <svg class="header__mobile-icon">
+            <use href="./images/symbol-defs.svg#icon-header-heart"></use>
+          </svg>
+        </li>
+        <li class="header__mobile-item">
+          <svg class="header__mobile-icon">
+            <use href="./images/symbol-defs.svg#icon-header-basket"></use>
+          </svg>
+        </li>
+      </ul>
+    </div>
     <ul class="header__icons">
       <li class="header__options">
         <svg class="header__option">
@@ -115,13 +123,13 @@
         </li>
         <li class="header__sale">
           <svg class="header__badge">
-            <use href="./images/symbol-defs.svg#icon-monogramm"></use>
+            <use href="./images/symbol-defs.svg#icon-percent"></use>
           </svg>
           <p class="header__cursive">Розпродаж</p>
         </li>
         <li class="header__sale">
           <svg class="header__badge">
-            <use href="./images/symbol-defs.svg#icon-percent"></use>
+            <use href="./images/symbol-defs.svg#icon-monogramm"></use>
           </svg>
           <p class="header__cursive">Купити в кредит</p>
         </li>
