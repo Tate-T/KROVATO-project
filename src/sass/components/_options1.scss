@@ -1,5 +1,8 @@
 .options {
-    @include block-model(0 0 40px 0, none, 0, 0);
+Updated upstream
+    padding-bottom: 40px;
+    @include block-model(70px 0 40px 0, none, 0, 0);
+Stashed changes
     background-color: #fff;
 
     &__container {
@@ -14,7 +17,8 @@
     &__list {
         @extend %flex-center;
         flex-wrap: wrap;
-        @include block-model(0, none, 0, 0 auto 0 auto);
+        margin-left: auto;
+        margin-right: auto;
 
         @media screen and (min-width: 1290px) {
             flex-wrap: nowrap;
@@ -29,23 +33,24 @@
         @media screen and (min-width: 1290px) {
             flex-basis: auto;
             flex-direction: row;
-            @include block-model(0, none, 0, 0 30px 0 auto);
+            margin: 0 30px 0 auto;
         }
     }
 
     &__item:nth-child(4) {
-        @include block-model(0, none, 0, 0);
+        margin-right: 0px;
     }
 
     &__icon {
         display: flex;
-        @include size(80px, 80px);
+        width: 80px;
+        height: 80px;   
         
         &-bottom {
-            @include block-model(0, none, 0, 41px 0 0 0);
+            margin-top: 41px;
 
             @media screen and (min-width: 1290px) {
-                @include block-model(0, none, 0, 0);
+                margin-top: 0px;
             }
         }
     }
@@ -53,21 +58,26 @@
     &__text {
         @extend %flex-center;
         text-align: center;
-        @include block-model(0, none, 0, 5px 0 0);
-        @include size(200px, 56px);
-        @include font($dark-color, 1.4, 20px, 600);
+        margin-top: 5px;
+        width: 200px;
+        height: 56px;
+        
+        color: $dark-color;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 1.4;
 
         @media screen and (min-width: 1290px) {
             text-align: left;
             justify-content: left;
-            @include block-model(0, none, 0, 5px 0 0 20px);
+            margin-left: 20px;
         }
 
         &-top {
-            @include block-model(0, none, 0, 5px 0 41px 0);
+            margin-bottom: 41px;
 
             @media screen and (min-width: 429px) {
-                @include block-model(0, none, 0, 5px 0 0 20px);
+                margin-bottom: 0px;
             }
         }
     }
