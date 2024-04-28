@@ -1,6 +1,5 @@
 .options {
-    padding-bottom: 40px;
-
+    @include block-model(0 0 40px 0, none, 0, 0);
     background-color: $light-color;
 
     &__container {
@@ -15,8 +14,7 @@
     &__list {
         @extend %flex-center;
         flex-wrap: wrap;
-        margin-left: auto;
-        margin-right: auto;
+        @include block-model(0, none, 0, 0 auto 0 auto);
 
         @media screen and (min-width: 1290px) {
             flex-wrap: nowrap;
@@ -31,24 +29,23 @@
         @media screen and (min-width: 1290px) {
             flex-basis: auto;
             flex-direction: row;
-            margin: 0 30px 0 auto;
+            @include block-model(0, none, 0, 0 30px 0 auto);
         }
     }
 
     &__item:nth-child(4) {
-        margin-right: 0px;
+        @include block-model(0, none, 0, 0);
     }
 
     &__icon {
         display: flex;
-        width: 80px;
-        height: 80px;
+        @include size(80px, 80px);
 
         &-bottom {
-            margin-top: 41px;
+            @include block-model(0, none, 0, 41px 0 0 0);
 
             @media screen and (min-width: 1290px) {
-                margin-top: 0px;
+                @include block-model(0, none, 0, 0);
             }
         }
     }
@@ -56,26 +53,21 @@
     &__text {
         @extend %flex-center;
         text-align: center;
-        margin-top: 5px;
-        width: 200px;
-        height: 56px;
-
-        color: $dark-color;
-        font-size: 20px;
-        font-weight: 600;
-        line-height: 1.4;
+        @include block-model(0, none, 0, 5px 0 0 0);
+        @include size(200px, 56px);
+        @include font($dark-color, 1.4, 20px, 600);
 
         @media screen and (min-width: 1290px) {
             text-align: left;
             justify-content: left;
-            margin-left: 20px;
+            @include block-model(0, none, 0, 5px 0 0 20px);
         }
 
         &-top {
-            margin-bottom: 41px;
+            @include block-model(0, none, 0, 5px 0 41px 0);
 
             @media screen and (min-width: 429px) {
-                margin-bottom: 0px;
+                @include block-model(0, none, 0, 5px 0 0 20px);
             }
         }
     }

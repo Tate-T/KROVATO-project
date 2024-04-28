@@ -3,9 +3,8 @@
     background-color: $light-color;
 
     &__container{
-        display: flex;
+        @extend %flex-center2;
         flex-direction: column;
-        align-items: center;
         position: relative;
 
         @media screen and (min-width: 1290px) {
@@ -13,24 +12,26 @@
         }
     }
     &__location{
-        display: flex;
+        @extend %flex-center2;
         flex-wrap: wrap;
         gap: 5px;
-        align-items: center;
         margin-bottom: 30px;
         align-self: flex-start;
     }
     &__location-svg{
-        width: 8px;
-        height: 8px;
+        @include size(8px, 8px);
     }
     &__location-pages{
-        font-size: 16px;
-        line-height: 1.875;
-        color: $grey-color;
+        @include font($grey-color, 1.875, 16px, 400);
     }
     &__location-active{
         color: $yellow-color;
+        transition-property: color;
+        transition-duration: 500ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    &__location-active:hover, &__location-active:focus{
+        color: #ee9c22;
     }
     &__box{
         @media screen and (min-width: 1290px) {
@@ -49,10 +50,7 @@
         }
     }
     &__name{
-        font-size: 30px;
-        font-weight: 600;
-        line-height: 1.33;
-        color: $dark-color;
+        @include font($dark-color, 1.3, 30px, 600);
         margin-bottom: 20px;
 
         @media screen and (min-width: 1290px) {
@@ -72,12 +70,10 @@
         }
     }
     &__info-item{
-        display: flex;
-        align-items: center;
+        @extend %flex-center2;
     }
     &__check-svg{
-        width: 24px;
-        height: 24px;
+        @include size(24px, 24px);
         fill: #82B09D;
         margin-right: 5px;
     }
@@ -86,20 +82,16 @@
         margin-right: 10px;
     }
     &__star-svg{
-        width: 24px;
-        height: 24px;
+        @include size(24px, 24px);
         fill: $yellow-color;
     }
     &__review-svg{
-        width: 24px;
-        height: 24px;
+        @include size(24px, 24px);
         fill: $grey-color;
         margin-right: 5px;
     }
     &__reviwe-text, &__model{
-        font-size: 17px;
-        line-height: 1.4; 
-        color: $grey-color;
+        @include font($grey-color, 1.4, 17px, 400);
     }
     &__img-box{
         position: relative;
@@ -124,12 +116,15 @@
     }
     &__img-btn{
         display: none;
-        width: 60px;
-        height: 60px;
+        @include size(60px, 60px);
         background-color: #FFF;
         border-radius: 50%;
         padding: 20px;
         padding-right: 25px;
+
+        transition-property: background-color;
+        transition-duration: 500ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
         @media screen and (min-width: 1290px) {
             display: block;
@@ -138,10 +133,19 @@
             left: 20px;
         }
     }
+    &__img-btn:hover, &__img-btn:focus{
+        background-color: $yellow-color;
+    }
+    &__img-btn:hover &__img-svg, &__img-btn:focus &__img-svg{
+        fill: #FFF;
+    }
     &__img-svg{
-        width: 20px;
-        height: 20px;
+        @include size(20px, 20px);
         fill: $yellow-color;
+
+        transition-property: fill;
+        transition-duration: 500ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     }
     &__right-btn{
         padding-right: 20px;
@@ -159,13 +163,11 @@
         }
     }
     &__other-img{
-        width: 100px;
-        height: 100px;
+        @include size(100px, 100px);
     }
     &__btn-points{
-        display: flex;
+        @extend %flex-center3;
         gap: 10px;
-        justify-content: center;
         padding-bottom: 30px;
 
         @media screen and (min-width: 1290px) {
@@ -173,8 +175,7 @@
         }
     }
     &__point-svg{
-        width: 15px;
-        height: 15px;
+        @include size(15px, 15px);
         fill: white;
     }
 
@@ -195,9 +196,8 @@
         }
     }
     &__prise-box{
-        display: flex;
+        @extend %flex-center2;
         flex-direction: column;
-        align-items: center;
         padding-bottom: 30px;
         border-bottom: solid $light-color;
 
@@ -206,20 +206,14 @@
         }
     }
     &__prise{
-        font-size: 30px;
-        font-weight: 600;
-        line-height: 1.33;
-        color: $dark-color;
+        @include font($dark-color, 1.3, 30px, 600);
 
         @media screen and (min-width: 1290px) {
             margin-right: 20px;
         }
     }
     &__old-prise{
-        color: #E03D3D;
-        font-size: 20px;
-        font-weight: 600;
-        line-height: 1.4;
+        @include font(#E03D3D, 1.4, 20px, 600);
         text-decoration-line: line-through;
         margin-bottom: 15px;
 
@@ -231,28 +225,20 @@
         }
     }
     &__like-box{
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @extend %flex-center;
         gap: 10px;
     }
     &__like-btn{
         background-color: transparent;
     }
     &__like-svg{
-        width: 50px;
-        height: 50px;
+        @include size(50px, 50px);
     }
     &__like-text{
-        font-size: 19px;
-        font-weight: 600;
-        line-height: 1.26; 
-        color: $grey-color;
+        @include font($grey-color, 1.26, 19px, 600);
     }
     &__properties-list{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @extend %flex-center;
         flex-wrap: wrap;
         gap: 30px;
         padding-top: 30px;
@@ -262,20 +248,16 @@
         }
     }
     &__properties-svg{
-        width: 24px;
-        height: 24px;
+        @include size(24px, 24px);
         fill: $grey-light-color;
     }
     &__properties-title-box{
-        display: flex;
-        align-items: center;
+        @extend %flex-center2;
         gap: 5px;
         margin-bottom: 10px;
     }
     &__properties-text{
-        font-size: 17px;
-        line-height: 1.4;
-        color: $dark-color;
+        @include font($dark-color, 1.4, 17px, 400);
     }
     &__select{
         padding: 10px 15px;
@@ -288,8 +270,7 @@
         }
     }
     &__materials{
-        display: flex;
-        justify-content: center;
+        @extend %flex-center3;
         flex-wrap: wrap;
         gap: 15px;
         margin-bottom: 20px;
@@ -301,32 +282,41 @@
         position: absolute;
         top: 25%;
         left: 25%;
-        width: 35px;
-        height: 35px;
+        @include size(35px, 35px);
         fill: $yellow-color;
     }
     &__material-img{
-        width: 70px;
-        height: 70px;
+        @include size(70px, 70px);
     }
     &__show-all{
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @extend %flex-center;
         gap: 10px;
-        font-size: 17px;
-        line-height: 1.4; 
-        color: $yellow-color;
+        @include font($yellow-color, 1.4, 17px, 400);
         margin-bottom: 30px;
+
+        transition-property: color;
+        transition-duration: 500ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
         @media screen and (min-width: 1290px) {
             justify-content: start;
         }
     }
+    &__show-all:hover, &__show-all:focus{
+        color: #ee9c22;
+    }
+    &__show-all:hover &__show-all-svg, &__show-all:focus &__show-all-svg{
+        fill: #ee9c22;
+    }
     &__show-all-svg{
         width: 24px;
         height: 24px;
+        @include size(24px, 24px);
         fill: $yellow-color;
+
+        transition-property: fill;
+        transition-duration: 500ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     }
     &__btn-box{
         display: flex;
@@ -339,9 +329,7 @@
         }
     }
     &__amount{
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @extend %flex-center;
         gap: 15px;
         border-radius: 8px;
         border: solid $grey-light-color;
@@ -350,59 +338,64 @@
     }
     &__amount-btn{
         background-color: transparent;
-        font-size: 20px;
-        font-weight: 600;
-        line-height: 1.4;
-        color: $dark-color;
+        @include font($dark-color, 1.4, 20px, 600);
     }
     &__amount-text{
-        font-size: 20px;
-        font-weight: 600;
-        line-height: 1.4;
-        color: $dark-color;
+        @include font($dark-color, 1.4, 20px, 600);
     }
     &__buy{
         padding: 8px 30px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @extend %flex-center;
+        gap: 15px;
         border-radius: 8px;
         background-color: $yellow-color;
-        font-size: 19px;
-        font-weight: 600;
-        line-height: 1.26;
-        color: #FFF;
+        @include font(#FFF, 1.26, 19px, 600);
+
+        transition-property: background-color;
+        transition-duration: 500ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    &__buy:hover, &__buy:focus{
+        background-color: #ee9c22;
     }
     &__buy-svg{
-        width: 40px;
-        height: 40px;
+        @include size(24px, 24px);
+        fill: #FFF;
     }
     &__credit{
-        display: flex;
+        @extend %flex-center;
         padding: 8px 30px;
-        justify-content: center;
-        align-items: center;
         gap: 10px;
         border-radius: 8px;
         background-color: transparent;
-        font-size: 19px;
-        font-weight: 600;
-        line-height: 1.26;
-        color: $dark-color;
+        @include font($dark-color, 1.26, 19px, 600);
         border: solid $yellow-color;
+        transition-property: background-color, border-color, color;
+        transition-duration: 500ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    &__credit:hover, &__credit:focus{
+        background-color: #ee9c22;
+        border-color: #ee9c22;
+        color: #FFF;
+    }
+    &__credit:hover &__credit-svg, &__credit:focus &__credit-svg{
+        fill: #FFF;
     }
     &__credit-svg{
-        width: 24px;
-        height: 24px;
+        @include size(24px, 24px);
         fill: $yellow-color;
+
+        transition-property: fill;
+        transition-duration: 500ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     }
     &__buy-now{
         padding-top: 10px;
         padding-bottom: 10px;
-        display: flex;
+        @extend %flex-center3;
         flex-wrap: wrap;
         gap: 20px;
-        justify-content: center;
 
         @media screen and (min-width: 1290px) {
             margin-left: auto;
@@ -411,17 +404,12 @@
         }
     }
     &__phone{
-        display: flex;
-        align-items: center;
+        @extend %flex-center2;
         gap: 20px;
-        font-size: 20px;
-        font-weight: 600;
-        line-height: 1.4;
-        color: $grey-light-color;
+        @include font($grey-light-color, 1.4, 20px, 600);
     }
     &__phone-svg{
-        width: 30px;
-        height: 30px;
+        @include size(30px, 30px);
         fill: $grey-light-color;
     }
     &__buy-now-btn{
@@ -429,9 +417,14 @@
         background-color: transparent;
         border-radius: 8px;
         border: solid $grey-color;
-        font-size: 19px;
-        font-weight: 600;
-        line-height: 1.26;
-        color: $grey-color;
+        @include font($grey-color, 1.26, 19px, 600);
+
+        transition-property: border-color, color;
+        transition-duration: 500ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    &__buy-now-btn:hover, &__buy-now-btn:focus{
+        border-color: #ee9c22;
+        color: #ee9c22;
     }
 }

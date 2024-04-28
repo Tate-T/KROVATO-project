@@ -3,7 +3,7 @@
     background-color: $light-color;
 
     @media screen and (min-width: 1290px) {
-        @include block-model(70px 0 0 0, none, 0, 0);
+        @include block-model(70px 0 70px 0, none, 0, 0);
     }
 
     &__title {
@@ -11,7 +11,7 @@
         @include font($dark-color, 1.33, 30px, 600);
 
         @media screen and (min-width: 1290px) {
-            @include size(610px, auto);
+            @include size(645px, auto);
             @include font($dark-color, 1.2, 40px, 600);
         }
 
@@ -35,8 +35,8 @@
         display: none;
         align-items: center;
         gap: 10px;
-
         @include font($yellow-color, 1.26, 19px, 600);
+        @extend %animation-of-button;
 
         @media screen and (min-width: 1290px) {
             display: flex;
@@ -54,117 +54,108 @@
     }
 
     &__title-arrow {
-        width: 24px;
-        height: 24px;
-
+        @include size(24px, 24px);
         fill: $yellow-color;
     }
 
     &__arrow {
         @extend %flex-center;
-        margin-left: auto;
-        width: 50px;
-        height: 20px;
-
+        @include block-model(0, none, 0, 0 0 0 auto);
+        @include size(50px, 20px);
         fill: $yellow-color;
     }
 
     &__arrow1 {
-        margin-right: auto;
-        margin-left: 0;
-        width: 57px;
+        @include block-model(0, none, 0, 0 auto 0 0);
+        @include size(57px, 20px);
     }
 
     &__button {
-        width: 60px;
-        height: 60px;
-
+        @include size(60px, 60px);
         background-color: #fff;
-        border-radius: 50%;
+        @include block-model(0, none, 50%, 0);
     }
 
     &__list {
         @extend %flex-center;
         flex-direction: column;
-        margin-left: auto;
-        margin-right: auto;
+        @include block-model(0, none, 0, 0 auto 0 auto);
         gap: 30px;
-        width: 410px;
 
         @media screen and (min-width: 1290px) {
             flex-direction: row;
-            width: 100%;
+            @include size(100%, auto);
         }
     }
 
     &__item {
-        padding-bottom: 20px;
-        width: 410px;
-        height: 476px;
+        @include block-model(0 0 20px 0, 1px solid #E3E2E2, 8px, 0);
+        @include size(290px, 400px);
 
         background-color: #fff;
-        border-radius: 8px;
-        border: 1px solid #E3E2E2;
         box-shadow: -3px 4px 15px 0px rgba(0, 0, 0, 0.06);
+
+        @media screen and (min-width:440px) {
+            @include block-model(0 0 20px 0, 1px solid #E3E2E2, 8px, 0);
+            @include size(410px, 476px);
+        }
     }
 
     &__photo {
-        width: 410px;
-        height: 270px;
-
-        border-radius: 8px;
+        @include size(290px, 200px);
+        @include block-model(0, none, 8px, 0);
+        
+        @media screen and (min-width:440px) {
+            @include size(410px, 270px);
+        }
     }
 
     &__subtitle {
         @extend %flex-center;
-        margin: 30px;
-        width: 350px;
-        height: 102px;
+        @include block-model(0, none, 0, 15px);
+        @include size(260px, 120px);
+        @include font($dark-color, 1.31, 22px, 600);
 
-        color: $dark-color;
-        font-size: 26px;
-        font-weight: 600;
-        line-height: 1.31;
+        @media screen and (min-width: 440px) {
+            @include size(350px, 102px);
+            @include font($dark-color, 1.31, 26px, 600);
+            @include block-model(0, none, 0, 30px);
+        }
     }
 
     &__list-link {
         @extend %flex-center2;
-        margin-left: 30px;
+        @include block-model(0, none, 0, 0 0 0 15px);
         gap: 10px;
+        @include font($yellow-color, 1.26, 19px, 600);
 
-        color: $yellow-color;
-        font-size: 19px;
-        font-weight: 600;
-        line-height: 1.26;
+        @media screen and (min-width: 440px) {
+            @include block-model(0, none, 0, 0 0 0 30px);
+        }
     }
 
     &__main-button {
         @extend %flex-center;
-        padding: 8px 20px 8px 20px;
-        margin: 30px auto 0 auto;
+        @include block-model(8px 20px 8px 20px, none, 8px, 30px  auto 0 auto);
+        @include size(290px, 50px);
         gap: 15px;
-        width: 410px;
-        height: 50px;
-
-        border-radius: 8px;
         background-color: $yellow-color;
+
+        @media screen and (min-width: 440px) {
+            @include size(410px, 50px);
+        }
 
         @media screen and (min-width: 1290px) {
             display: none;
         }
 
         &-arrow {
-            width: 24px;
-            height: 24px;
-            
+            @include size(24px, 24px);
             fill: #FFF;
         }
 
         &-text {
-            color: #FFF;
-            font-size: 19px;
-            font-weight: 600;
-            line-height: 1.26;
+            @include font(#FFF, 1.26, 19px, 600);
         }
     }
 }

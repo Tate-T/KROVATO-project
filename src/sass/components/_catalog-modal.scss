@@ -1,37 +1,77 @@
+.backdrop {
+  @extend %position21;
+
+  overflow-y: scroll;
+  background-color: rgba(27, 26, 26, 0.8);
+  backdrop-filter: blur(2.5px);
+
+  &.is-hidden {
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
 .catalog-modal {
-  width: 100%;
+  @include size(100%);
+
+  background-color: #fff;
+
+  @media screen and (min-width: 1290px) {
+    position: absolute;
+    top: 0;
+    left: 15.3%;
+
+    @include size(255px);
+  }
+
+  &__list {
+    @media screen and (min-width: 1290px) {
+      @include size(255px);
+    }
+  }
 
   &__item {
-    padding: 10px 35px;
+    box-shadow: 0px -2px 0px 0px #e2e2e2 inset;
   }
 
   &__box {
-    display: flex;
-    align-items: center;
+    @include block-model(10px 35px);
+
+    @extend %flex-center;
   }
 
   &__icon {
-    width: 40px;
-    height: 40px;
+    @include size(40px, 40px);
 
-    fill: #2b2929;
+    fill: $dark-color;
   }
 
   &__text {
-    margin: 0 auto 0 15px;
+    @include block-model(0, none, 0, 0 auto 0 15px);
 
-    color: #2b2929;
-
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 1.4;
+    @include font($dark-color, 1.4, 20px, 600);
   }
 
   &__arrow {
-    width: 24px;
-    height: 24px;
+    @include block-model(0, none, 0, -8px 0 0);
+    @include size(24px, 24px);
 
     transform: rotate(-90deg);
+    fill: $yellow-color;
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    @media screen and (min-width: 1290px) {
+      @include block-model(0, none, 0, 0);
+
+      transform: rotate(0);
+    }
   }
 
   &__position {
@@ -39,31 +79,118 @@
   }
 
   &__radio {
-    position: absolute;
-    top: 18px;
-    right: 0;
+    @extend %position22;
 
-    width: 24px;
-    height: 24px;
+    @include size(100%, 60px);
 
-    // &:checked + .catalog-modal__acordeon {
-    //   display: flex;
-    // }
+    opacity: 0;
+
+    &:checked ~ .catalog-modal__acordeon--mobile {
+      display: flex;
+
+      @media screen and (min-width: 1290px) {
+        display: none;
+      }
+    }
+
+    &:checked ~ .catalog-modal__acordeon--desktop {
+      display: none;
+
+      @media screen and (min-width: 1290px) {
+        display: flex;
+      }
+    }
 
     &:checked ~ .catalog-modal__box {
-      background-color: #ffbc57;
+      background-color: $yellow-color;
+    }
+
+    &:checked ~ .catalog-modal__box > .catalog-modal__arrow {
+      @include block-model(0, none, 0, 10px 0 0);
+
+      transform: rotate(90deg);
+      fill: $dark-color;
+
+      @media screen and (min-width: 1290px) {
+        transform: rotate(0);
+        @include block-model(0, none, 0, 0);
+      }
     }
   }
 
   &__acordeon {
-    display: none;
-    flex-direction: column;
-    gap: 40px;
+    &--mobile {
+      @include block-model(20px 177px 30px 35px);
+
+      display: none;
+      flex-direction: column;
+      gap: 35px;
+
+      background-color: $light-color;
+    }
+
+    &--desktop {
+      display: none;
+
+      @media screen and (min-width: 1290px) {
+        position: absolute;
+        left: 255px;
+
+        @include block-model(20px 20px 35px 30px, none, 0 8px 8px 0);
+        @include size(318px, 631px);
+        border-left: 5px solid $yellow-color;
+
+        display: none;
+        flex-direction: column;
+        gap: 35px;
+
+        overflow-y: scroll;
+        background-color: #fff;
+
+        &1 {
+          top: 0;
+        }
+
+        &2 {
+          top: -60px;
+        }
+
+        &3 {
+          top: -120px;
+        }
+
+        &4 {
+          top: -200px;
+        }
+
+        &5 {
+          top: -260px;
+        }
+
+        &6 {
+          top: -320px;
+        }
+
+        &7 {
+          top: -380px;
+        }
+
+        &8 {
+          top: -440px;
+        }
+
+        &9 {
+          top: -500px;
+        }
+
+        &10 {
+          top: -571.7px;
+        }
+      }
+    }
   }
 
   &__paragraph {
-    color: #2b2929;
-    font-size: 19px;
-    line-height: 1;
+    @include font($dark-color, 1.3, 19px, 400);
   }
 }

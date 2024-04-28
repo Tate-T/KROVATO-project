@@ -1,6 +1,46 @@
+html,
+body {
+    position: relative;
+    height: 100%;
+}
+
+body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .hero {
-    @include block-model(40px 0 60px 0, none, 0, 0);
+    @include block-model(20px 0 30px 0, none, 0, 0);
     background-color: $light-color;
+
+    @media screen and (min-width: 440px) {
+        @include block-model(40px 0 60px 0, none, 0, 0);
+    }
 
     @media screen and (min-width: 1290px) {
         @include block-model(30px 0 70px 0, none, 0, 0);
@@ -22,10 +62,7 @@
     }
 
     &__button1 {
-        position: absolute;
-        left: 21px;
-        top: 180px;
-
+        @extend %position4;
         display: none;
         @include block-model(20px 0 20px 0, none, 50%, 0);
         @include size(60px, 60px);
@@ -37,10 +74,7 @@
     }
 
     &__button2 {
-        position: absolute;
-        right: 21px;
-        top: 180px;
-
+        @extend %position5;
         display: none;
         @include block-model(20px 0 20px 0, none, 50%, 0);
         @include size(60px, 60px);
@@ -52,8 +86,12 @@
     }
 
     &__slide {
-        @include size(410px, 600px);
+        @include size(290px, 435px);
         background: url(../images/mobile/slide-1@1x.webp) center / contain no-repeat;
+
+        @media screen and (min-width: 440px) {
+            @include size(410px, 600px);
+        }
 
         @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
             background: url(../images/mobile/slide-1@2x.webp) center / contain no-repeat;
@@ -70,9 +108,7 @@
     }
 
     &__list {
-        position: absolute;
-        bottom: 20px;
-        
+        @extend %position6;    
         @extend %flex-center;
         flex-direction: row;
         @include block-model(0, none, 0, 0 auto 0 auto);

@@ -1,13 +1,24 @@
 .questions {
-    padding-top: 60px;
-    padding-bottom: 60px;
-
+    @include block-model(60px 0 60px 0, none, 0, 0);
     background-color: $light-color;
 
     input {
-        position: absolute;
-        opacity: 0;
-        z-index: -1;
+        @extend %position20;
+        @include size(290px, 50px);
+        // outline: 2px solid red;
+        cursor: pointer;
+
+        @media screen and (min-width: 440px) {
+            @include size(410px, 50px);
+        }
+
+        @media screen and (min-width: 768px) {
+            @include size(738px, 50px);
+        }
+
+        @media screen and (min-width: 1290px) {
+            @include size(1070px, 50px);
+        }
     }
 
     &__container {
@@ -15,131 +26,140 @@
         flex-direction: column;
     }
 
-    &__checkbox:checked + &__paragraph {
+    &__checkbox:checked+&__paragraph {
         display: flex;
     }
 
     &__item {
         position: relative;
-
-        padding: 15px;
-        margin-bottom: 15px;
+        @include block-model(15px, none, 8px, 0 0 15px 0);
+        @include size(290px, auto);
         gap: 10px;
-        width: 410px;
 
-        border-radius: 8px;
         background: #FFF;
         box-shadow: -3px 4px 15px 0px rgba(0, 0, 0, 0.06);
 
+        @media screen and (min-width: 440px) {
+            @include size(410px, auto);
+        }
+
+        @media screen and (min-width: 768px) {
+            @include size(738px, auto);
+        }
+
         @media screen and (min-width: 1290px) {
-            width: 1070px;
+            @include size(1070px, auto);
         }
     }
 
-    &__item:nth-child(1):hover, &__item:nth-child(1):focus, &__item:nth-child(1):active {
-        padding: 13px;
+    &__item:nth-child(1):hover,
+    &__item:nth-child(1):focus,
+    &__item:nth-child(1):active {
+        @include block-model(13px, 2px solid $yellow-color, 8px, 0 0 15px 0);
     }
 
     &__item:hover,
     &__item:focus,
     &__item:active {
-        padding: 14px;
-
-        border-radius: 8px;
-        border: 2px solid $yellow-color;
+        @include block-model(14px, 2px solid $yellow-color, 8px, 0 0 15px 0);
         outline: none;
     }
 
     &__item:last-child {
-        margin-bottom: 0px;
+        @include block-model(14px, none, 8px, 0);
+    }
+
+    &__item:last-child:hover {
+        @include block-model(14px, 2px solid $yellow-color, 8px, 0);
     }
 
     &__item>input:checked~.questions__paragraph {
-        max-height: 500px;
+        max-height: 1000px;
     }
 
     &__title {
         @extend %flex-center;
         text-align: center;
-        margin-bottom: 40px;
-
-        color: $dark-color;
-        font-size: 30px;
-        font-weight: 600;
-        line-height: 1.33;
+        @include block-model(0, none, 0, 0 0 40px 0);
+        @include font($dark-color, 1.33, 30px, 600);
 
         @media screen and (min-width: 1290px) {
-            font-size: 40px;
-            line-height: 1.2;
+            @include font($dark-color, 1.2, 40px, 600);
         }
     }
 
     &__item:nth-child(1)>&__box>&__icon {
-        width: 43px;
-        height: 50px;
+        @include size(43px, 50px);
     }
 
     &__item:nth-child(2)>&__box>&__icon {
-        width: 43px;
-        height: 50px;
+        @include size(43px, 50px);
     }
 
     &__item:nth-child(3)>&__box>&__icon {
-        width: 43px;
-        height: 50px;
+        @include size(43px, 50px);
     }
 
     &__item:nth-child(4)>&__box>&__icon {
-        width: 43px;
-        height: 50px;
+        @include size(43px, 50px);
     }
 
     &__item:nth-child(5)>&__box>&__icon {
-        width: 43px;
-        height: 50px;
+        @include size(43px, 50px);
     }
 
     &__subtitle {
-        margin-left: 15px;
-        width: 286px;
+        @include block-model(0, none, 0, 0 0 0 15px);
+        @include size(290px, auto);
+        @include font($dark-color, 1.26, 15px, 600);
 
-        color: $dark-color;
-        font-size: 19px;
-        font-weight: 600;
-        line-height: 1.26;
+        @media screen and (min-width: 440px) {
+            @include font($dark-color, 1.26, 19px, 600);
+        }
+
+        @media screen and (min-width: 768px) {
+            @include size(600px, auto);
+        }
 
         @media screen and (min-width: 1290px) {
-            width: 946px;
-            height: 24px;
+            @include size(946px, 24px);
         }
 
         &-button {
-            position: absolute;
-            top: 37px;
-            right: 15px;
-
+            @extend %position13;
             text-align: center;
-            margin: auto auto auto 15px;
-            width: 24px;
-            height: 24px;
+            @include block-model(0, none, 0, auto auto auto 15px);
+            @include size(20px, 20px);
             transform: rotate(90deg);
 
             transition: all 0.35s;
+
+            @media screen and (min-width: 440px) {
+                @include size(24px, 24px);
+            }
         }
     }
 
     &__item:nth-child(2)>&__subtitle-button {
-        top: 45px;
+        top: 40px;
 
-        @media screen and (min-width: 1290px) {
+        @media screen and (min-width: 440px) {
+            top: 45px;
+        }
+
+        @media screen and (min-width: 768px) {
             top: 37px;
         }
     }
 
     &__item:nth-child(2)>input:checked+&__subtitle-button {
-        top: 35px;
+        top: 30px;
 
-        @media screen and (min-width: 1290px) {
+        @media screen and (min-width: 440px) {
+            top: 35px;
+        }
+
+        @media screen and (min-width: 768px) {
             top: 27px;
         }
     }
@@ -157,20 +177,18 @@
     }
 
     &__text {
-        color: $dark-color;
-        font-size: 16px;
-        line-height: 1.87;
+        @include font($dark-color, 1.87, 16px, 400);
 
         &-box {
-            margin-bottom: 24px;
+            @include block-model(0, none, 0, 0 0 24px 0);
         }
 
         &-box:first-child {
-            margin-top: 10px;
+            @include block-model(0, none, 0, 0 0 10px 0);
         }
 
         &-box:last-child {
-            margin-bottom: 0px;
+            @include block-model(0, none, 0, 0);
         }
     }
 

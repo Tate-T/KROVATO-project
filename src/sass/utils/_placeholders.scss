@@ -1,16 +1,165 @@
+// Flex centers
+
 %flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 %flex-center2 {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 %flex-center3 {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
+// Animation for main buttons
+
+%animation-of-button {
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+}
+
+// Positions
+
+%position1 {
+  position: absolute;
+  left: 20px;
+  bottom: 56px;
+}
+
+%position2 {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+}
+
+%position3 {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+
+%position4 {
+  position: absolute;
+  left: 21px;
+  top: 180px;
+}
+
+%position5 {
+  position: absolute;
+  right: 21px;
+  top: 180px;
+}
+
+%position6 {
+  position: absolute;
+  bottom: 20px;
+}
+
+%position7 {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+%position8 {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+%position9 {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
+
+%position10 {
+    position: absolute;
+    top: 300px;
+}
+
+%position11 {
+    position: absolute;
+    inset: 380px 145px 0px;
+}
+
+%position12 {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+%position13 {
+  position: absolute;
+  top: 37px;
+  right: 15px;
+}
+
+%position14 {
+  position: absolute;
+  top: 100px;
+  right: 20px;
+}
+
+%position15 {
+  position: absolute;
+  top: 151px;
+  right: 20px;
+}
+
+%position16 {
+  position: absolute;
+  top: 20px;
+  left: 70%;
+}
+
+%position17 {
+  position: absolute;
+  top: 14.5px;
+  left: 70%;
+  opacity: 0;
+  z-index: 2;
+}
+
+%position18 {
+  position: absolute;
+  bottom: 70px;
+  left: 0;
+  right: 0;
+}
+
+%position19 {
+  position: absolute;
+  top: 280px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+%position20 {
+  position: absolute;
+  opacity: 0;
+  z-index: 4;
+  top: 15px;
+  left: 60px;
+}
+
+%position21 {
+  position: fixed;
+  top: 165px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+%position22 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}

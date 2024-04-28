@@ -1,8 +1,10 @@
 @import "./utils/vars.scss";
 @import './utils/placeholders';
+@import './utils/mixins.scss';
 @import "./common/base.scss";
 @import "./common/reset.scss";
 @import "./components/header.scss";
 @import "./basket/basket-list.scss";
 @import "./components/options2.scss";
 @import "./components/footer.scss";
+@import './components/catalog-modal';

@@ -1,5 +1,6 @@
 @import "./utils/vars";
 @import './utils/placeholders';
+@import './utils/mixins.scss';
 @import "./common/base";
 @import "./common/reset";
 @import "./components/header";
@@ -12,3 +13,4 @@
 @import "./product-card/recomended";
 @import "./components/options2";
 @import "./components/footer";
+@import './components/catalog-modal';
