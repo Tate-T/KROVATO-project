@@ -8,7 +8,7 @@
         @extend %animation-of-button;
         transform: rotate(180deg);
         cursor: pointer;
-        z-index: 20;
+        z-index: 1;
         transition: opacity 0.3s ease;
 
         &:hover {
