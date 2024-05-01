@@ -1,0 +1,280 @@
+.choose {
+  margin-bottom: 40px;
+  &__title {
+    @include font($dark-color, 126%, 19px, 600);
+  }
+  &__option {
+    @include font($grey-color, 141%, 17px, 400);
+  }
+  &__filter {
+    @include size(24px, 24px);
+    fill: $dark-color;
+  }
+  &__sorting {
+    @include font($dark-color, 126%, 19px, 600);
+  }
+  &__hide {
+    @include size(12px, 12px);
+    transform: rotate(90deg);
+    fill: $dark-color;
+  }
+  &__box {
+    display: flex;
+
+    flex-direction: column-reverse;
+    gap: 20px;
+    @media screen and (min-width: 1290px) {
+      gap: none;
+      justify-content: space-between;
+      flex-direction: row;
+    }
+  }
+  &__pashalko {
+    @extend %flex-center2;
+    gap: 10px;
+
+    @media screen and (max-width: 410px) {
+      flex-direction: column;
+    }
+  }
+  &__list {
+    @extend %flex-center2;
+    gap: 10px;
+
+    margin-top: 30px;
+    flex-wrap: wrap;
+  }
+  &__item {
+    display: flex;
+    border-radius: 8px;
+    border: 1px solid $grey-light-color;
+    padding: 3px 10px;
+    gap: 5px;
+  }
+  &__text {
+    @include font($dark-color, 147%, 15px, 400);
+  }
+  &__close {
+    @include size(24px, 24px);
+    fill: $dark-color;
+  }
+  &__item:first-child {
+    background-color: $yellow-color;
+    border: none;
+  }
+}
+.shop {
+  &__container {
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+
+    @media screen and (min-width: 1290px) {
+      justify-content: start;
+    }
+  }
+  &__item {
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    width: 410px;
+    border: 1px solid #e3e2e2;
+    border-radius: 8px;
+    box-shadow: -3px 4px 15px 0px rgba(0, 0, 0, 0.06);
+    @media screen and (min-width: 1200px) {
+      width: 300px;
+    }
+    &-element {
+      @extend %flex-center2;
+      justify-content: space-between;
+    }
+  }
+  &__ban {
+    display: none;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+    }
+  }
+  &__text {
+    @include font($grey-color, 147%, 15px, 400);
+    @media screen and (min-width: 1200px) {
+      @include font($grey-color, 169%, 13px, 300);
+    }
+  }
+  &__suptitle {
+    @include font($grey-color, 140%, 20px, 600);
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    @media screen and (min-width: 1200px) {
+      @include font($grey-color, 126%, 17px, 600);
+    }
+  }
+  &__icon {
+    @include size(24px, 24px);
+    fill: #82b09d;
+  }
+  &__instock {
+    @include font($dark-color, 169%, 13px, 300);
+  }
+  &__pashalka {
+    @extend %flex-center2;
+    gap: 5px;
+
+    
+  }
+  &__old {
+    text-decoration-line: line-through;
+    @include font(#e03d3d, 147%, 14px, 400);
+  }
+  &__price {
+    @include font($dark-color, 130%, 26px, 600);
+
+    @media screen and (min-width: 1200px) {
+      @include font($dark-color, 140%, 20px, 600);
+    }
+    @media screen and (max-width: 410px) {
+      @include font($dark-color, 140%, 20px, 600);
+    }
+  }
+  &__heart {
+    @include size(70px, 70px);
+    @media screen and (min-width: 1200px) {
+      @include size(50px, 50px);
+    }
+    @media screen and (max-width: 410px) {
+      @include size(50px, 50px);
+    }
+  }
+  &__basket {
+    @include size(70px, 70px);
+
+    @media screen and (min-width: 1200px) {
+      @include size(50px, 50px);
+    }
+    @media screen and (max-width: 410px) {
+      @include size(50px, 50px);
+    }
+  }
+  &__icons {
+    display: flex;
+    gap: 10px;
+  }
+}
+.aside {
+  // width: 300px;
+  border-radius: 8px 8px 0px 0px;
+  border: 1px solid #e3e2e2;
+
+  &__box {
+    @extend %flex-center2;
+    padding: 20px;
+
+    gap: 15px;
+    border-bottom: 1px solid #e3e2e2;
+  }
+  &__icon {
+    @include size(24px, 24px);
+  }
+  &__filter {
+    @include font($dark-color, 126%, 19px, 600);
+  }
+  &__box2 {
+    padding: 18px 15px 18px 0;
+    @extend %flex-center2;
+    justify-content: space-between;
+  }
+  &__suptitle {
+    @include font($dark-color, 126%, 19px, 600);
+  }
+  &__close {
+    @include size(34px, 34px);
+  }
+  &__form {
+    padding: 15px 15px 15px 0;
+    gap: 14px;
+    @extend %flex-center;
+  }
+  &__input {
+    display: flex;
+    @include size(90px, 40px);
+    padding: 5px 24px;
+    border-radius: 8px;
+    border: 1px solid var(--Theme-Grey-light, #b1b1b1);
+    outline: none;
+  }
+  &__input ::placeholder {
+    @include font($dark-color, 188%, 16px, 400);
+    outline: #e03d3d;
+  }
+  &__button {
+    border-radius: 8px;
+    @include font(#fff, 126%, 19px, 600);
+    background-color: $yellow-color;
+    padding: 8px 15px;
+    @include size(60px, 40px);
+  }
+  &__scroll {
+    height: 17px;
+    width: 268px;
+  }
+  &__raaar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__checkbox {
+    @include size(20px, 20px);
+    outline: none;
+    border: 2px solid $grey-color;
+    border-radius: 8px;
+  }
+  &__text {
+    @include font($dark-color, 188%, 16px, 400);
+  }
+  &__show {
+    @include font($yellow-color, 150%, 16px, 600);
+    margin-top: 10px;
+  }
+  &__suptitle {
+    @include font($dark-color, 126%, 17px, 600);
+  }
+  &__more {
+    @include size(15px, 15px);
+    padding-left: 2px;
+    transform: rotate(90deg);
+  }
+  &__flex {
+    @extend %flex-center2;
+    justify-content: space-between;
+    padding: 18px 15px;
+    border-bottom: 1px solid #e3e2e2;
+  }
+  &__item {
+    padding-left: 15px;
+    border-bottom: 1px solid #e3e2e2;
+    padding-bottom: 20px;
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    &-item {
+      @extend %flex-center2;
+      gap: 10px;
+    }
+  }
+}
