@@ -1,15 +1,15 @@
 (() => {
-  const refs = {
-    openCatalogModalBtn: document.querySelector("[data-mobile-menu-open]"),
-    closeCatalogModalBtn: document.querySelector("[data-mobile-menu-close]"),
-    modal: document.querySelector("[data-mobile-menu]"),
+  const mobileMenuRefs = {
+    openMobileMenuBtn: document.querySelector("[data-mobile-menu-open]"),
+    closeMobileMenuBtn: document.querySelector("[data-mobile-menu-close]"),
+    mobileMenu: document.querySelector("[data-mobile-menu]"),
   };
 
-  refs.openCatalogModalBtn.addEventListener("click", toggleModal);
-  refs.closeCatalogModalBtn.addEventListener("click", toggleModal);
+  mobileMenuRefs.openMobileMenuBtn.addEventListener("click", toggleMobileMenu);
+  mobileMenuRefs.closeMobileMenuBtn.addEventListener("click", toggleMobileMenu);
 
-  function toggleModal() {
-    refs.modal.classList.toggle("is-hidden");
+  function toggleMobileMenu() {
+    mobileMenuRefs.mobileMenu.classList.toggle("is-hidden");
     document.body.classList.toggle("no-scroll");
   }
 })();
