@@ -1,15 +1,21 @@
 (() => {
-  const refs = {
+  const catalogModalRefs = {
     openCatalogModalBtn: document.querySelector("[data-catalog-modal-open]"),
     closeCatalogModalBtn: document.querySelector("[data-catalog-modal-close]"),
-    modal: document.querySelector("[data-catalog-modal]"),
+    catalogModal: document.querySelector("[data-catalog-modal]"),
   };
 
-  refs.openCatalogModalBtn.addEventListener("click", toggleModal);
-  refs.closeCatalogModalBtn.addEventListener("click", toggleModal);
+  catalogModalRefs.openCatalogModalBtn.addEventListener(
+    "click",
+    toggleCatalogModal
+  );
+  catalogModalRefs.closeCatalogModalBtn.addEventListener(
+    "click",
+    toggleCatalogModal
+  );
 
-  function toggleModal() {
-    refs.modal.classList.toggle("is-hidden");
+  function toggleCatalogModal() {
+    catalogModalRefs.catalogModal.classList.toggle("is-hidden");
     document.body.classList.toggle("no-scroll");
   }
 })();
