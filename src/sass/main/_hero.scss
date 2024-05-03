@@ -1,38 +1,77 @@
 html,
-body {
-    position: relative;
-    height: 100%;
-}
-
-body {
-    background: #eee;
-    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    color: #000;
-    margin: 0;
-    padding: 0;
-}
-
-swiper-container {
+body,
+#page {
     width: 100%;
     height: 100%;
-    z-index: 0;
 }
 
-swiper-slide {
+ul,
+li {
+    list-style: none;
+}
+
+.js-slider {
     text-align: center;
-    font-size: 18px;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;
+    width: 100%;
+    /*height: 200px;*/
+    overflow: hidden;
 }
 
-swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+ul {
+    /*height: 350px !important;*/
+    font-size: 40px;
+    line-height: 200px;
+    color: white;
+}
+
+.js-slider li {
+    float: left;
+}
+
+.js-slider>.next,
+.js-slider>.prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    background: #fff;
+    /* Adjust background color */
+    border: none;
+    padding: 10px 15px;
+    /* Adjust padding as needed */
+    cursor: pointer;
+}
+
+.js-slider>.prev {
+    left: 20px;
+}
+
+.js-slider>.next {
+    right: 20px;
+}
+
+.dot {
+    display: inline-block;
+    @include size(15px, 15px);
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    position: relative;
+    top: -70px;
+    left: 580px;
+}
+
+.dot.active {
+    background-color: $yellow-color;
+    border: 3.5px solid #fff;
+}
+
+.dots-container {
+    margin-left: auto;
+    margin-right: auto;
+    gap: 10px;
 }
 
 .hero {
@@ -53,17 +92,16 @@ swiper-slide img {
     }
 
     &__icon1 {
-        @include size(50px, 20px);
+        @include size(30px, 20px);
         fill: $yellow-color;
     }
 
     &__icon2 {
-        @include size(70px, 20px);
+        @include size(40px, 20px);
         fill: $yellow-color;
     }
 
     &__button1 {
-        @extend %position4;
         display: none;
         @include block-model(20px 0 20px 0, none, 50%, 0);
         @include size(60px, 60px);
@@ -75,7 +113,6 @@ swiper-slide img {
     }
 
     &__button2 {
-        @extend %position5;
         display: none;
         @include block-model(20px 0 20px 0, none, 50%, 0);
         @include size(60px, 60px);
@@ -99,7 +136,7 @@ swiper-slide img {
         }
 
         @media screen and (min-width: 1290px) {
-            @include size(1290px, 420px);
+            @include size(1290px, 100px);
             background: url(../images/desktop/slide-1@1x.webp) center / contain no-repeat;
 
             @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
