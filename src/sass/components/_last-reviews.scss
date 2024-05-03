@@ -8,20 +8,14 @@
   }
 
   &__container {
-    @media screen and (min-width: 1290px) {
-      position: relative;
-      display: flex;
-      justify-content: center;
-    }
-  }
-
-  &__box3 {
     display: flex;
     flex-direction: column;
     align-items: center;
 
     @media screen and (min-width: 1290px) {
-      display: block;
+      position: relative;
+
+      flex-direction: row;
     }
   }
 
@@ -137,15 +131,11 @@
     gap: 30px;
   }
 
-  &__swiper {
-    @include size(100%, 370px);
+  &__slider {
+    width: 100%;
 
     @media screen and (min-width: 480px) {
-      @include size(450px, 370px);
-    }
-
-    @media screen and (min-width: 1290px) {
-      @include block-model(0, none, 0, 0 0 0 104px);
+      width: 450px;
     }
   }
 
@@ -153,6 +143,10 @@
     @include block-model(20px, 1px solid #e3e2e2, 8px, 0);
 
     background-color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   &__flex2 {
@@ -195,6 +189,7 @@
     max-width: 95%;
     @include block-model(0, none, 0, 30px 0);
     @include font($grey-color, 1.87, 16px, 400);
+    text-align: left;
 
     @media screen and (min-width: 480px) {
       max-width: 354px;
@@ -207,7 +202,7 @@
   }
 
   &__img {
-    @include size(50px);
+    width: 50px;
   }
 
   &__product {

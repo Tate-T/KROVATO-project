@@ -1,145 +1,515 @@
-<section class="order">
+<section class="orderin">
   <div class="container">
-    <ul class="order__location">
-      <li class="order__location-item">
-          <a href="../../index.html" class="order__location-pages">Головна</a>
+    <ul class="order__list-titlein">
+      <li class="order__item-titlein">
+        <a href="../../index.html" class="location-pages-bl">Головна</a>
       </li>
-      <li class="order__location-item">
-          <svg class="order__location-svg">
-              <use href="../../images/symbol-defs.svg#icon-main-hero-right"></use>
-          </svg>
+      <li class="order__item-titlein">
+        <svg class="location-icon" data-aos="flip-up">
+          <use href="../images/symbol-defs.svg#icon-main-hero-right"></use>
+        </svg>
       </li>
-      <li class="order__location-item">
-          <a href="#" class="order__location-pages">Кошик</a>
+      <li class="order__item-titlein">
+        <a href="../../basket.html" class="location-pages-yl">Кошик</a>
       </li>
     </ul>
-    <h1 class="order__title">Оформлення замовлення</h1>
-    <div class="order__info">
-      <div class="order__title-box">
-        <div class="order__svg-box">
-          <svg class="order__svg">
-            <use href="../../images/symbol-defs.svg#icon-more-info"></use>
-          </svg>
-          <h2 class="order__subtitle">Інформація про покупця</h2>
+    <h1
+      data-aos="flip-up"
+      data-aos-easing="ease-in-back"
+      data-aos-duration="1000"
+      data-aos-offset="0"
+      class="order__titlein"
+    >
+      Оформлення замовлення
+    </h1>
+    <div class="order__box-flexall">
+      <div class="order__box-flexall1">
+        <div
+          class="order__box-bgin"
+          data-aos="fade-right"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine"
+          data-aos-duration="1000"
+        >
+          <div class="order__box1in">
+            <svg class="order__label-iconin">
+              <use href="../images/symbol-defs.svg#order-client"></use>
+            </svg>
+            <p class="order__title-labelin">Інформаця про покупця</p>
+          </div>
+          <form class="order__formin">
+            <div class="order__box3in">
+              <label class="order__label" for="surname">
+                <input
+                  placeholder="Прізвище"
+                  class="order__inputin"
+                  id="surname"
+                  type="text"
+                />
+              </label>
+              <label class="order__labelin" for="name">
+                <input
+                  placeholder="Контактний телефон"
+                  class="order__inputin"
+                  id="name"
+                  type="text"
+                />
+              </label>
+              <label class="order__labelin" for="middlename">
+                <input
+                  placeholder="Ім'я"
+                  class="order__inputin"
+                  id="middlename"
+                  type="text"
+                />
+              </label>
+              <label class="order__label" for="phone">
+                <input
+                  placeholder="E-mail"
+                  class="order__inputin"
+                  id="phone"
+                  type="text"
+                />
+              </label>
+              <label class="order__labelin" for="email">
+                <input
+                  placeholder="По батькові"
+                  class="order__inputin"
+                  id="email"
+                  type="text"
+                />
+              </label>
+            </div>
+            <div class="order__box2in">
+              <input
+                class="order__checkboxin"
+                type="checkbox"
+                id="message"
+                name="message"
+                checked
+              />
+              <label class="order__label-checkboxin" for="message"
+                >Отримуватиме замовлення інша людина</label
+              >
+            </div>
+          </form>
+        </div>
+
+        <div
+          class="order__box-bgdl"
+          data-aos="fade-right"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine"
+          data-aos-duration="1000"
+        >
+          <div class="order__box1dl">
+            <svg class="order__icon-choisedl">
+              <use href="../images/symbol-defs.svg#car-with-bg"></use>
+            </svg>
+            <h1 class="order__titledl">Вибір способу доставки</h1>
+          </div>
+          <ul class="order__list-choisedl">
+            <li class="order__itemdl">
+              <div class="order__choisedl">
+                <svg class="order__icon-tickdl">
+                  <use href="../images/symbol-defs.svg#icon-tick-withbg"></use>
+                </svg>
+                <p class="order__card-titledl">Самовивіз із магазину</p>
+                <p class="order__card-subtitledl">Бесплатно</p>
+              </div>
+            </li>
+            <li class="order__itemdl">
+              <div class="order__choisedl">
+                <svg class="order__icon-npdl">
+                  <use href="../images/symbol-defs.svg#icon-nova-poshta"></use>
+                </svg>
+                <p class="order__card-titledl">Доставка Нова Пошта</p>
+                <p class="order__card-subtitledl">≈ від 500 грн</p>
+              </div>
+            </li>
+            <li class="order__itemdl">
+              <div class="order__choisedl">
+                <svg class="order__icon-peopledl">
+                  <use href="../images/symbol-defs.svg#delivery-people"></use>
+                </svg>
+                <p class="order__card-titledl">Доставка кур'єром</p>
+                <p class="order__card-subtitledl">≈ від 200 грн</p>
+              </div>
+            </li>
+          </ul>
+          <div class="order__boxdl">
+            <svg class="order__svg-locationdl">
+              <use href="../images/symbol-defs.svg#icon-location"></use>
+            </svg>
+            <ul class="order__list-orderdl">
+              <li class="order__item-textdl">
+                <p class="order__text-timetabledl">
+                  Графік роботи: щодня з 9:00 до 18:00
+                </p>
+              </li>
+              <li class="order__item-textdl">
+                <p class="order__text-addresdl">
+                  м. Київ, пров. Ізяславський 52, пов. 2
+                </p>
+              </li>
+            </ul>
+            <button class="order__buttondl">
+              <svg class="order__mapdl">
+                <use href="../images/symbol-defs.svg#icon-map"></use>
+              </svg>
+              На мапі
+            </button>
+          </div>
+        </div>
+        <div
+          class="order__box-bgpm"
+          data-aos="fade-right"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine"
+          data-aos-duration="1000"
+        >
+          <div class="order__boxpm">
+            <svg class="order__iconpm">
+              <use href="../images/symbol-defs.svg#icon__wallet"></use>
+            </svg>
+            <h2 class="order__titlepm">Вибір способу оплати</h2>
+          </div>
+          <form action="" class="order__formpm">
+            <ul class="order__listpm">
+              <li class="order__itempm">
+                <input
+                  class="order__inputpm"
+                  type="radio"
+                  id="checkbox1pm"
+                  name="checkbox1pm"
+                  value="cash"
+                />
+                <label class="order__labelpm" for="checkbox1pm"
+                  >Готівкою при отриманні (Післясплата)</label
+                >
+              </li>
+              <li class="order__itempm">
+                <input
+                  class="order__inputpm"
+                  type="radio"
+                  id="checkbox2pm"
+                  name="checkbox2pm"
+                  value="card"
+                />
+                <label class="order__labelpm" for="checkbox2pm"
+                  >Оплата карткою на сайті</label
+                >
+                <svg class="visapm">
+                  <use href="../images/symbol-defs.svg#icon-visa"></use>
+                </svg>
+                <svg class="mastercardpm">
+                  <use href="../images/symbol-defs.svg#icon-masteracrd"></use>
+                </svg>
+              </li>
+              <li class="order__itempm">
+                <input
+                  class="order__inputpm"
+                  type="radio"
+                  id="checkbox3pm"
+                  name="checkbox3pm"
+                  value="privatpay"
+                />
+                <label class="order__labelpm" for="checkbox3pm"
+                  >Privat Pay</label
+                >
+                <svg class="privatpaypm">
+                  <use href="../images/symbol-defs.svg#icon-privatpay"></use>
+                </svg>
+              </li>
+              <li class="order__itempm">
+                <input
+                  class="order__inputpm"
+                  type="radio"
+                  id="checkbox4pm"
+                  name="checkbox4pm"
+                  value="krovato"
+                />
+                <label class="order__labelpm" for="checkbox4pm"
+                  >Кредит від Krovato</label
+                >
+              </li>
+              <li class="order__itempm">
+                <input
+                  class="order__inputpm"
+                  type="radio"
+                  id="checkbox5pm"
+                  name="checkbox5pm"
+                  value="privatbank"
+                />
+                <label class="order__labelpm" for="checkbox5pm"
+                  >Оплата частинами ПриватБанк</label
+                >
+                <svg class="privatbankpm">
+                  <use
+                    href="../images/symbol-defs.svg#icon-privatycredit"
+                  ></use>
+                </svg>
+              </li>
+              <li class="order__itempm">
+                <input
+                  class="order__inputpm"
+                  type="radio"
+                  id="checkbox6pm"
+                  name="checkbox6pm"
+                  value="monobank"
+                />
+                <label class="order__labelpm" for="chkckbox6pm"
+                  >Оплата частинами МоноБанк</label
+                >
+                <svg class="monobankpm">
+                  <use href="../images/symbol-defs.svg#icon-monobank"></use>
+                </svg>
+              </li>
+            </ul>
+          </form>
+        </div>
+        <div
+          class="order__box-bgcm"
+          data-aos="fade-right"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine"
+          data-aos-duration="1000"
+        >
+          <div class="order__boxcm">
+            <svg class="order__svgcm">
+              <use href="../../images/symbol-defs.svg#icon-chat-check"></use>
+            </svg>
+            <h2 class="order__titlecm">Коментар до замовлення</h2>
+          </div>
+          <label class="order__labelcm" for="order">
+            <input
+              placeholder="Ваш коментар"
+              class="order__inputcm"
+              id="order"
+              type="text"
+            />
+          </label>
         </div>
       </div>
-      <form class="order__form">
-        <input type="text" class="order__input" placeholder="Прізвище">
-        <input type="text" class="order__input" placeholder="Контактний телефон">
-        <input type="text" class="order__input" placeholder="Ім’я">
-        <input type="text" class="order__input" placeholder="E-mail">
-        <input type="text" class="order__input" placeholder="По батькові">
-        <input type="checkbox" class="order__checkbox" id="checkbox1">
-        <label for="checkbox1" class="order__lable">Отримуватиме замовлення інша людина</label>
-      </form>
-    </div>
-    <div class="order__delivery">
-      <div class="order__title-box">
-        <div class="order__svg-box">
-          <svg class="order__svg">
-            <use href="../../images/symbol-defs.svg#icon-delivery"></use>
+      <div
+        class="order__box-bgsh"
+        data-aos="fade-left"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine"
+        data-aos-duration="1000"
+      >
+        <div class="order__boxsh">
+          <h2 class="order__titlesh">Ваш кошик</h2>
+          <p class="order__numbersh">4</p>
+        </div>
+        <ul class="order__listsh">
+          <li class="order__itemsh">
+            <div class="order__box-card1sh">
+              <picture>
+                <source
+                  srcset="
+                    ./images/mobile/sparta-bed@1x.webp 1x,
+                    ./images/mobile/sparta-bed@2x.webp 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <source
+                  srcset="
+                    ./images/desktop/sparta-bed@1x.webp 1x,
+                    ./images/desktop/sparta-bed@2x.webp 2x
+                  "
+                  media="(min-width: 1290px)"
+                />
+                <img
+                  src="./images/desktop/sparta-bed@1x.webp"
+                  alt="Спарта ліжко"
+                  class="order__imgsh"
+                />
+              </picture>
+              <div class="order__box-btnsh">
+                <button class="order__kilkist-minush">-</button>
+                <p class="order__kilkist-textsh">1</p>
+                <button class="order__kilkist-plush">+</button>
+              </div>
+            </div>
+            <div class="order__box-cardsh">
+              <p class="order__widthsh">Розмір: 61 x 184 x 2130 мм</p>
+              <p class="order__bed-namesh">
+                Ліжко Спарта / Sparta з підйомним механізмом
+              </p>
+              <div class="order__box-checksh">
+                <svg class="order__icon-checksh">
+                  <use href="../images/symbol-defs.svg#icon-check"></use>
+                </svg>
+                <p class="order__checksh">В наявності</p>
+              </div>
+              <p class="order__pricesh">15 400 грн.</p>
+              <!-- <p class="order__priceshr">25 400 грн.</p> -->
+              <div class="order__boxxxsh"></div>
+            </div>
+            <p class="order__crosssh">✖</p>
+          </li>
+          <li class="order__itemsh">
+            <div class="order__box-card1sh">
+              <picture>
+                <source
+                  srcset="
+                    ./images/mobile/sparta-bed@1x.webp 1x,
+                    ./images/mobile/sparta-bed@2x.webp 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <source
+                  srcset="
+                    ./images/desktop/sparta-bed@1x.webp 1x,
+                    ./images/desktop/sparta-bed@2x.webp 2x
+                  "
+                  media="(min-width: 1290px)"
+                />
+                <img
+                  src="./images/desktop/sparta-bed@1x.webp"
+                  alt="Спарта ліжко"
+                  class="order__imgsh"
+                />
+              </picture>
+              <div class="order__box-btnsh">
+                <button class="order__kilkist-minush">-</button>
+                <p class="order__kilkist-textsh">2</p>
+                <button class="order__kilkist-plush">+</button>
+              </div>
+            </div>
+            <div class="order__box-cardsh">
+              <p class="order__widthsh">Розмір: 61 x 184 x 2130 мм</p>
+              <p class="order__bed-namesh">
+                Ліжко Спарта / Sparta з підйомним механізмом
+              </p>
+              <div class="order__box-checksh">
+                <svg class="order__icon-checksh">
+                  <use href="../images/symbol-defs.svg#icon-check"></use>
+                </svg>
+                <p class="order__checksh">В наявності</p>
+              </div>
+              <p class="order__pricesh">15 400 грн.</p>
+              <div class="order__boxxxsh order__boxxxxsh"></div>
+            </div>
+            <p class="order__crosssh">✖</p>
+            <div class="order__gradient-adaptive"></div>
+            <button class="order__see-allsh">Показати всі ↓</button>
+          </li>
+          <li class="order__itemsh order__item-adaptivesh">
+            <div class="order__box-card1sh">
+              <picture>
+                <source
+                  srcset="
+                    ./images/mobile/sparta-bed@1x.webp 1x,
+                    ./images/mobile/sparta-bed@2x.webp 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <source
+                  srcset="
+                    ./images/desktop/sparta-bed@1x.webp 1x,
+                    ./images/desktop/sparta-bed@2x.webp 2x
+                  "
+                  media="(min-width: 1290px)"
+                />
+                <img
+                  src="./images/desktop/sparta-bed@1x.webp"
+                  alt="Спарта ліжко"
+                  class="order__imgsh"
+                />
+              </picture>
+              <div class="order__box-btnsh">
+                <button class="order__kilkist-minush">-</button>
+                <p class="order__kilkist-textsh">1</p>
+                <button class="order__kilkist-plush">+</button>
+              </div>
+            </div>
+            <div class="order__box-cardsh">
+              <p class="order__widthsh">Розмір: 61 x 184 x 2130 мм</p>
+              <p class="order__bed-namesh">
+                Ліжко Спарта / Sparta з підйомним механізмом
+              </p>
+              <div class="order__box-checksh">
+                <svg class="order__icon-checksh">
+                  <use href="../images/symbol-defs.svg#icon-check"></use>
+                </svg>
+                <p class="order__checksh">В наявності</p>
+              </div>
+              <p class="order__pricesh">15 400 грн.</p>
+              <div class="order__boxxxsh order__boxxxxsh"></div>
+            </div>
+            <p class="order__crosssh">✖</p>
+          </li>
+        </ul>
+        <div class="order__box-promosh">
+          <svg class="order__icon-promosh">
+            <use href="../images/symbol-defs.svg#icon-price"></use>
           </svg>
-          <h2 class="order__subtitle">Вибір способу доставки</h2>
+          <div class="order__bg-adaptive">
+            <p class="order__promosh">Є промокод?</p>
+            <div class="order__promo-flexsh">
+              <label class="order__labelsh" for="promo">
+                <input
+                  placeholder="Введіть код"
+                  class="order__inputsh"
+                  id="promo"
+                  type="text"
+                />
+              </label>
+              <button class="order__oksh">OK</button>
+            </div>
+            <div class="order__box-promosh"></div>
+          </div>
+
+          <div class="final__box-down">
+            <h2 class="final__title">Разом:</h2>
+            <ul class="final__list">
+              <li class="final__item">
+                <p class="final__text">4 товари на суму:</p>
+                <div class="final__box-line"></div>
+                <p class="final__text">540 269 грн.</p>
+              </li>
+              <li class="final__item">
+                <p class="final__text">Вартість доставки:</p>
+                <div class="final__box-line"></div>
+                <p class="final__text">За тарифами оператора</p>
+              </li>
+              <li class="final__item">
+                <p class="final__text">До оплати:</p>
+                <div class="final__box-line"></div>
+                <p class="final__text-br">540 269 грн.</p>
+              </li>
+            </ul>
+            <div class="final__box-flex">
+              <form action="" class="final__form">
+                <input
+                  class="final__input"
+                  type="checkbox"
+                  id="nocall"
+                  name="nocall"
+                  value="nocall"
+                />
+                <label class="final__label" for="nocall"
+                  >Не передзвонюйте мені для підтвердження замовлення</label
+                >
+              </form>
+              <button type="button" class="final__button">
+                ОФОРМИТИ ЗАМОВЛЕННЯ
+              </button>
+              <div class="final__box">
+                <p class="final__policy-bl">
+                  Підтверджуючи замовлення, я приймаю умови<span
+                    class="order__policy-yl"
+                  >
+                    Угоди користувача</span
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <ul class="order__delivery-list">
-        <li class="order__delivery-item">
-          <svg class="order__delivery-tick order__delivery-svg">
-            <use href="../../images/symbol-defs.svg#icon-tick-withbg"></use>
-          </svg>
-          <h3 class="order__delivery-title">Самовивіз із магазину</h3>
-          <p class="order__delivery-text">Безкоштовно</p>
-        </li>
-        <li class="order__delivery-item">
-          <svg class="order__delivery-np order__delivery-svg">
-            <use href="../../images/symbol-defs.svg#icon-nova-poshta"></use>
-          </svg>
-          <h3 class="order__delivery-title">Доставка Нова Пошта</h3>
-          <p class="order__delivery-text">≈ від 500 грн</p>
-        </li>
-        <li class="order__delivery-item">
-          <svg class="order__delivery-curier order__delivery-svg">
-            <use href="../../images/symbol-defs.svg#reviews-curier"></use>
-          </svg>
-          <h3 class="order__delivery-title">Доставка кур'єром</h3>
-          <p class="order__delivery-text">≈ від 200 грн</p>
-        </li>
-      </ul>
-      <div class="order__delivery-box">
-        <svg class="order__delivery-location">
-          <use href="../../images/symbol-defs.svg#icon-location"></use>
-        </svg>
-        <p class="order__delivery-time">Графік роботи: щодня з 9:00 до 18:00</p>
-        <p class="order__delivery-place">м. Київ, пров. Ізяславський 52, пов. 2</p>
-        <button class="order__delivery-btn">
-          <svg class="order__map">
-            <use href="../../images/symbol-defs.svg#icon-map"></use>
-          </svg>
-          На мапі
-        </button>
-      </div>
-    </div>
-    <div class="order__payment">
-      <div class="order__title-box">
-        <div class="order__svg-box">
-          <svg class="order__svg">
-            <use href="../../images/symbol-defs.svg#icon-wallet"></use>
-          </svg>
-          <h2 class="order__subtitle">Вибір способу оплати</h2>
-        </div>
-      </div>
-      <form class="order__payment-form">
-        <input type="radio" class="order__payment-option" id="box1">
-        <label for="box1" class="order__payment-label">
-          Готівкою при отриманні (Післясплата)
-        </label>
-        <input type="radio" class="order__payment-option" id="box2">
-        <label for="box2" class="order__payment-label">
-          Оплата карткою на сайті
-          <svg class="order__payment-svg">
-            <use href="../../images/symbol-defs.svg#icon-masteracrd"></use>
-          </svg>
-          <svg class="order__payment-svg">
-            <use href="../../images/symbol-defs.svg#icon-visa"></use>
-          </svg>
-        </label>
-        <input type="radio" class="order__payment-option" id="box3">
-        <label for="box3" class="order__payment-label">
-          Privat Pay
-          <svg class="order__payment-svg">
-            <use href="../../images/symbol-defs.svg#icon-privatpay"></use>
-          </svg>
-        </label>
-        <input type="radio" class="order__payment-option" id="box4">
-        <label for="box4" class="order__payment-label">
-          Кредит від Krovato
-        </label>
-        <input type="radio" class="order__payment-option" id="box5">
-        <label for="box5" class="order__payment-label">
-          Оплата частинами ПриватБанк
-          <svg class="order__payment-svg">
-            <use href="../../images/symbol-defs.svg#icon-privatycredit"></use>
-          </svg>
-        </label>
-        <input type="radio" class="order__payment-option" id="box6">
-        <label for="box6" class="order__payment-label">
-          Оплата частинами МоноБанк
-          <svg class="order__payment-svg">
-            <use href="../../images/symbol-defs.svg#icon-monobank"></use>
-          </svg>
-        </label>
-      </form>
-    </div>
-    <div class="order__comment">
-      <div class="order__title-box">
-        <div class="order__svg-box">
-          <svg class="order__svg">
-            <use href="../../images/symbol-defs.svg#icon-chat-check"></use>
-          </svg>
-          <h2 class="order__subtitle">Коментар до замовлення</h2>
-        </div>
-      </div>
-      <input type="text" class="order__comm" placeholder="Ваш коментар">
     </div>
   </div>
 </section>
