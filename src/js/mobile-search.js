@@ -12,7 +12,8 @@
   );
 
   function toggleMobileSearch() {
-    mobileSearchRefs.mobileMenu.classList.toggle("is-hidden");
+    mobileSearchRefs.mobileSearch.classList.toggle("is-hidden");
+    
     document.body.classList.toggle("no-scroll");
   }
 })();

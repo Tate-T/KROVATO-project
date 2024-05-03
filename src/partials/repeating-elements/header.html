@@ -39,9 +39,12 @@
     </div>
     <div class="header__filter">
       <div class="header__mobile">
-        <svg class="header__menu">
-          <use href="./images/symbol-defs.svg#icon-menu"></use>
-        </svg>
+        <button class="menu__button" data-mobile-menu-open>
+          <svg class="header__menu">
+            <use href="./images/symbol-defs.svg#icon-menu"></use>
+          </svg>
+        </button>
+
         <a href="./index.html">
           <svg class="header__logo">
             <use href="./images/symbol-defs.svg#icon-logo-black"></use>
@@ -58,10 +61,16 @@
         </svg>
         Каталог
       </button>
-      <input class="header__input" type="search" placeholder="Пошук товарів" />
-      <svg class="header__search">
-        <use href="./images/symbol-defs.svg#icon-search"></use>
-      </svg>
+      <div class="header__relative">
+        <input
+          class="header__input"
+          type="search"
+          placeholder="Пошук товарів"
+        />
+        <svg class="header__search">
+          <use href="./images/symbol-defs.svg#icon-search"></use>
+        </svg>
+      </div>
 
       <div class="header__call">
         <svg class="header__phone">
@@ -77,17 +86,19 @@
         </svg>
       </div>
       <ul class="header__mobile-list">
-        <button class="header__mobile-button" data-catalog-modal-open>
+        <!-- <button class="header__mobile-button" data-catalog-modal-open>
           <svg class="header__katalog">
             <use href="./images/symbol-defs.svg#icon-catalog"></use>
           </svg>
           Каталог
-        </button>
+        </button> -->
 
         <li class="header__mobile-item">
-          <svg class="header__mobile-icon">
-            <use href="./images/symbol-defs.svg#icon-header-search"></use>
-          </svg>
+          <button class="menu__button" data-mobile-search-open data-mobile-search-close>
+            <svg class="header__mobile-icon">
+              <use href="./images/symbol-defs.svg#icon-header-search"></use>
+            </svg>
+          </button>
         </li>
         <li class="header__mobile-item">
           <svg class="header__mobile-icon">
@@ -95,9 +106,11 @@
           </svg>
         </li>
         <li class="header__mobile-item">
-          <svg class="header__mobile-icon">
-            <use href="./images/symbol-defs.svg#icon-header-basket"></use>
-          </svg>
+          <a href="./basket.html">
+            <svg class="header__mobile-icon">
+              <use href="./images/symbol-defs.svg#icon-header-basket"></use>
+            </svg>
+          </a>
         </li>
       </ul>
     </div>
@@ -123,38 +136,38 @@
         </li>
         <li class="header__sale">
           <svg class="header__badge">
-            <use href="./images/symbol-defs.svg#icon-percent"></use>
+            <use href="./images/symbol-defs.svg#icon-monogramm"></use>
           </svg>
           <p class="header__cursive">Розпродаж</p>
         </li>
         <li class="header__sale">
           <svg class="header__badge">
-            <use href="./images/symbol-defs.svg#icon-monogramm"></use>
+            <use href="./images/symbol-defs.svg#icon-percent"></use>
           </svg>
           <p class="header__cursive">Купити в кредит</p>
         </li>
       </ul>
       <ul class="header__list">
         <li class="header__item">
-          <a href="#" class="header__tab">Дитяча</a>
+          <a href="./catalog.html" class="header__tab">Каталог</a>
         </li>
         <li class="header__item">
-          <a href="" class="header__tab">Кухня</a>
+          <a href="#" class="header__tab">Кухня</a>
         </li>
         <li class="header__item">
-          <a href="" class="header__tab">Ванна</a>
+          <a href="#" class="header__tab">Ванна</a>
         </li>
         <li class="header__item">
-          <a href="" class="header__tab">Спальня</a>
+          <a href="#" class="header__tab">Спальня</a>
         </li>
         <li class="header__item">
-          <a href="" class="header__tab">Передпокій</a>
+          <a href="#" class="header__tab">Передпокій</a>
         </li>
         <li class="header__item">
-          <a href="" class="header__tab">Вітальня</a>
+          <a href="#" class="header__tab">Вітальня</a>
         </li>
         <li class="header__item">
-          <a href="" class="header__tab">Офіс</a>
+          <a href="#" class="header__tab">Офіс</a>
         </li>
       </ul>
     </div>

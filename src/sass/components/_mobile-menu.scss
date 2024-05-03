@@ -1,0 +1,55 @@
+.menu {
+  padding: 20px 35px 35px;
+  background-color: #fff;
+  
+  &__list {
+    display: flex;
+    flex-direction: column;
+    padding: 35px;
+    gap: 40px;
+    padding-top: 35px;
+    border-top: 2px solid #f8f8f8;
+    
+  }
+  &__link {
+    @include font($dark-color, 140%, 20px, 600);
+  }
+  &__item {
+    display: flex;
+    gap: 10px;
+  }
+  &__icon {
+    @include size(24px, 24px);
+    fill: $yellow-color;
+  }
+  &__text {
+    @include font($grey-color, 126%, 19px, 600);
+  }
+  &__button {
+    background-color: transparent;
+  }
+}
+.header__cross {
+  @include size(75px, 75px);
+  fill: $grey-color;
+}
+.backdrop1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  overflow-y: scroll;
+  background-color: rgba(27, 26, 26, 0.8);
+  backdrop-filter: blur(2.5px);
+  &.is-hidden {
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  @media screen and (min-width: 1290px) {
+    display: none;
+  }
+}
