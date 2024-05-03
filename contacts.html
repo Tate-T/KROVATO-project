@@ -16,7 +16,7 @@
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     
-    <link rel="stylesheet" href="/KROVATO-project/assets/contacts-dfc2cc4d.css">
+    <link rel="stylesheet" href="/KROVATO-project/assets/contacts-ed910733.css">
   </head>
   <body>
     <header class="header">
@@ -60,9 +60,12 @@
     </div>
     <div class="header__filter">
       <div class="header__mobile">
-        <svg class="header__menu">
-          <use href="/KROVATO-project/assets/symbol-defs-efd3eda3.svg#icon-menu"></use>
-        </svg>
+        <button class="menu__button" data-mobile-menu-open>
+          <svg class="header__menu">
+            <use href="/KROVATO-project/assets/symbol-defs-efd3eda3.svg#icon-menu"></use>
+          </svg>
+        </button>
+
         <a href="./index.html">
           <svg class="header__logo">
             <use href="/KROVATO-project/assets/symbol-defs-efd3eda3.svg#icon-logo-black"></use>
@@ -79,10 +82,16 @@
         </svg>
         Каталог
       </button>
-      <input class="header__input" type="search" placeholder="Пошук товарів" />
-      <svg class="header__search">
-        <use href="/KROVATO-project/assets/symbol-defs-efd3eda3.svg#icon-search"></use>
-      </svg>
+      <div class="header__relative">
+        <input
+          class="header__input"
+          type="search"
+          placeholder="Пошук товарів"
+        />
+        <svg class="header__search">
+          <use href="/KROVATO-project/assets/symbol-defs-efd3eda3.svg#icon-search"></use>
+        </svg>
+      </div>
 
       <div class="header__call">
         <svg class="header__phone">
@@ -98,17 +107,19 @@
         </svg>
       </div>
       <ul class="header__mobile-list">
-        <button class="header__mobile-button" data-catalog-modal-open>
+        <!-- <button class="header__mobile-button" data-catalog-modal-open>
           <svg class="header__katalog">
-            <use href="/KROVATO-project/assets/symbol-defs-efd3eda3.svg#icon-catalog"></use>
+            <use href="./images/symbol-defs.svg#icon-catalog"></use>
           </svg>
           Каталог
-        </button>
+        </button> -->
 
         <li class="header__mobile-item">
-          <svg class="header__mobile-icon">
-            <use href="/KROVATO-project/assets/symbol-defs-efd3eda3.svg#icon-header-search"></use>
-          </svg>
+          <button class="menu__button" data-mobile-search-open data-mobile-search-close>
+            <svg class="header__mobile-icon">
+              <use href="/KROVATO-project/assets/symbol-defs-efd3eda3.svg#icon-header-search"></use>
+            </svg>
+          </button>
         </li>
         <li class="header__mobile-item">
           <svg class="header__mobile-icon">
@@ -116,9 +127,11 @@
           </svg>
         </li>
         <li class="header__mobile-item">
-          <svg class="header__mobile-icon">
-            <use href="/KROVATO-project/assets/symbol-defs-efd3eda3.svg#icon-header-basket"></use>
-          </svg>
+          <a href="./basket.html">
+            <svg class="header__mobile-icon">
+              <use href="/KROVATO-project/assets/symbol-defs-efd3eda3.svg#icon-header-basket"></use>
+            </svg>
+          </a>
         </li>
       </ul>
     </div>
@@ -144,38 +157,38 @@
         </li>
         <li class="header__sale">
           <svg class="header__badge">
-            <use href="/KROVATO-project/assets/symbol-defs-efd3eda3.svg#icon-percent"></use>
+            <use href="/KROVATO-project/assets/symbol-defs-efd3eda3.svg#icon-monogramm"></use>
           </svg>
           <p class="header__cursive">Розпродаж</p>
         </li>
         <li class="header__sale">
           <svg class="header__badge">
-            <use href="/KROVATO-project/assets/symbol-defs-efd3eda3.svg#icon-monogramm"></use>
+            <use href="/KROVATO-project/assets/symbol-defs-efd3eda3.svg#icon-percent"></use>
           </svg>
           <p class="header__cursive">Купити в кредит</p>
         </li>
       </ul>
       <ul class="header__list">
         <li class="header__item">
-          <a href="#" class="header__tab">Дитяча</a>
+          <a href="./catalog.html" class="header__tab">Каталог</a>
         </li>
         <li class="header__item">
-          <a href="" class="header__tab">Кухня</a>
+          <a href="#" class="header__tab">Кухня</a>
         </li>
         <li class="header__item">
-          <a href="" class="header__tab">Ванна</a>
+          <a href="#" class="header__tab">Ванна</a>
         </li>
         <li class="header__item">
-          <a href="" class="header__tab">Спальня</a>
+          <a href="#" class="header__tab">Спальня</a>
         </li>
         <li class="header__item">
-          <a href="" class="header__tab">Передпокій</a>
+          <a href="#" class="header__tab">Передпокій</a>
         </li>
         <li class="header__item">
-          <a href="" class="header__tab">Вітальня</a>
+          <a href="#" class="header__tab">Вітальня</a>
         </li>
         <li class="header__item">
-          <a href="" class="header__tab">Офіс</a>
+          <a href="#" class="header__tab">Офіс</a>
         </li>
       </ul>
     </div>
@@ -689,7 +702,7 @@
         <div class="footer__line"></div>
     </div>
 </footer>
-    <div class="backdrop is-hidden" data-catalog-modal>
+    <div class="catalog-modal__backdrop is-hidden" data-catalog-modal>
   <div class="catalog-modal">
     <ul class="catalog-modal__list">
       <li class="catalog-modal__item">
@@ -1524,8 +1537,89 @@
   </div>
 </div>
 
-    
-    
+    <div class="backdrop1 is-hidden" data-mobile-menu>
+  <div class="menu">
+    <div class="header__filter">
+      <div class="header__mobile">
+        <button class="menu__button" data-mobile-menu-close>
+          <svg class="header__cross">
+            <use href="/KROVATO-project/assets/symbol-defs-efd3eda3.svg#icon-cross"></use>
+          </svg>
+        </button>
+
+        <a href="./index.html">
+          <svg class="header__logo">
+            <use href="/KROVATO-project/assets/symbol-defs-efd3eda3.svg#icon-logo-black"></use>
+          </svg>
+        </a>
+        <svg class="header__ringtone">
+          <use href="/KROVATO-project/assets/symbol-defs-efd3eda3.svg#icon-call"></use>
+        </svg>
+      </div>
+    </div>
+    <ul class="menu__list">
+      <li class="menu__item">
+        <a href="./about-us.html" class="menu__link">Про нас</a>
+      </li>
+      <li class="menu__item">
+        <a href="./payment.html" class="menu__link">Оплата</a>
+      </li>
+      <li class="menu__item">
+        <a href="./delivery.html" class="menu__link">Доставка та збірка</a>
+      </li>
+      <li class="menu__item">
+        <a href="./reviews.html" class="menu__link">Відгуки</a>
+      </li>
+      <li class="menu__item">
+        <a href="./blog.html" class="menu__link">Блог</a>
+      </li>
+      <li class="menu__item">
+        <a href="./contacts.html" class="menu__link">Контакти</a>
+      </li>
+      <li class="menu__item">
+        <a href="./catalog.html" class="menu__link">Каталог</a>
+      </li>
+      <li class="menu__item">
+        <svg class="menu__icon">
+          <use href="/KROVATO-project/assets/symbol-defs-efd3eda3.svg#icon-percent"></use>
+        </svg>
+        <a href="#" class="menu__text">Купити в кредит</a>
+      </li>
+      <li class="menu__item">
+        <svg class="menu__icon">
+          <use href="/KROVATO-project/assets/symbol-defs-efd3eda3.svg#icon-monogramm"></use>
+        </svg>
+        <a href="#" class="menu__text">Розпродаж</a>
+      </li>
+      <li class="menu__item">
+        <svg class="menu__icon">
+          <use href="/KROVATO-project/assets/symbol-defs-efd3eda3.svg#icon-full-star"></use>
+        </svg>
+        <a href="#" class="menu__text">Акції</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+    <div class="search__backdrop is-hidden" data-mobile-search>
+  <div class="search">
+    <form>
+      <input
+        type="text"
+        class="search__input"
+        id="earch__input"
+        type="search"
+        placeholder="Пошук товарів"
+      />
+      <button type="submit" class="search__button">
+        <svg class="search__icon">
+          <use href="/KROVATO-project/assets/symbol-defs-efd3eda3.svg#icon-search"></use>
+        </svg>
+      </button>
+    </form>
+  </div>
+</div>
+
 
     <script src="./js/catalog-modal.js" type="text/javascript"></script>
     <script src="./js/mobile-search.js" type="text/javascript"></script>
