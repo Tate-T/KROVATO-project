@@ -4,7 +4,7 @@
   &__container {
     display: flex;
     flex-direction: column;
-    align-items: center;
+
     @media screen and (min-width: 1290px) {
       gap: 43px;
       align-items: baseline;
@@ -20,6 +20,10 @@
 
   &__logo {
     @include size(215px, 36px);
+
+    @media screen and (max-width: 430px) {
+      @include size(150px, 25px);
+    }
   }
   &__menu {
     @include size(25px, 25px);
@@ -35,43 +39,66 @@
     }
   }
   &__mobile {
-    display: flex;
+    @extend %flex-center2;
     justify-content: space-between;
-    gap: 47px;
     margin-bottom: 32px;
 
     @media screen and (min-width: 1290px) {
       margin-bottom: 0;
     }
+    @media screen and (max-width: 430px) {
+      gap: 20px;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
   }
 
   &__btn {
-    display: none;
+    @include font(#fff, 126%, 19px, 600);
+    background-color: $yellow-color;
+    padding: 11px 20px;
+    @extend %flex-center2;
+    gap: 10px;
+    border-radius: 8px;
+    position: absolute;
+
+    @media screen and (max-width: 430px) {
+      gap: 10px;
+      padding: 5px 10px;
+      top: 64px;
+      left: 30px;
+      font-size: 15px;
+    }
 
     @media screen and (min-width: 1290px) {
-      color: #fff;
-      font-size: 19px;
-      font-weight: 600;
-      line-height: 24px;
-      background-color: $yellow-color;
-      padding: 11px 20px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      border-radius: 8px;
+      position: static;
     }
   }
   &__input {
     display: none;
 
-    @media screen and (min-width: 1290px) {
+    @media screen and (min-width: 768px) {
       @include font($grey-light-color, 188%, 16px, 400);
-      @include size(421px, 50px);
+      @include size(300px, 50px);
       border-radius: 8px;
       border: 1px solid $grey-light-color;
       display: flex;
       padding: 10px 15px;
       outline: 0;
+      position: absolute;
+      left: 30%;
+    }
+    @media screen and (min-width: 1000px) {
+      left: 27%;
+      @include size(350px, 50px);
+    }
+    @media screen and (min-width: 1200px) {
+      left: 35%;
+    }
+    @media screen and (min-width: 1290px) {
+      @include size(421px, 50px);
+      outline: 0;
+      position: static;
     }
   }
   &__katalog {
@@ -100,46 +127,64 @@
   &__search {
     display: none;
 
-    @media screen and (min-width: 1290px) {
-      @include size(24px, 24px);
+    @media screen and (min-width: 768px) {
+      @include size(20px, 20px);
       fill: $grey-color;
       display: block;
       position: absolute;
-      top: 15px;
-      right: 415px;
+      top: 14px;
+      right: 32%;
     }
+    @media screen and (min-width: 1000px) {
+      right: 28%;
+    }
+    @media screen and (min-width: 1200px) {
+      right: 38%;
+    }
+    // @media screen and (min-width: 1290px) {
+    //   @include size(421px, 50px);
+    //   outline: 0;
+    //   position: static;
+    // }
+
+    @media screen and (min-width: 1290px) {
+      top: 13px;
+      right: 5%;
+      @include size(24px, 24px);
+    }
+  }
+  &__relative{
+    position: relative;
   }
   &__icons {
     display: none;
   }
   &__mobile-icon {
-    width: 50px;
-    height: 50px;
+    @include size(50px, 50px);
     fill: $grey-color;
-  }
-  &__mobile-item:first-of-type{
-    display: none;
-  }
-  &__mobile-button {
-    color: #fff;
-    font-size: 19px;
-    font-weight: 600;
-    line-height: 24px;
-    background-color: $yellow-color;
-    padding: 11px 20px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    border-radius: 8px;
-    margin-right: 75px;
 
-    @media screen and (min-width: 1290px) {
+    @media screen and (max-width: 430px) {
+      @include size(25px, 25px);
+    }
+  }
+
+  &__mobile-item:first-of-type {
+    @media screen and (min-width: 768px) {
       display: none;
     }
   }
   &__mobile-list {
     display: flex;
     gap: 20px;
+    justify-content: flex-end;
+
+    @media screen and (min-width: 1290px) {
+      padding-left: 0;
+    }
+    @media screen and (max-width: 430px) {
+      padding-left: 150px;
+      gap: 10px;
+    }
   }
   @media screen and (min-width: 1290px) {
     &__filter {
@@ -194,37 +239,38 @@
     &__phone {
       @include size(24px, 24px);
     }
-    &__more{
+    &__more {
       @include size(13px, 13px);
     }
-    &__hours{
+    &__hours {
       @include font($grey-color, 169%, 13px, 300);
     }
-    &__number{
+    &__number {
       @include font($dark-color, 140%, 20px, 600);
     }
-    &__badge{
+    &__badge {
       @include size(24px, 24px);
       fill: $yellow-color;
     }
-    &__sales{
+    &__sales {
       display: flex;
       gap: 40px;
     }
-    &__sale{
+    &__sale {
       display: flex;
       gap: 5px;
       align-items: center;
+      flex-shrink: 0;
     }
-    &__cursive{
+    &__cursive {
       @include font($grey-color, 126%, 19px, 600);
     }
-    &__list{
+    &__list {
       display: flex;
-      gap: 40px;
+      gap: 30px;
       align-items: center;
     }
-    &__tab{
+    &__tab {
       @include font($grey-color, 126%, 19px, 600);
     }
   }
