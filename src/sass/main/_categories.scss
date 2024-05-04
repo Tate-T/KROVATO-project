@@ -89,7 +89,7 @@
         opacity: 0;
         @include size(40px, 40px);
         background-color: transparent;
-        @include block-model(10px, solid 2px $yellow-color, 50%, 0);
+        @include block-model(13px, solid 2px $yellow-color, 50%, 0);
 
         transition-property: opacity;
         transition-duration: 500ms;

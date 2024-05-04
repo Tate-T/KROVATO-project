@@ -2,8 +2,8 @@
 
     &__button {
         position: fixed;
-        bottom: 50px;
-        right: 50px;
+        bottom: 25px;
+        right: 25px;
         background-color: transparent;
         @extend %animation-of-button;
         transform: rotate(180deg);
@@ -13,6 +13,11 @@
 
         &:hover {
             opacity: 1;
+        }
+
+        @media screen and (min-width: 1290px) {
+            bottom: 50px;
+            right: 50px;
         }
     }
 

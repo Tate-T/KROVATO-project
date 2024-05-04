@@ -106,7 +106,7 @@
         @include block-model(0, none, 8px, 0);
         
         @media screen and (min-width:440px) {
-            @include size(410px, 270px);
+            @include size(410px, 260px);
         }
     }
 

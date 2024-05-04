@@ -1,6 +1,7 @@
 .products {
     @include block-model(0 0 60px 0, none, 0, 0);
     background-color: $light-color;
+    overflow-x: hidden;
 
     @media screen and (min-width: 1290px) {
         @include block-model(0 0 80px 0, none, 0, 0);
@@ -18,7 +19,7 @@
         @include font($dark-color, 1.33, 30px, 600);
 
         @media screen and (min-width: 440px) {
-            width: 520px;
+            width: 410px;
         }
 
         @media screen and (min-width: 768px) {
@@ -90,24 +91,11 @@
         }
     }
 
-    &__photo-mobile {
+    img {
         display: block;
-        @include block-model(0, none, 0, 0 0 20px 0);
-
-        @media screen and (min-width: 1290px) {
-            display: none;
-        }
+        margin-bottom: 20px;
     }
-
-    &__photo-desktop {
-        display: none;
-        @include block-model(0, none, 0, 0 0 20px 0);
-
-        @media screen and (min-width: 1290px) {
-            display: block;
-        }
-    }
-
+    
     &__size {
         @include block-model(0, none, 0, 0 0 10px 0);
         @include font($grey-color, 1.69, 13px, 300);
@@ -126,7 +114,7 @@
 
     &__subtitle-mobile {
         @extend %flex-center2;
-        @include size(370px, 52px);
+        @include size(260px, 52px);
         @include font($dark-color, 1.4, 20px, 600);
 
         @media screen and (min-width: 1290px) {
@@ -135,7 +123,8 @@
     }
 
     &__stock {
-        @extend %flex-center2;
+        display: flex;
+        align-items: center;
         @include block-model(0, none, 0, 10px 0 20px 0);
         gap: 5px;
 
@@ -145,7 +134,7 @@
         }
     
         &-text {
-            @include font($dark-color, 1.69, 13px, 300);
+            @include font(black, 1.69, 13px, 300);
         }
     }
 

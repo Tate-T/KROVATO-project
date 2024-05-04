@@ -1,6 +1,7 @@
 .promotions {
     @include block-model(0 0 60px 0, none, 0, 0);
     background-color: $light-color;
+    overflow-x: hidden;
 
     @media screen and (min-width: 1290px) {
         @include block-model(0 0 70px 0, none, 0, 0);
@@ -8,8 +9,12 @@
 
     &__title {
         text-align: left;
-        @include size(215px, auto);
+        @include size(auto, auto);
         @include font($dark-color, 1.33, 30px, 600);
+
+        @media screen and (min-width: 768px) {
+            @include size(215px, auto);
+        }
 
         @media screen and (min-width: 1290px) {
             @include size(91px, auto);
@@ -86,7 +91,7 @@
     }
 
     &__photo {
-        @include size(410px, 288px);
+        @include size(410px, auto);
         @include block-model(0, none, 8px, 0);
     }
 
