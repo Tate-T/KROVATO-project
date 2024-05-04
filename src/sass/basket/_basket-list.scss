@@ -5,6 +5,7 @@
 .order__box-flexall {
   display: flex;
   gap: 30px;
+  flex-wrap: wrap;
 }
 
 .order__box-bgin {
@@ -29,20 +30,14 @@
 .order__titlein {
   color: var(--Theme-Dark, $dark-color);
   font-family: "Roboto";
-  font-size: 30px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 48px;
+  @include font(var(--Theme-Dark, $dark-color), 48px, 30px, 600);
   margin-top: 20px;
   margin-bottom: 40px;
 
   @media screen and (min-width: 1290px) {
     color: var(--Theme-Dark, $dark-color);
     font-family: "Roboto";
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 48px;
+    @include font(var(--Theme-Dark, $dark-color), 48px, 40px, 600);
     margin-top: 20px;
     margin-bottom: 40px;
   }
@@ -51,20 +46,14 @@
 .order__numberin {
   color: var(--Theme-Yellow, #ffbc57);
   font-family: "Roboto";
-  font-size: 30px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 48px;
+  @include font(var(--Theme-Yellow, #ffbc57), 48px, 30px, 600);
   margin-top: 20px;
   margin-bottom: 40px;
 
   @media screen and (min-width: 1290px) {
     color: var(--Theme-Yellow, #ffbc57);
     font-family: "Roboto";
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 48px;
+    @include font(var(--Theme-Yellow, #ffbc57), 48px, 40px, 600);
     margin-top: 20px;
     margin-bottom: 40px;
   }
@@ -73,18 +62,12 @@
 .order__title-labelin {
   color: var(--Theme-Dark, $dark-color);
   font-family: "Roboto";
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 28px;
+  @include font(var(--Theme-Dark, $dark-color), 28px, 20px, 600);
 
   @media screen and (min-width: 1290px) {
     color: var(--Theme-Dark, $dark-color);
     font-family: "Roboto";
-    font-size: 26px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 34px;
+    @include font(var(--Theme-Dark, $dark-color), 34px, 26px, 600);
   }
 }
 
@@ -140,7 +123,6 @@
   color: var(--Theme-Grey, $grey-color);
   font-family: "Roboto";
   font-size: 16px;
-  font-style: normal;
   font-weight: 400;
   line-height: 30px;
 }
@@ -168,7 +150,6 @@
 
   font-family: "Roboto";
   font-size: 16px;
-  font-style: normal;
   font-weight: 400;
   line-height: 30px;
 
@@ -177,7 +158,6 @@
 
     font-family: "Roboto";
     font-size: 16px;
-    font-style: normal;
     font-weight: 400;
     line-height: 30px;
   }
@@ -188,7 +168,6 @@
 
   font-family: "Roboto";
   font-size: 16px;
-  font-style: normal;
   font-weight: 400;
   line-height: 30px;
 
@@ -197,7 +176,6 @@
 
     font-family: "Roboto";
     font-size: 16px;
-    font-style: normal;
     font-weight: 400;
     line-height: 30px;
   }
@@ -206,9 +184,7 @@
 .location-icon {
   width: 8px;
   height: 8px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @extend flex-center !optional;
 }
 
 .order__box-bgdl {
@@ -235,7 +211,6 @@
   color: var(--Theme-Dark, $dark-color);
   font-family: "Roboto";
   font-size: 20px;
-  font-style: normal;
   font-weight: 600;
   line-height: 28px;
 
@@ -243,7 +218,6 @@
     color: var(--Theme-Dark, $dark-color);
     font-family: "Roboto";
     font-size: 26px;
-    font-style: normal;
     font-weight: 600;
     line-height: 34px;
   }
@@ -327,7 +301,6 @@
   text-align: center;
   font-family: "Roboto";
   font-size: 16px;
-  font-style: normal;
   font-weight: 400;
   line-height: 30px;
 
@@ -335,7 +308,6 @@
     color: var(--Theme-Dark, $dark-color);
     font-family: "Roboto";
     font-size: 16px;
-    font-style: normal;
     font-weight: 400;
     line-height: 30px;
     max-width: 900px;
@@ -348,7 +320,6 @@
   text-align: center;
   font-family: "Roboto";
   font-size: 15px;
-  font-style: normal;
   font-weight: 400;
   line-height: 22px;
 
@@ -356,7 +327,6 @@
     color: var(--Theme-Grey, $grey-color);
     font-family: "Roboto";
     font-size: 15px;
-    font-style: normal;
     font-weight: 400;
     line-height: 22px;
     text-align: center;
@@ -431,7 +401,6 @@
   text-align: center;
   font-family: "Roboto";
   font-size: 16px;
-  font-style: normal;
   font-weight: 400;
   line-height: 30px;
 
@@ -439,7 +408,6 @@
     color: var(--Theme-Dark, $dark-color);
     font-family: "Roboto";
     font-size: 16px;
-    font-style: normal;
     font-weight: 400;
     line-height: 30px;
     margin-left: 20px;
@@ -453,7 +421,6 @@
   text-align: center;
   font-family: "Roboto";
   font-size: 20px;
-  font-style: normal;
   font-weight: 600;
   line-height: 28px;
 
@@ -461,7 +428,6 @@
     color: var(--Theme-Dark, $dark-color);
     font-family: "Roboto";
     font-size: 20px;
-    font-style: normal;
     font-weight: 600;
     line-height: 28px;
     margin-left: 20px;
@@ -486,7 +452,6 @@
   color: #fff;
   font-family: "Roboto";
   font-size: 19px;
-  font-style: normal;
   font-weight: 600;
   line-height: 24px;
 }
@@ -548,7 +513,6 @@
   color: var(--Theme-Dark, $dark-color);
   font-family: "Roboto";
   font-size: 20px;
-  font-style: normal;
   font-weight: 600;
   line-height: 28px;
 
@@ -556,7 +520,6 @@
     color: var(--Theme-Dark, $dark-color);
     font-family: "Roboto";
     font-size: 26px;
-    font-style: normal;
     font-weight: 600;
     line-height: 34px;
   }
@@ -619,7 +582,6 @@
   color: var(--Theme-Dark, $dark-color);
   font-family: "Roboto";
   font-size: 17px;
-  font-style: normal;
   font-weight: 400;
   line-height: 24px;
 
@@ -627,7 +589,6 @@
     color: var(--Theme-Dark, $dark-color);
     font-family: "Roboto";
     font-size: 17px;
-    font-style: normal;
     font-weight: 400;
     line-height: 24px;
   }
@@ -689,7 +650,6 @@
   color: var(--Theme-Dark, #2b2929);
   font-family: "Roboto";
   font-size: 20px;
-  font-style: normal;
   font-weight: 600;
   line-height: 28px;
 
@@ -697,7 +657,6 @@
     color: var(--Theme-Dark, #2b2929);
     font-family: "Roboto";
     font-size: 26px;
-    font-style: normal;
     font-weight: 600;
     line-height: 34px;
   }
@@ -763,7 +722,6 @@
   color: var(--Theme-Dark, #2b2929);
   font-family: "Roboto";
   font-size: 26px;
-  font-style: normal;
   font-weight: 600;
   line-height: 34px;
 }
@@ -778,7 +736,6 @@
   color: var(--Theme-Yellow, #ffbc57);
   font-family: "Roboto";
   font-size: 26px;
-  font-style: normal;
   font-weight: 600;
   line-height: 34px;
 }
@@ -809,7 +766,6 @@
   text-align: center;
   font-family: "Roboto";
   font-size: 20px;
-  font-style: normal;
   font-weight: 600;
   line-height: 28px;
 }
@@ -820,7 +776,6 @@
   text-align: center;
   font-family: "Roboto";
   font-size: 20px;
-  font-style: normal;
   font-weight: 600;
   line-height: 28px;
 }
@@ -829,7 +784,6 @@
   color: var(--Theme-Grey, #535353);
   font-family: "Roboto";
   font-size: 13px;
-  font-style: normal;
   font-weight: 300;
   line-height: 22px;
   margin-bottom: 5px;
@@ -839,7 +793,6 @@
   color: var(--Theme-Dark, #2b2929);
   font-family: "Roboto";
   font-size: 19px;
-  font-style: normal;
   font-weight: 600;
   line-height: 24px;
   margin-bottom: 5px;
@@ -856,7 +809,6 @@
   color: var(--Theme-Dark, #2b2929);
   font-family: "Roboto";
   font-size: 13px;
-  font-style: normal;
   font-weight: 300;
   line-height: 22px;
 }
@@ -865,7 +817,6 @@
   color: var(--Theme-Dark, #2b2929);
   font-family: "Roboto";
   font-size: 20px;
-  font-style: normal;
   font-weight: 600;
   line-height: 28px;
 }
@@ -874,7 +825,6 @@
   color: #e03d3d;
   font-family: "Roboto";
   font-size: 15px;
-  font-style: normal;
   font-weight: 400;
   line-height: 22px; /* 146.667% */
   text-decoration-line: strikethrough;
@@ -900,7 +850,7 @@
 //   color: var(--Theme-Yellow, #ffbc57);
 //   font-family: "Roboto";
 //   font-size: 19px;
-//   font-style: normal;
+//
 //   font-weight: 600;
 //   line-height: 24px;
 //   margin-top: 40px;
@@ -991,7 +941,6 @@
   color: var(--Theme-Dark, #0c0d0d);
   font-family: "Roboto";
   font-size: 18px;
-  font-style: normal;
   font-weight: 400;
   line-height: 30px;
   margin-right: 40px;
@@ -1032,7 +981,6 @@
   color: #fff;
   font-family: "Roboto";
   font-size: 19px;
-  font-style: normal;
   font-weight: 600;
   line-height: 24px;
 }
@@ -1043,15 +991,21 @@
   border-radius: 8px;
   @media screen and (min-width:1290px){
     display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  background-color: none;
-  padding: 0;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: none;
+    padding: 0;
+    margin-left: 15px;
   }
 }
 
-.order__promo-flexsh {
+.order__box-flexalsh{
   display: flex;
+}
+
+.order__promo-flexsh {
+    display: flex;
+    align-items: center;
 }
 
 .order__box-promoline{
@@ -1072,7 +1026,7 @@
   border-radius: 50%;
 }
 
-.final__box-bg {
+.order__box-bgfl {
   border-radius: 8px;
   background: #fff;
   padding: 30px 0 30px 27px;
@@ -1091,42 +1045,38 @@
   }
 }
 
-.final__title {
+.order__titlefl {
   color: var(--Theme-Dark, #2b2929);
   text-align: center;
   font-family: "Roboto";
   font-size: 26px;
-  font-style: normal;
   font-weight: 600;
   line-height: 34px;
   text-align: start;
 }
 
-.final__text {
+.order__textfl {
   color: var(--Theme-Dark, #2b2929);
   font-family: "Roboto";
   font-size: 16px;
-  font-style: normal;
   font-weight: 400;
   line-height: 30px;
   flex-shrink: 0;
 }
 
-.final__text-br {
+.order__text-brfl {
   color: var(--Theme-Dark, #2b2929);
   font-family: "Roboto";
   font-size: 26px;
-  font-style: normal;
   font-weight: 600;
   line-height: 34px;
   flex-shrink: 0;
 }
 
-.final__label {
+.order__labelfl {
   color: var(--Theme-Dark, #0c0d0d);
   font-family: "Roboto";
   font-size: 17px;
-  font-style: normal;
   font-weight: 400;
   line-height: 24px;
   max-width: 326px;
@@ -1136,7 +1086,6 @@
     text-align: center;
     font-family: "Roboto";
     font-size: 19px;
-    font-style: normal;
     font-weight: 400;
     line-height: 24px;
     max-width: 426px;
@@ -1145,7 +1094,7 @@
   }
 }
 
-.final__button {
+.order__buttonfl {
   display: flex;
   width: 350px;
   height: 50px;
@@ -1160,7 +1109,6 @@
   text-align: center;
   font-family: "Roboto";
   font-size: 19px;
-  font-style: normal;
   font-weight: 600;
   line-height: 24px;
   margin-top: 30px;
@@ -1182,18 +1130,16 @@
     text-align: center;
     font-family: "Roboto";
     font-size: 19px;
-    font-style: normal;
     font-weight: 600;
     line-height: 24px;
   }
 }
 
-.final__policy-bl {
+.order__policy-blfl {
   color: #535353;
   text-align: center;
   font-family: "Roboto";
   font-size: 17px;
-  font-style: normal;
   font-weight: 400;
   line-height: 24px;
   // text-align: start;
@@ -1201,37 +1147,36 @@
   margin-bottom: 30px;
 }
 
-.final__policy-yl {
+.order__policy-ylfl {
   color: #ffbc57;
   font-family: "Roboto";
   font-size: 17px;
-  font-style: normal;
   font-weight: 400;
   line-height: 24px;
 }
 
-.final__list {
+.order__listfl {
   margin-top: 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.final__item {
+.order__itemfl {
   display: flex;
   align-items: center;
   gap: 10px;
   margin-right: 30px;
 }
 
-.final__form {
+.order__formfl {
   display: flex;
   align-items: center;
   gap: 10px;
   margin-top: 39px;
 }
 
-.final__box {
+.order__boxfl {
   max-width: 340px;
   text-align: center;
 
@@ -1241,7 +1186,7 @@
   }
 }
 
-.final__line-mobile {
+.order__line-mobilefl {
   display: none;
 
   @media screen and (min-width: 1290px) {
@@ -1249,21 +1194,21 @@
   }
 }
 
-.final__box-down {
+.order__box-downfl {
   margin-top: 50px;
 }
 
-.final__box-text {
+.order__box-textfl {
   display: flex;
   flex-direction: row;
 }
 
-.final__box-line {
+.order__box-linefl {
   border-top: 1px dashed $grey-color;
   width: 100%;
 }
 
-.order__box-flexall {
+.order__box-flexallfl {
   display: flex;
   flex-wrap: wrap;
  justify-content: center;
@@ -1291,7 +1236,7 @@
     display: none;
   }
 }
-// .final__box-line{
+// .order__box-line{
 //   border-top: 1px dashed $grey-color;
 //   width: 100%;
 // }
