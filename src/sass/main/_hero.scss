@@ -18,21 +18,15 @@ li {
     overflow: hidden;
 }
 
-ul {
-    /*height: 350px !important;*/
-    font-size: 40px;
-    line-height: 200px;
-    color: white;
-}
-
 .js-slider li {
     float: left;
 }
 
 .js-slider>.next,
 .js-slider>.prev {
+    display: none;
     position: absolute;
-    top: 50%;
+    bottom: 220px;
     transform: translateY(-50%);
     font-size: 30px;
     background: #fff;
@@ -41,14 +35,29 @@ ul {
     padding: 10px 15px;
     /* Adjust padding as needed */
     cursor: pointer;
+    opacity: 0;
+
+    @media screen and (min-width: 1290px) {
+        display: flex;
+        opacity: 1;
+    }
 }
 
 .js-slider>.prev {
-    left: 20px;
+    left: 40px;
+
+    @media screen and (min-width: 1290px) {
+        bottom: 140px;
+    }
 }
 
 .js-slider>.next {
-    right: 20px;
+    right: 40px;
+    bottom: 215px;
+
+    @media screen and (min-width: 1290px) {
+        bottom: 140px;
+    }
 }
 
 .dot {
@@ -59,8 +68,23 @@ ul {
     margin: 0 5px;
     cursor: pointer;
     position: relative;
-    top: -70px;
-    left: 580px;
+    top: -50px;
+    left: 100px;
+
+    @media screen and (min-width: 440px) {
+        top: -30px;
+        left: 160px;
+    }
+
+    @media screen and (min-width: 768px) {
+        top: -30px;
+        left: 300px;
+    }
+
+    @media screen and (min-width: 1290px) {
+        top: -30px;
+        left: 580px;
+    }
 }
 
 .dot.active {
@@ -71,19 +95,22 @@ ul {
 .dots-container {
     margin-left: auto;
     margin-right: auto;
-    gap: 10px;
+    gap: 5px;
 }
 
 .hero {
     @include block-model(20px 0 30px 0, none, 0, 0);
     background-color: $light-color;
+    height: 550px;
 
     @media screen and (min-width: 440px) {
         @include block-model(40px 0 60px 0, none, 0, 0);
+        height: 700px;
     }
 
     @media screen and (min-width: 1290px) {
         @include block-model(30px 0 70px 0, none, 0, 0);
+        height: 560px;
     }
 
     &__container {
@@ -124,11 +151,11 @@ ul {
     }
 
     &__slide {
-        @include size(290px, 435px);
+        @include size(290px, 100px);
         background: url(../images/mobile/slide-1@1x.webp) center / contain no-repeat;
 
         @media screen and (min-width: 440px) {
-            @include size(410px, 600px);
+            @include size(410px, 120px);
         }
 
         @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
@@ -136,7 +163,7 @@ ul {
         }
 
         @media screen and (min-width: 1290px) {
-            @include size(1290px, 100px);
+            @include size(1290px, 80px);
             background: url(../images/desktop/slide-1@1x.webp) center / contain no-repeat;
 
             @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
