@@ -10,7 +10,7 @@
         max-width: 1290px;
 
         @media screen and (min-width: 1290px){
-            background-image: url(./images/desktop/women@1x.webp);
+            background-image: url(../images/desktop/women@1x.webp);
             background-repeat: no-repeat;
             background-size: cover;
 
@@ -19,12 +19,12 @@
             padding-top: 50px;
             padding-bottom: 50px;
 
-            // @media (min-device-pixel-ratio: 2),
-            // (-webkit-min-device-pixel-ratio: 2),
-            // (min-resolution: 192dpi),
-            // (min-resolution: 2dppx) {
-            //     background-image: url(./images/desktop/women@2x.webp);
-            // }
+            @media (min-device-pixel-ratio: 2),
+            (-webkit-min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url(../images/desktop/women@2x.webp);
+            }
         }
     }
     &__box{
