@@ -935,6 +935,13 @@
   width: 26.663px;
   height: 26.663px;
   fill: var(--Theme-Yellow, #ffbc57);
+  margin-top: 0;
+  margin-bottom: 0;
+
+  @media screen and (min-width:1290px) {
+    argin-top: auto;
+  margin-bottom: auto;
+  }
 }
 
 .order__promosh {
@@ -999,13 +1006,20 @@
   }
 }
 
-.order__box-flexalsh{
+.order__box-flexallsh{
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .order__promo-flexsh {
     display: flex;
     align-items: center;
+    justify-content: center;
+}
+
+.order__boxx-flexalsh{
+  display: flex;
 }
 
 .order__box-promoline{
