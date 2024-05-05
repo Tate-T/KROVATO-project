@@ -19,7 +19,7 @@ li {
 }
 
 .hero-slide-list {
-    height: 350px !important;
+    min-height: 350px;
     font-size: 40px;
     line-height: 200px;
     color: white;
@@ -170,7 +170,7 @@ li {
         }
 
         @media screen and (min-width: 1290px) {
-            @include size(1290px, 80px);
+            @include size(1290px, 400px);
             background: url(../images/desktop/slide-1@1x.webp) center / contain no-repeat;
 
             @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
