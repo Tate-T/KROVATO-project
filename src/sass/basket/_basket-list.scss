@@ -276,7 +276,7 @@
     height: 40px;
     fill: $yellow-color;
     margin-bottom: 10px;
-    margin-left: 56px;
+    margin-left: 65px;
   }
 }
 
@@ -292,23 +292,22 @@
     height: 40px;
     fill: #ff090b;
     margin-bottom: 10px;
-    margin-left: 56px;
+    margin-left: 65px;
   }
 }
 
 .order__icon-peopledl {
   width: 52px;
   height: 40px;
-  fill: $grey-color;
   margin-bottom: 10px;
   margin-left: 40px;
 
   @media screen and (min-width: 1290px) {
-    width: 52px;
+    width: 40px;
     height: 40px;
     fill: $grey-color;
     margin-bottom: 10px;
-    margin-left: 37px;
+    margin-left: 50px;
   }
 }
 
@@ -555,7 +554,7 @@
   background-color: $yellow-color;
   border-radius: 50%;
   fill: white;
-  padding: 5px 5px 3px 8px;
+  padding: 0px 5px 3px 8px;
 
   @media screen and (min-width: 1290px) {
     width: 60px;
@@ -563,7 +562,7 @@
     background-color: $yellow-color;
     border-radius: 50%;
     fill: white;
-    padding: 15px 10px 15px 10px;
+    padding: 10px 10px 10px 10px;
   }
 }
 
@@ -962,8 +961,17 @@
   height: 26.663px;
   fill: var(--Theme-Yellow, #ffbc57);
   display: flex;
+  align-self: none;
+  justify-content: center;
+
+  @media screen and (min-width:1290px){
+    width: 26.663px;
+  height: 26.663px;
+  fill: var(--Theme-Yellow, #ffbc57);
+  display: flex;
   align-self: center;
   justify-content: center;
+  }
 }
 
 .order__promosh {
@@ -1032,7 +1040,14 @@
 .order__box-flexallsh {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  justify-content: start;
+  gap: 10px;
+
+  @media screen and (min-width:1290px) {
+    align-items: center;
   justify-content: center;
+  }
 }
 
 .order__promo-flexsh {
