@@ -3,25 +3,20 @@
   padding-bottom: 70px;
 
   &__title {
-    color: $dark-color;
-    font-size: 30px;
-    font-weight: 600;
-    line-height: 133%;
+    @include font($dark-color, 133%, 30px, 600);
     @media screen and (min-width: 768px) {
       font-size: 40px;
       line-height: 120%;
     }
   }
   &__subtitle {
-    color: $grey-light-color;
-    font-size: 19px;
-    font-weight: 600;
     line-height: 24px;
+    @include font($grey-light-color, 126%, 19px, 600);
   }
   &__main {
-    display: flex;
+    @extend %flex-center2;
     gap: 10px;
-    align-items: center;
+    
   }
   &__list {
     display: flex;
@@ -29,17 +24,16 @@
     margin-top: 40px;
   }
   &__hide {
-    color: $yellow-color;
-    font-size: 19px;
-    font-weight: 600;
-    line-height: 126%;
     text-align: center;
-    display: block;
+    @include font($yellow-color, 126%, 19px, 600);
+    transition: font-size 0.5s ease-in;
     
+    &:hover,&:focus{
+      font-size: 22px;
+    }
   }
   &__item {
-    width: 200px;
-    height: 180px;
+    @include size(200px, 180px);
     flex-basis: calc((100% - 10px) / 2);
     background-repeat: no-repeat;
     background-size: 100%;
@@ -61,8 +55,7 @@
   &__item::after {
     content: "";
     display: block;
-    width: 20px;
-    height: 5px;
+    @include size(20px, 5px);
     background-color: $yellow-color;
     border-radius: 8px;
     position: absolute;
@@ -249,15 +242,12 @@
     }
   }
   &__text {
-    color: $dark-color;
     text-align: center;
-    font-size: 17px;
+    @include font($dark-color, 141%, 17px, 400);
 
-    font-weight: 400;
-    line-height: 141%;
     @media screen and (min-width: 768px) {
       font-weight: 600;
-      line-height: 126.316%;
+      line-height: 126%;
     }
   }
   &__box {
@@ -266,8 +256,7 @@
     gap: 10px;
   }
   &__icon {
-    width: 24px;
-    height: 24px;
+    @include size(24px, 24px);
     transform: rotate(180deg);
     fill: $yellow-color;
   }
