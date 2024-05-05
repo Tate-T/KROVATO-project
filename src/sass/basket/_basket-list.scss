@@ -962,8 +962,17 @@
   height: 26.663px;
   fill: var(--Theme-Yellow, #ffbc57);
   display: flex;
+  align-self: none;
+  justify-content: center;
+
+  @media screen and (min-width:1290px){
+    width: 26.663px;
+  height: 26.663px;
+  fill: var(--Theme-Yellow, #ffbc57);
+  display: flex;
   align-self: center;
   justify-content: center;
+  }
 }
 
 .order__promosh {
@@ -1032,7 +1041,14 @@
 .order__box-flexallsh {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  justify-content: start;
+  gap: 10px;
+
+  @media screen and (min-width:1290px) {
+    align-items: center;
   justify-content: center;
+  }
 }
 
 .order__promo-flexsh {
