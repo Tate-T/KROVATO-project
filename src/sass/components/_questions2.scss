@@ -1,4 +1,6 @@
 .questions {
+    overflow-x: hidden;
+
     @include block-model(60px 0 60px 0, none, 0, 0);
     background-color: $light-color;
 
