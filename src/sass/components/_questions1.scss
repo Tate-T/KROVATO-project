@@ -4,20 +4,20 @@
 
     input {
         @extend %position20;
-        @include size(290px, 50px);
+        @include size(260px, 50px);
         // outline: 2px solid red;
         cursor: pointer;
 
         @media screen and (min-width: 440px) {
-            @include size(410px, 50px);
+            @include size(370px, 50px);
         }
 
         @media screen and (min-width: 768px) {
-            @include size(738px, 50px);
+            @include size(698px, 50px);
         }
 
         @media screen and (min-width: 1290px) {
-            @include size(1070px, 50px);
+            @include size(1040px, 50px);
         }
     }
 
